@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="M"
-            android:textColor="@color/money_mart_accent"
+            android:textColor="@color/primary"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/iv_loan"
             app:layout_constraintEnd_toEndOf="@+id/iv_loan"

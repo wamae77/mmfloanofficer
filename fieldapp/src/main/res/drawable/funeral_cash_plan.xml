@@ -12,8 +12,8 @@
     <path
         android:pathData="M28.253,9.381L28.253,30.932L11.32,30.932L11.32,13.229L15.168,9.381Z"
         android:strokeWidth="1.067"
-        android:fillColor="#cea766"
-        android:strokeColor="#cea766"/>
+        android:fillColor="#000000"
+        android:strokeColor="#000000"/>
     <path
         android:pathData="M14.399,27.084L20.556,27.084A0.77,0.77 0,0 1,21.326 27.854L21.326,27.854A0.77,0.77 0,0 1,20.556 28.623L14.399,28.623A0.77,0.77 0,0 1,13.629 27.854L13.629,27.854A0.77,0.77 0,0 1,14.399 27.084z"
         android:fillColor="#fff"/>

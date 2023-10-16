@@ -22,7 +22,6 @@
         android:layout_marginTop="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_20dp"
         android:background="@drawable/grey_bg_corned"
-        android:theme="@style/SearchViewTheme"
         android:visibility="gone"
         app:defaultQueryHint="Search customer"
         app:iconifiedByDefault="false"

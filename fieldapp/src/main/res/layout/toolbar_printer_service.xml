@@ -8,8 +8,7 @@
     android:minHeight="?attr/actionBarSize"
     android:titleTextColor="@color/white"
     android:visibility="visible"
-    app:navigationIcon="?attr/homeAsUpIndicator"
-    app:theme="@style/ToolbarColoredBackArrow">
+    app:navigationIcon="?attr/homeAsUpIndicator">
 
     <TextView
         android:id="@+id/toolbarTitleTextView"

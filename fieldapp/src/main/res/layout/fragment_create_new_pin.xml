@@ -86,10 +86,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cl_Pin"
         app:lottie_autoPlay="true"
-        app:lottie_colorFilter="@color/money_mart_accent"
+        app:lottie_colorFilter="@color/primary"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/pin_loading"
         app:lottie_speed="1.25" />
+
+
 
     <TextView
         android:id="@+id/tvEnterPin"

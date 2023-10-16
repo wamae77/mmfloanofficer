@@ -48,9 +48,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
+            android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@color/money_mart_accent" />
+            android:background="?android:attr/listDivider" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.appcompat.widget.SearchView
@@ -62,7 +63,6 @@
         android:layout_marginTop="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_20dp"
         android:background="@drawable/grey_bg_corned"
-        android:theme="@style/SearchViewTheme"
         app:defaultQueryHint="Search customer"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"

@@ -54,8 +54,8 @@
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/helloTxt"
-            app:tabIndicatorColor="@color/money_mart_accent"
-            app:tabSelectedTextColor="@color/money_mart_accent"
+            app:tabIndicatorColor="@color/primary"
+            app:tabSelectedTextColor="@color/primary"
             app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
             app:tabTextColor="@color/grey2" />
 <!--

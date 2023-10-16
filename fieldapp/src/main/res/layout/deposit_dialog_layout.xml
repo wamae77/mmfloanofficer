@@ -11,10 +11,11 @@
         android:id="@+id/topView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_12dp"
-        android:background="@color/money_mart_accent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?android:attr/listDivider" />
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_toolbar"
@@ -206,7 +207,6 @@
             android:textColor="@color/kcb_blue"
             android:textSize="@dimen/_12sp"
             android:textStyle="bold"
-            android:theme="@style/ButtonTheme"
             app:layout_constraintEnd_toStartOf="@+id/btn_Submit"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
@@ -223,7 +223,6 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_12sp"
             android:textStyle="bold"
-            android:theme="@style/ButtonTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_cancel"
             app:layout_constraintTop_toTopOf="parent" />

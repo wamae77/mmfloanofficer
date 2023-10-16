@@ -45,11 +45,12 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <View
+            android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@color/money_mart_accent" />
+            android:background="?android:attr/listDivider" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView

@@ -14,7 +14,6 @@
         android:layout_marginTop="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_20dp"
         android:background="@drawable/grey_bg_corned"
-        android:theme="@style/SearchViewTheme"
         app:defaultQueryHint="Search customer"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
