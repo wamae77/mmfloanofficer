@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="7dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clIncompleteReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_5dp"
+        android:background="@color/grey2"
+        >
+
+        <TextView
+            android:id="@+id/tType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Damaris muhia" />
+
+        <TextView
+            android:id="@+id/tAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tType"
+            app:layout_constraintTop_toTopOf="@id/tType"
+            tools:text="20000" />
+
+        <TextView
+            android:id="@+id/tvChannel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="@id/tType"
+            app:layout_constraintTop_toBottomOf="@id/tType"
+            tools:text="12/12/2021" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@+id/tvChannel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvChannel"
+            app:layout_constraintTop_toTopOf="@id/tvChannel"
+            tools:text="Failed" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="Delete"
+            android:drawableLeft="@drawable/ic_baseline_delete_forever_24"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:padding="5dp"
+            android:textColor="@color/dark_red"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/_10dp"
+            app:layout_constraintEnd_toStartOf="@id/resume"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/tvChannel"
+            app:layout_constraintStart_toStartOf="@id/tvChannel" />
+
+        <TextView
+            android:id="@+id/resume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Resume"
+            android:drawablePadding="@dimen/_10dp"
+            android:padding="@dimen/_5dp"
+            android:textColor="@color/kcb_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_restore_24"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_marginStart="@dimen/_20dp"
+            app:layout_constraintStart_toEndOf="@id/delete"
+            app:layout_constraintTop_toTopOf="@id/delete"
+           app:layout_constraintBottom_toBottomOf="@id/delete"
+            app:layout_constraintEnd_toEndOf="parent"
+          />
+
+        <!--  <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNotNow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/kcb_blue"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGoAssess"
+            app:layout_constraintTop_toTopOf="@id/btnGoAssess"
+            app:layout_constraintEnd_toStartOf="@id/btnGoAssess"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/kcb_blue"
+            app:strokeWidth="@dimen/_1dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoAssess"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:text="Resume"
+            android:layout_marginBottom="@dimen/_60dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_marginStart="@dimen/_4dp"
+            android:textAlignment="center"
+            android:theme="@style/AppTheme.Button.Primary"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChannel"
+            app:layout_constraintStart_toEndOf="@+id/btnNotNow"
+            app:cornerRadius="20dp"
+            />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

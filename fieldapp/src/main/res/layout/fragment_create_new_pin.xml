@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.auth.userlogin.CreateNewPinFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/create_new_pin"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivBack"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/mmf_extra_small_common"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+    <!--<com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicatorColor="@color/money_mart_accent"
+        app:indicatorName="BallPulseSyncIndicator"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPin"/>-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/avi"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_Pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cl_Pin"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/money_mart_accent"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pin_loading"
+        app:lottie_speed="1.25" />
+
+    <TextView
+        android:id="@+id/tvEnterPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="Enter your default pin"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+        app:layout_constraintBottom_toTopOf="@+id/cl_Pin"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_Pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPin">
+
+        <View
+            android:id="@+id/pin1"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pin2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/pin2"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/pin3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pin1"
+            app:layout_constraintTop_toTopOf="@+id/pin1" />
+
+        <View
+            android:id="@+id/pin3"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/pin4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pin2"
+            app:layout_constraintTop_toTopOf="@+id/pin2" />
+
+        <View
+            android:id="@+id/pin4"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pin3"
+            app:layout_constraintTop_toTopOf="@+id/pin3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_Pin">
+
+        <TextView
+            android:id="@+id/btn_one"
+            style="@style/keypad_buttons_style"
+            android:layout_marginTop="5dp"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_four"
+            app:layout_constraintEnd_toStartOf="@+id/btn_two"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_two"
+            style="@style/keypad_buttons_style"
+            android:text="2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_three"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_one"
+            app:layout_constraintTop_toTopOf="@+id/btn_one" />
+
+        <TextView
+            android:id="@+id/btn_three"
+            style="@style/keypad_buttons_style"
+            android:text="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_two"
+            app:layout_constraintTop_toTopOf="@+id/btn_one" />
+
+        <TextView
+            android:id="@+id/btn_four"
+            style="@style/keypad_buttons_style"
+            android:text="4"
+            app:layout_constraintBottom_toTopOf="@+id/btn_seven"
+            app:layout_constraintEnd_toStartOf="@+id/btn_five"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btn_one"
+            app:layout_constraintTop_toBottomOf="@+id/btn_one" />
+
+        <TextView
+            android:id="@+id/btn_five"
+            style="@style/keypad_buttons_style"
+            android:text="5"
+            app:layout_constraintEnd_toStartOf="@+id/btn_six"
+            app:layout_constraintStart_toStartOf="@+id/btn_two"
+            app:layout_constraintTop_toTopOf="@+id/btn_four" />
+
+        <TextView
+            android:id="@+id/btn_six"
+            style="@style/keypad_buttons_style"
+            android:text="6"
+            app:layout_constraintEnd_toEndOf="@+id/btn_three"
+            app:layout_constraintStart_toStartOf="@+id/btn_three"
+            app:layout_constraintTop_toTopOf="@+id/btn_five" />
+
+        <TextView
+            android:id="@+id/btn_seven"
+            style="@style/keypad_buttons_style"
+            android:text="7"
+            app:layout_constraintBottom_toTopOf="@+id/btn_zero"
+            app:layout_constraintEnd_toStartOf="@+id/btn_eight"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btn_four"
+            app:layout_constraintTop_toBottomOf="@+id/btn_four" />
+
+        <TextView
+            android:id="@+id/btn_eight"
+            style="@style/keypad_buttons_style"
+            android:text="8"
+            app:layout_constraintEnd_toStartOf="@+id/btn_nine"
+            app:layout_constraintStart_toStartOf="@+id/btn_five"
+            app:layout_constraintTop_toTopOf="@+id/btn_seven" />
+
+        <TextView
+            android:id="@+id/btn_nine"
+            style="@style/keypad_buttons_style"
+            android:text="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_six"
+            app:layout_constraintTop_toTopOf="@+id/btn_eight" />
+
+        <TextView
+            android:id="@+id/btn_zero"
+            style="@style/keypad_buttons_style"
+            android:text="0"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_Delete"
+            app:layout_constraintEnd_toStartOf="@+id/btn_Delete"
+            app:layout_constraintStart_toStartOf="@+id/btn_eight"
+            app:layout_constraintTop_toTopOf="@+id/btn_Delete" />
+
+        <ImageView
+            android:id="@+id/btn_Delete"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_delete"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_nine"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nine" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

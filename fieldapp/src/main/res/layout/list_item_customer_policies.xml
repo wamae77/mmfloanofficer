@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10dp"
+    android:elevation="@dimen/_0dp"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/funeral_insurance_packages_bg">
+
+        <TextView
+            android:id="@+id/tvPackageName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_bold_common"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_15dp"
+            android:text="Silver package"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvPackageStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPackageStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_bold_common"
+            android:gravity="end"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_15dp"
+            android:text="Active"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPackageName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvDependants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_10dp"
+            android:fontFamily="@font/nunitosans_bold_common"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_15dp"
+            android:text="4 dependants"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPackageName" />
+
+        <TextView
+            android:id="@+id/tvDueOn"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_10dp"
+            android:fontFamily="@font/nunitosans_bold_common"
+            android:gravity="end"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_15dp"
+            android:text="Due on: Today"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDependants"
+            app:layout_constraintTop_toBottomOf="@id/tvPackageStatus" />
+
+        <TextView
+            android:id="@+id/tvViewMore"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#CEA766"
+            android:fontFamily="@font/nunitosans_bold_common"
+            android:gravity="center"
+            android:padding="@dimen/_16dp"
+            android:text="VIEW MORE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDependants" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

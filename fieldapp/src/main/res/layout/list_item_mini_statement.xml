@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/requestList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_2dp"
+    app:cardBackgroundColor="@color/grey_100"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Cl_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTransactionType"
+            android:text="Loan Repayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRefNo"
+            android:text="RefNo: 356473WRE84"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTransactionType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTransactionType"
+            app:layout_constraintTop_toTopOf="@+id/tvTransactionType" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/tvTransactionType"
+            app:layout_constraintTop_toBottomOf="@+id/tvRefNo" />
+
+        <TextView
+            android:id="@+id/tvLoanBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Loan Balance"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTransactionType"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tvLoanBalanceValue"
+            tools:text="USD 3,000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLoanBalance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvLoanBalance"
+            app:layout_constraintTop_toTopOf="@+id/tvLoanBalance" />
+
+        <TextView
+            android:id="@+id/tvTransactionDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Transaction Date"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="@+id/tvLoanBalance"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoanBalance" />
+
+        <TextView
+            android:id="@+id/tvTransactionDateValue"
+            tools:text="2022-04-25"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTransactionDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTransactionDate"
+            app:layout_constraintTop_toTopOf="@+id/tvTransactionDate" />
+
+        <TextView
+            android:id="@+id/tvDebitAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Debit Amount"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTransactionDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransactionDate" />
+
+        <TextView
+            android:id="@+id/tvDebitAmountValue"
+            tools:text="USD 3,000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDebitAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDebitAmount"
+            app:layout_constraintTop_toTopOf="@+id/tvDebitAmount" />
+
+        <TextView
+            android:id="@+id/tvCreditAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Credit Amount"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDebitAmount"
+            app:layout_constraintTop_toBottomOf="@+id/tvDebitAmount" />
+
+        <TextView
+            android:id="@+id/tvCreditAmountValue"
+            tools:text="USD 3,000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCreditAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCreditAmount"
+            app:layout_constraintTop_toTopOf="@+id/tvCreditAmount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_red_400_dark">#EC2E2A</color>
+    <color name="md_blue_800_dark">#11529B</color>
+    <color name="md_blue_800">#1565C0</color>
+    <color name="md_green_700">#388E3C</color>
+    <color name="default_text_color">#ffffff</color>
+    <color name="red_text">@color/md_red_400_dark</color>
+    <color name="default_birthdays_color">@color/md_blue_800</color>
+    <color name="default_holidays_color">@color/md_green_700</color>
+    <color name="default_anniversaries_color">@color/md_red_400_dark</color>
+</resources>

@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            //minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    //kotlin version
+    implementation 'androidx.core:core-ktx:' + rootProject.kotlinCoreVersion
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    //api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'androidx.legacy:legacy-support-v4:' + rootProject.supportLegacyLibVersion
+
+    //design support
+    api 'androidx.appcompat:appcompat:' + rootProject.supportLibVersion
+    api 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
+    api 'com.google.android.material:material:' + rootProject.materialVersion
+    api 'androidx.constraintlayout:constraintlayout:' + rootProject.constraintLayoutVersion
+
+    //livedata and viewmodel
+    api 'androidx.lifecycle:lifecycle-livedata-ktx:' + rootProject.kotlinLifecycleExtVersion
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:' + rootProject.kotlinLifecycleExtVersion
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    api 'androidx.lifecycle:lifecycle-common:2.4.1'
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+    //retrofit
+    api 'com.squareup.retrofit2:retrofit:' + rootProject.retrofitVersion
+    api 'com.squareup.retrofit2:converter-gson:' + rootProject.retrofitVersion
+    api 'com.squareup.retrofit2:converter-scalars:' + rootProject.retrofitVersion
+    api("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    //co-routines
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:' + rootProject.couroutinesVersion
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:' + rootProject.couroutinesVersion
+    api "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+
+
+    //navigation framework
+    api 'androidx.navigation:navigation-fragment-ktx:' + rootProject.navigationUIVersion
+    api 'androidx.navigation:navigation-ui-ktx:' + rootProject.navigationUIVersion
+
+    //test frameworks
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+    androidTestImplementation 'androidx.annotation:annotation:' + rootProject.supportLibVersion
+
+    // This dependency is downloaded from the Google’s Maven repository.
+    // So, make sure you also include that repository in your project's build.gradle file.
+    api 'com.google.android.play:core:1.10.3'
+    //Spin kit progress bar
+    api 'com.github.ybq:Android-SpinKit:' + rootProject.spinkitVersion
+    //sms
+    api 'com.google.android.gms:play-services-auth:20.1.0'
+    api 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    api 'com.wang.avi:library:2.1.3'
+    api "com.airbnb.android:lottie:5.0.3"
+    api 'com.github.yalantis:ucrop:2.2.6'
+    api 'com.mikhaellopez:circularimageview:3.2.0'
+    api 'com.hbb20:ccp:2.5.4'
+    api 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+    //dagger
+    api "com.google.dagger:dagger:" + rootProject.googleDaggerVersion
+    kapt "com.google.dagger:dagger-compiler:" + rootProject.googleDaggerVersion
+    api "com.google.dagger:dagger:" + rootProject.googleDaggerVersion
+    api "com.google.dagger:dagger-android:" + rootProject.googleDaggerVersion
+    api "com.google.dagger:dagger-android-support:" + rootProject.googleDaggerVersion
+
+    //used by diary
+    api 'com.simplemobiletools:commons:5.21.9'
+    api 'joda-time:joda-time:2.10.10'
+    api 'com.scottyab:rootbeer-lib:0.1.0'
+
+    //navigation framework
+    api 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    api 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    //livedata and viewmodel
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //
+    api 'androidx.lifecycle:lifecycle-common:2.5.1'
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    api "androidx.lifecycle:lifecycle-process:2.5.1"
+    //
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api "androidx.fragment:fragment-ktx:1.5.4"
+    api "androidx.activity:activity-ktx:1.6.1"
+    // SIGNATURE PAD
+    api 'com.github.gcacace:signature-pad:1.2.1'
+
+    api 'com.github.GrenderG:Toasty:1.5.0'
+
+    api 'androidx.room:room-runtime:' + rootProject.archRoomVersion
+    api "androidx.room:room-ktx:" + rootProject.archRoomVersion
+    kapt "androidx.room:room-compiler:" + rootProject.archRoomVersion
+    /*api 'io.realm:realm-android-library:10.9.0'
+    annotationProcessor 'io.realm:realm-annotations:10.9.0'*/
+    // ...
+    api 'org.threeten:threetenbp:1.4.4'
+
+    api 'com.google.zxing:core:3.3.3'
+
+    api 'com.jakewharton.timber:timber:5.0.1'
+}

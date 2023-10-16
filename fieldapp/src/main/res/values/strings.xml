@@ -1,0 +1,542 @@
+<resources>
+    <string name="title_home">Home</string>
+    <string name="fback">Feedback</string>
+    <string name="us_dollar">US$</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyBYCwYs84Buc0ZlFVBrxhWrQaQBSiZ4EwM</string>
+    <string name="kcb_bank_field_agent">Eclectics Bank - Field Agent</string>
+    <string name="login_title"><![CDATA[Enter the phone number you registered with\nat the branch]]></string>
+    <string name="email_address">Email Address</string>
+    <string name="lookup_title">Enter the phone number you registered with at the branch</string>
+    <string name="password">Password</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="fa_hezekiah_kipngetich_32566789">FA: Hezekiah Kipngetich - 32566789</string>
+    <string name="onboard_account">Customer Onboarding</string>
+    <string name="existing_account">Existing Customer</string>
+    <string name="application_requests">Application Requests</string>
+    <string name="onboard_merchant">Onboard Merchant / Agent</string>
+    <string name="loan_application">Loan Application &amp; View</string>
+    <string name="customer_loans">Loans</string>
+    <string name="customer_assessment">Assessment</string>
+    <string name="use_id">Search customer with ID Number or Name</string>
+    <string name="use_id_loan">Search customer with ID Number or Name</string>
+    <string name="quick_reports">Quick Reports</string>
+    <string name="sales_target">Sales Target</string>
+    <string name="bill_payment">Bill Payment</string>
+    <string name="diary">Diary</string>
+    <string name="mileage">Mileage</string>
+    <string name="agent_field">Customer 360 View</string>
+    <string name="customer_feedback">Customer Feedback</string>
+    <string name="agent_geomap">Agent / Merchant Geomap</string>
+    <string name="customer_geomap">Customer Geomap</string>
+    <string name="customer_complains">Customer Complains</string>
+    <string name="customers_complains">Customer\'s Complains</string>
+    <string name="agent_complains">Agent / Merchant Complains</string>
+    <string name="asset_management">Asset Management</string>
+    <string name="new_customers">New Customers</string>
+    <string name="existing_customers">Existing Customers</string>
+    <string name="select_category">Select Category</string>
+    <string name="continue_">CONTINUE</string>
+    <string name="search">SEARCH</string>
+    <string name="search_for_account">Search for Account</string>
+    <string name="enter_account">Enter Account Number</string>
+    <string name="new_merchant_agents">New Merchant / Agents</string>
+    <string name="existing_merchant_agents">Existing Merchant / Agents</string>
+    <string name="account_type">Account Type</string>
+    <string name="select_account">Select Account</string>
+    <string name="select_type">Select Type</string>
+    <string name="merchant_agent_type">Merchant/ Agent Type</string>
+    <string name="_360_degree_merchant_agent_summary">360 Degree Customer Summary</string>
+    <string name="select_type_of_customers">Select Type of Customers</string>
+    <string name="acc_katani_pharmarcy">ACC: KATANI PHARMARCY - \n01XXXXX4282</string>
+    <string name="agent_no_567898">Agent no. 567898</string>
+    <string name="tel_0749924243">Tel: 0749924243</string>
+    <string name="view_transaction_analysis">View Transaction Analysis</string>
+    <string name="view_commissions_analysis">View Commissions Analysis</string>
+    <string name="agent_merchant_loan_status">Merchant Loan Status</string>
+    <string name="online_questionnaire">Online Questionnaire Survey</string>
+    <string name="merchant_location_details">Merchant Location Details</string>
+    <string name="agent_merchant_complains">Agent / Merchant Complains</string>
+    <string name="select_reference_type">Select Reference Type</string>
+    <string name="merchants_agents">Merchant / Agent</string>
+    <string name="customers">Customers</string>
+    <string name="select_type_of_complain">Select Type of Complain</string>
+    <string name="search_account">SEARCH ACCOUNT</string>
+    <string name="type_of_complain">Type of Complain</string>
+    <string name="atm_card">ATM CARD</string>
+    <string name="subject">Subject</string>
+    <string name="enter_subject">Enter Subject</string>
+    <string name="message">Message</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="attach_document">Attach Document</string>
+    <string name="submit_message">SUBMIT MESSAGE</string>
+    <string name="customer_id">Customer ID</string>
+    <string name="merchant_agent_info">Merchant / Agent Info</string>
+    <string name="update">UPDATE</string>
+    <string name="merchant_agent_details">Merchant / Agent Details</string>
+    <string name="contact_person_details">Contact Person Details</string>
+    <string name="liquidation_details">Liquidation Details</string>
+    <string name="physical_address">Physical Address</string>
+    <string name="admin_user_details">Admin User Details</string>
+    <string name="agent_images">Agent\'s Business Images</string>
+    <string name="business_images">Business Images</string>
+    <string name="personal_images">Personal Images</string>
+    <string name="agent_personal_images">Agent\'s Personal Images</string>
+    <string name="customer_info">Customer Info</string>
+    <string name="acc_current_account">ACC: CURRENT ACCOUNT -\n 012XXXXX4421</string>
+    <string name="martin_omondi_chepkirui">Martin Omondi Chepkirui</string>
+    <string name="id_253672883">ID: 253672883</string>
+    <string name="customer_details">Customer Details</string>
+    <string name="basic_info">Basic Information</string>
+    <string name="add_details">Additional Details</string>
+    <string name="bs_details">Business Details</string>
+    <string name="bs_address">Business Address</string>
+    <string name="nok_details">Next of Kin Details</string>
+    <string name="bank_account_details">Bank Account Details</string>
+    <string name="loan_status">Loan Status</string>
+    <string name="merchant_agent_loan_status">Merchant/Agent Loan Status</string>
+    <string name="customer_loan_status">Customer Loan Status</string>
+    <string name="id_passport_photos">ID and Passport Photos</string>
+    <string name="active_channels">Active Channels</string>
+    <string name="manage_account">Manage Account</string>
+    <string name="agent_location">Agent Location</string>
+    <string name="make_call">MAKE CALL</string>
+    <string name="get_directions">GET DIRECTIONS</string>
+    <string name="select_type_of_account">Select Type of Account</string>
+    <string name="create_loan_origination_for_agent_customers">Create Loan Origination for Customer</string>
+    <string name="customers_application">Customer\'s Application</string>
+    <string name="loan_application_title">Loan Application</string>
+    <string name="acc_martin_ndungu">ACC: MARTIN NDUNGU -\n01XXXXX4231</string>
+    <string name="loan_limit">Loan Limit</string>
+    <string name="kes_10_000_000_0">ZWD. 10,000,000.0</string>
+    <string name="calculate_loan">Calculate Loan</string>
+    <string name="enter_loan_amount">Enter Loan Amount</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="period">Repayment Period</string>
+    <string name="interest_rate">Interest Rate %</string>
+    <string name="apply">APPLY</string>
+    <string name="reset">RESET</string>
+    <string name="monthly_installments">Monthly Installments</string>
+    <string name="repayment_period_24_0">Repayment Period\n24.0</string>
+    <string name="total_interest_n1_300_000">Total Interest\n1,300,000</string>
+    <string name="other_deductions">*Other deductions and changes may apply</string>
+    <string name="purpose">Purpose</string>
+    <string name="choose_an_asset">Choose an Asset</string>
+    <string name="enter_serial">Enter Serial</string>
+    <string name="submit_asset">SUBMIT ASSET</string>
+    <string name="attach_three_3_photos_of_the_asset">Attach a Photo of the Asset</string>
+    <string name="_265_743_00">265,743.00</string>
+    <string name="monthly_transaction_report">Monthly Transaction Report</string>
+    <string name="questionnaire_survey">Questionnaire Survey</string>
+    <string name="monthly_commission_report">Monthly Commission Report</string>
+    <string name="merchant_loans_status">Merchant Loans Status</string>
+    <string name="active_loan">Active Loan</string>
+    <string name="due_date_24_june_2023">Due Date:24 JUN 2023</string>
+    <string name="refresh">REFRESH</string>
+    <string name="repayments_01xxxxxx44282">REPAYMENTS - 01XXXXXX44282</string>
+    <string name="kes_250_879">ZWD 250,879</string>
+    <string name="available_balance">AVAILABLE BALANCE</string>
+    <string name="merchant_questionnaire_survey">Merchant Questionnaire Survey</string>
+    <string name="customer_experience">Customer Experience</string>
+    <string name="customer_experience_card_questions">• Is the pos communicate stable ?\n\n
+    • Is your commissions paid on time ?\n\n
+    • Are customers happy with our services ?\n\n
+    • What additional services are they interested in\n\n
+    • What else can Eclectics Bank improve to serve them better\n\n</string>
+    <string name="open">OPEN</string>
+    <string name="_1_is_the_pos_communication_stable">1. Is the pos communication stable?</string>
+    <string name="_2_are_your_commissions_paid_on_time">2. Are your commissions paid on time</string>
+    <string name="_3_are_customers_happy_with_our_services">3. Are customers happy with our services?</string>
+    <string name="_4_what_additional_services_are_they_interested_in">4. What additional services are they interested in?</string>
+    <string name="_5_what_else_can_kcb_bank_improve_to_serve_them_better">5. What else can Eclectics Bank improve to serve them better?</string>
+    <string name="submit_survey">Submit Survey</string>
+    <string name="capture_customer_photo">Capture Customer Photo</string>
+    <string name="take_photo">TAKE PHOTO</string>
+    <string name="work_details">Work Details</string>
+    <string name="where_do_you_work">Where do you work?</string>
+    <string name="type_of_employment">Type of Employment</string>
+    <string name="income_band">Income Band</string>
+    <string name="purpose_for_opening_this_account">Purpose for opening this account?</string>
+    <string name="enter_business_name">Enter Business Name</string>
+    <string name="surname">Surname</string>
+    <string name="business_mobile_number">Business Mobile Number</string>
+    <string name="first_name">First Name</string>
+    <string name="business_email_address">Business Email Address</string>
+    <string name="select_business_type">Select Business Type</string>
+    <string name="last_name">Last Name</string>
+    <string name="nature_of_business">Nature of Business</string>
+    <string name="select_liquidation_type">Select Liquidation Type</string>
+    <string name="liquidation_rate">Liquidation Rate</string>
+    <string name="select_bank_name">Select Bank Name</string>
+    <string name="bank_code">Bank Code</string>
+    <string name="select_branch_name">Select Branch Name</string>
+    <string name="account_name">Account Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="liquidation_account_name">Liquidation Account Name</string>
+    <string name="liquidation_account_number">Liquidation Account Number</string>
+    <string name="select_county">Select County</string>
+    <string name="select_constituency">Select Constituency</string>
+    <string name="select_ward">Select Ward</string>
+    <string name="select_town">Select Town</string>
+    <string name="enter_street_name">Enter Street Name</string>
+    <string name="enter_building_name">Enter Building Name</string>
+    <string name="room_number">Room Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="add_terms_condition_form"><![CDATA[ATTACH TERMS & CONDITION FORM]]></string>
+    <string name="add_kfd_photo">ATTACH KFD PHOTO</string>
+    <string name="add_customer_photo">ATTACH COLORED PASSPORT PHOTO</string>
+    <string name="add_signature_photo">ATTACH SIGNATURE PHOTO</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="scan_id">Scan ID</string>
+    <string name="enter_id_number">Enter ID Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="attach_photo">Attach Photo</string>
+    <string name="select_account_type">Select Account Type</string>
+    <string name="select_id_type">Select ID Type</string>
+    <string name="scan_details">Scan Details</string>
+    <string name="type_in_details">Type in Details</string>
+    <string name="id_number">ID Number</string>
+    <string name="select_sub_branch">Select Sub-branch</string>
+    <string name="add_photo">ADD PHOTO</string>
+    <string name="submit">SUBMIT</string>
+    <string name="select_type_of_loan">Select Type of Loan</string>
+    <string name="new_account">New Account</string>
+    <string name="enter_phone_number">Enter Customer Phone Number</string>
+    <string name="select_user_type">Select User Type</string>
+    <string name="select_what_you_need">Select What You Need</string>
+    <string name="select_nearest_branch">Select Home Branch</string>
+    <string name="capture_id_photo">Capture ID Photo</string>
+    <string name="capture_front_id">Capture Front ID</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="capture_back_id">Capture Back ID</string>
+    <string name="search_for_existing_account">Search for Existing Account</string>
+    <string name="agent_no_56744893">Agent no. 56744893</string>
+    <string name="merchant_details">Merchant/Agent Details</string>
+    <string name="merchant_info">Merchant/Agent Info</string>
+    <string name="customer_location_details">Agent / Merchant Location Details</string>
+    <string name="apply_loan">APPLY LOAN</string>
+    <string name="default_personal_acc_name">MARTIN NDUNGU</string>
+    <string name="default_personal_acc_number">011803445709</string>
+    <string name="default_merchant_acc_name">KATANI PHARMACY</string>
+    <string name="default_merchant_acc_number">011832929215</string>
+    <string name="customer_location">Agent / Merchant Location</string>
+    <string name="add_business_permit">ATTACH BUSINESS PERMIT</string>
+    <string name="add_company_registration_certificate">ATTACH COMPANY REGISTRATION CERTIFICATE</string>
+    <string name="scan_national_id">SCAN NATIONAL ID</string>
+    <string name="attach_certificate_of_good_conduct">ATTACH CERTIFICATE OF GOOD CONDUCT</string>
+    <string name="attach_field_application_form">ATTACH FIELD APPLICATION FORM</string>
+    <string name="attach_kra_pin_certificate">ATTACH KRA PIN CERTIFICATE</string>
+    <string name="attach_business_license">ATTACH BUSINESS LICENSE</string>
+    <string name="merchant_id_photo">Merchant ID Photo</string>
+    <string name="merchant_agent_personal_details">Merchant / Agent Personal Details</string>
+    <string name="my_profile">My Profile</string>
+    <string name="incomplete_onboarding_process">Incomplete Registration</string>
+    <string name="onboarded_accounts">Onboarded Accounts</string>
+    <string name="enter_town_name">Enter Town Name</string>
+    <string name="capture_shop_photo">Capture Shop Photo</string>
+    <string name="front_id">Front ID</string>
+    <string name="back_id">Back ID</string>
+    <string name="close">CLOSE</string>
+    <string name="afternoon">Good Afternoon %1$s</string>
+    <string name="evening">Good Evening %1$s</string>
+    <string name="night">Good Night %1$s</string>
+    <string name="morning">Good Morning %1$s</string>
+    <string name="error_occurred">Oops! We could not process your request at the moment. Please try again</string>
+    <string name="no_network_connection">No internet connection, Kindly turn on Data or WIFI and try again</string>
+    <string name="we_have_sent_verification_code">We’ve sent you a verification code \nTo %1$s</string>
+    <string name="you_can_now_reset_or">You can now reset or change your JIBOOST pin</string>
+    <string name="if_you_forgot_your_pin">If you forgot your pin select one of the methods to use to Reset your JIBOOST pin</string>
+    <string name="give_answers_to_the_following_question">Give answers to the following question</string>
+    <string name="answer_the_following_question_with_the_answer_you_gave_during_registration">Answer the following question with the answer you gave during registration</string>
+    <string name="set_and_answer_questions_incase_you_want_to_reset_your_pin_in_future">Set and answer questions incase you want to reset your pin in future</string>
+    <string name="give_your_answers_here">Give your answers here</string>
+    <string name="verification_successful">Verification successful</string>
+    <string name="you_can_reset">We have sent you a 4-digit default to the phone number used during registration. Go ahead and reset your pin to access your account!</string>
+    <string name="fa">LO: %1$s</string>
+    <string name="acc">ACC: %1$s</string>
+    <string name="kesh">$ %1$s</string>
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="account_types">
+        <item>Current Account</item>
+        <item>Jiinue Account Bankika</item>
+        <item>Personal Student</item>
+        <item>Simba Savings Cub Account</item>
+        <item>Goal Savings Account</item>
+        <item>Advantage Banking Platinum Banking</item>
+    </string-array>
+    <string-array name="customer_types">
+        <item>REFERENCED</item>
+        <item>NON-REFERENCED</item>
+    </string-array>
+    <string-array name="reference_types_customer">
+        <item>API URL</item>
+        <item>DATABASE</item>
+    </string-array>
+    <string-array name="reference_types_agent">
+        <item>API URL</item>
+        <item>DATABASE</item>
+        <item>TILL ENABLED</item>
+    </string-array>
+    <string-array name="id_types">
+        <item>NATIONAL ID</item>
+        <item>PASSPORT</item>
+    </string-array>
+    <string-array name="employment_types">
+        <item>FULL TIME</item>
+        <item>PART TIME</item>
+        <item>CONTRACT</item>
+        <item>INTERNSHIP</item>
+    </string-array>
+    <string-array name="agent_types">
+        <item>NORMAL AGENT</item>
+        <item>IMPLANT AGENT</item>
+        <item>COLLECTIONS AGENT</item>
+    </string-array>
+    <string-array name="merchant_types2">
+        <item>Cereals Shops</item>
+        <item>Foods and Drinks</item>
+    </string-array>
+    <string-array name="business_types">
+        <item>Sole Proprietorship</item>
+        <item>Partnership</item>
+        <item>Limited Liability</item>
+        <item>Retail</item>
+        <item>Wholesale</item>
+        <item>Retail</item>
+        <item>Wholesale</item>
+        <item>Corporate</item>
+    </string-array>
+    <string-array name="liquidation_types">
+        <item>Real-Time</item>
+        <item>On Demand</item>
+        <item>Scheduled</item>
+    </string-array>
+    <string-array name="bank_names">
+        <item>KCB Bank</item>
+        <item>Equity Bank</item>
+        <item>Co-operative Bank</item>
+        <item>Sidian Bank</item>
+        <item>Absa Bank</item>
+        <item>Bank of Baroda</item>
+        <item>Standered Chartered</item>
+    </string-array>
+    <string-array name="bank_branches">
+        <item>Nairobi CBD</item>
+        <item>Nyeri</item>
+        <item>Eldoret</item>
+        <item>Nakuru</item>
+        <item>Mombasa</item>
+        <item>Kisumu</item>
+        <item>Wajir</item>
+    </string-array>
+    <string-array name="counties">
+        <item>Nairobi</item>
+        <item>Nyeri</item>
+        <item>Eldoret</item>
+        <item>Nakuru</item>
+        <item>Mombasa</item>
+        <item>Kisumu</item>
+        <item>Wajir</item>
+    </string-array>
+    <string-array name="constituencies">
+        <item>Mathira</item>
+        <item>Makadara</item>
+        <item>Kamukunji</item>
+        <item>Gem</item>
+        <item>Nyali</item>
+    </string-array>
+    <string-array name="wards">
+        <item>Karatina Town</item>
+        <item>Kiima Kimwe</item>
+        <item>Nkaimurunya</item>
+    </string-array>
+    <string-array name="towns">
+        <item>Karatina</item>
+        <item>Thika</item>
+        <item>Kiambu</item>
+        <item>Garissa</item>
+        <item>Limuru</item>
+    </string-array>
+    <string-array name="repayment_period">
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>6 months</item>
+        <item>1 year</item>
+        <item>2 years</item>
+    </string-array>
+    <string-array name="complain_type">
+        <item>ATM CARD</item>
+    </string-array>
+    <string-array name="asset_types">
+        <item>AGENT POS</item>
+        <item>MERCHANT POS</item>
+    </string-array>
+    <string-array name="loan_types">
+        <item>BORESHA BIASHARA LOAN</item>
+    </string-array>
+    <string-array name="user_types">
+        <item>Individual</item>
+        <item>Agent</item>
+        <item>Merchant</item>
+        <item>SME</item>
+        <item>Corporate</item>
+        <item>Agent and Merchant</item>
+    </string-array>
+    <string-array name="merchant_types">
+        <item>Agent</item>
+        <item>Merchant</item>
+    </string-array>
+    <string-array name="income_bands">
+        <item>10,000–30,000</item>
+        <item>30,000–50,000</item>
+        <item>50,000–70,000</item>
+        <item>70,000–80,000</item>
+    </string-array>
+    <string name="str_admission_open">2021 Admission Open</string>
+    <string name="str_admission_desc">For Secondary school student \n starting at 14</string>
+    <string name="btn_enroll_now">ENROLL NOW</string>
+    <string name="submit_complain">SUBMIT COMPLAIN</string>
+    <string name="start_date">Start Date</string>
+    <string name="select_a_date_range">SELECT A DATE RANGE</string>
+    <string name="no_data_for_the_selected_period">No data for the selected period</string>
+    <string name="from_01_09_2021_to_07_01_2022">FROM 01-09-2021 TO 07-01-2022</string>
+    <string name="otp_title">We’ve sent you a verification code\nTo +263 715 3** *29</string>
+    <string name="resend">RESEND</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="forgot_password">FORGOT PIN</string>
+    <string name="create_new_pin">Create New Pin</string>
+    <string name="confirm_new_pin">Confirm New Pin</string>
+    <string name="confirm_new_pin_change_pin">Confirm New PIN</string>
+    <string name="onboard_lookup_title">Use the customers phone number to check whether they already have an account</string>
+    <string name="sorry_you_don_t_have_an_account_registered">Sorry you don’t have an account \nregistered!</string>
+    <string name="your_number_registered">This number is already registered with JIBOOST. Please proceed to customer assessment</string>
+    <string name="register">REGISTER</string>
+    <string name="not_now">NOT NOW</string>
+    <string name="account_already_registered">Account already registered</string>
+    <string name="customer_account_found">Customer Account Found</string>
+    <string name="_1_of_8">1 of 12</string>
+    <string name="_1_of_3">1 of4</string>
+    <string name="_2_of_3">2 of 4</string>
+    <string name="_3_of_3">3 of 4</string>
+    <string name="_4_of_3">4 of 4</string>
+    <string name="_5_of_3">5 of 6</string>
+    <string name="_6_of_3">6 of 6</string>
+    <string name="_2_of_8">2 of 12</string>
+    <string name="_3_of_8">3 of 12</string>
+    <string name="_4_of_8">4 of 12</string>
+    <string name="_5_of_8">5 of 12</string>
+    <string name="_6_of_8">6 of 12</string>
+    <string name="_7_of_8">7 of 12</string>
+    <string name="_8_of_8">8 of 12</string>
+    <string name="_9_of_8">9 of 12</string>
+    <string name="_10_of_8">10 of 12</string>
+    <string name="_12_of_8">12 of 12</string>
+    <string name="_11_of_8">11 of 12</string>
+    <string name="gender">Gender</string>
+    <string name="are_you_married">Are you married?</string>
+    <string name="income_details">Income Information</string>
+    <string name="residential_details">Residential Details</string>
+    <string name="building_name">Building Name</string>
+    <string name="home_address">Home Address</string>
+    <string name="accommodation_status">Accommodation Status</string>
+    <string name="guarantors">Guarantors Details</string>
+    <string name="collaterals">Collateral Details</string>
+    <string name="other_borrowings">Other Borrowings</string>
+    <string name="summary">Summary</string>
+    <string name="success">Success</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="account_not_found">Account Not Found!</string>
+    <string name="this_number_is_not_registered_with_moneymart_finance_kindly_contact_the_admin_to_get_started">This number is not registered with JIBOOST!! Kindly contact the Admin to get started!</string>
+    <string name="enter_your_pin_to_login">Enter your pin to login</string>
+    <string name="required">Required</string>
+    <string name="age_should_be_more_than_18years">Age should be 18 years and above!</string>
+    <string name="use">Use:</string>
+    <string name="do_you_have_a_business_that_generates_income_for_you">Do you have a business that generates income for you?</string>
+    <string name="add">Add</string>
+    <string name="note_you_must_have_a_minimum_of_2_guarantors_kindly_add_your_guarantors">Note: You must have a minimum of 2 guarantors, Kindly add your guarantors</string>
+    <string name="this_customer_has_no_guarantors">Note:This customer has no guarantor! Kindly add at least 2 guarantors</string>
+    <string name="this_customer_has_no_collateral">Note:This customer has no collateral pledged! Kindly add at least 2 collateral</string>
+    <string name="the_customers_account_has_been_opened">The customers account has been opened and verified successfully. Please Proceed to customer assessment!</string>
+    <string name="account_opened_successfully">Account Have Been Opened Successfully %1$s</string>
+    <string name="householsd_info">Family Members </string>
+    <string name="expense_info">Expense Information </string>
+    <string name="_income_info">Income Information </string>
+    <string name="customer_doc">Customer Documents</string>
+    <string name="customer_has_no_income_details">This customer has no income details, Proceed to add!!</string>
+    <string name="customer_has_no_expense_details">This customer has no expense details, Proceed to add</string>
+    <string name="do_you_have_any_existing_loans_with_other_financial_institutions">Do you have any existing loans with other financial institutions?</string>
+    <string name="note_you_have_not_added_any_other_existing_borrowings_kindly_add_your_existing_borrowings">Note: You have not added any other existing borrowings, Kindly add your existing borrowings</string>
+    <string name="these_are_tailored_products">These are tailored products based on customer\'s account details,tap one to apply for a loan</string>
+    <string name="these_are_tailored_disbured_products">These are tailored products based on customer\'s account details,tap one to proceed to loan disbursement</string>
+    <string name="these_are_tailored_payable_products">These are tailored products based on customer\'s account details, tap one to proceed to loan repayment</string>
+    <string name="payable_products">These are tailored products based on customer\'s account details, tap one to view loan repayment schedule</string>
+    <string name="statement_payable_products">These are tailored products based on customer\'s account details,tap one to view loan statement</string>
+    <string name="list_of_pending_loans">These are a list of loan product(s) that you applied waiting for approval by the admin</string>
+    <string name="we_are_processing_requesrt">We are processing your request…</string>
+    <string name="remove">Remove</string>
+    <string name="an_error_occurred_while_submitting">An error occurred while submitting the customer data. Data has been saved locally and you can sync to the online server later</string>
+    <string name="current_pin">Current PIN</string>
+    <string name="new_pin">New PIN</string>
+    <string name="debt_formula">Debt Ratio = (Total income-Total expenses)/Monthly</string>
+    <string name="attach_customer_front_id">Attach Customer Front ID</string>
+    <string name="attach_passport_photo_size">Attach Passport Size Photo</string>
+    <string name="attach_education_certificate">Attach Education Certificate</string>
+    <string name="attach_collateral_photo">Attach Collateral Photo</string>
+    <string name="view_collateral_photo">View Collateral Photo</string>
+    <string name="attach_proof_of_residence">Attach Proof of Residence</string>
+    <string name="proof_of_residence">Proof of Residence</string>
+    <string name="view_proof_of_residence">View Proof of Residence</string>
+    <string name="view_edu_certificate">View Education Certificate</string>
+    <string name="view_incor_certificate">View Certificate of Incorporation</string>
+    <string name="attach_certificate_of_incorporation">Attach Certificate of Incorporation</string>
+    <string name="certificate_of_incorporation">Certificate of Incorporation</string>
+    <string name="attach_payslip">Attach Income Statement</string>
+    <string name="view_payslip">View Income Statement</string>
+    <string name="attach_rental_income_report">Attach Rental Income Report</string>
+    <string name="view_rental_income_report">View Rental Income Report</string>
+    <string name="attach_sales_report">Attach Sales Report</string>
+    <string name="view_sales_report">View Sales Report</string>
+    <string name="attach_guarantor_affidavit">Attach Guarantor Affidavit</string>
+    <string name="view_guarantor_affidavit">View Guarantor Affidavit</string>
+    <string name="attach_guarantor_front_national_id">Attach Guarantor Front National ID</string>
+    <string name="view_guarantor_front_national_id">View Guarantor Front National ID</string>
+    <string name="customer_assessment_details_has_been_submitted_sucessfully">Customer assessment details has been submitted successfully</string>
+    <string name="the_customers_assessment_details_has_been_verified_successfully_please_proceed_to_loan_application">The customers assessment details has been verified successfully. Please Proceed to loan application!</string>
+    <string name="error_occurred_while_loading_the_document_please_try_again">Error occurred while loading the document,please try again…</string>
+    <string name="number_of_dependants">Number of Dependants</string>
+    <string name="edu_cert">Education Certificate</string>
+    <string name="schedule_date_time"><![CDATA[Schedule Date & Time]]></string>
+    <string name="name">Name</string>
+    <string-array name="status">
+        <item>Active</item>
+        <item>Inactive</item>
+    </string-array>
+    <string name="how_much_airtime_would_you_like_to_buy">How much airtime would you like to buy?</string>
+    <string name="how_much_amount">How much amount would you like to pay %1$s</string>
+    <string name="confirm_bill_payment">Confirm Bill Payment</string>
+    <string name="customer_not_assessed">Customer has not been assessed. Please assess customer before doing a Loan Application</string>
+    <string name="unable_to_complete_your_request">Unable to complete your request, \nPlease try again later!</string>
+    <string name="funeral_cash_plan">Funeral Cash Plan</string>
+    <string name="relationship">Relationship</string>
+    <string name="cash_label">Cash</string>
+
+    <!--    -->
+    <string name="timeout">Dear Customer,\nThe application has timed out.\n\nKindly log in again to proceed with your mobile banking experience..</string>
+    <string name="proceed">Proceed</string>
+    <string name="title_signature_capture">Signature Pad</string>
+    <string name="signature_instructions">Double tap to clear signature.</string>
+    <string name="submit_signature">Done</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#BFD6F6</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="kcb_green">#4A5782</color>
+    <color name="kcb_blue">#4A5782</color>
+    <color name="grey2">#F7F7F7</color>
+    <color name="kcb_darker_blue">#363F60</color>
+    <color name="login_bg">#FFFFFF</color>
+    <color name="money_mart_accent">#CEA766</color>
+    <color name="btn_gray">#E4E4E4</color>
+    <!--D8ECFD-->
+    <color name="text_dashboard">#022A4D</color>
+    <color name="text_screens">#333333</color>
+    <color name="gray">#CFCFCF</color>
+    <color name="text_screens_faint">#717171</color>
+    <color name="date_picker_bg">#EFEFEF</color>
+    <color name="dark_red">#FF453A</color>
+    <color name="purple">#3658DA</color>
+    <color name="yellow">#FFC107</color>
+    <color name="ncba_yellow">#f9e200</color>
+    <color name="card_color">#F7F7F7</color>
+    <color name="lightGray">#d8d8d8</color>
+    <color name="informationPrimary">#673AAA</color>
+    <color name="informationPrimaryDark">#63329B</color>
+    <color name="mapPrimary">#F34E4E</color>
+    <color name="mapPrimaryDark">#C0394F</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>x
+    <color name="colorAccent">#F34E4E</color>
+    <color name="grey_100">#F3F7F8</color>
+    <color name="shimmerColor">#C2C2C2</color>
+    <color name="whitesmoke">#f5f5f5</color>
+    <color name="hintColor">#707070</color>
+    <color name="card_bg">#F7F7F7</color>
+
+    <color name="buttonColor">#4a5782</color>
+
+
+
+    <color name="transparent">#00f6711c</color>
+    <color name="gray_color_wallet_service">#707071</color>
+    <color name="navy_blue">#cbcec9</color>
+
+</resources>

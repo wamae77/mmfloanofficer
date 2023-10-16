@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.homepage.funeralcashplan.Step1LookUpFuneralCashPlanFragment">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/app_sub_tool_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:background="@drawable/grey_bg_corned"
+        android:theme="@style/SearchViewTheme"
+        android:visibility="gone"
+        app:defaultQueryHint="Search customer"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="Search customer"
+        app:showDividers="none" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAssessment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:padding="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        tools:itemCount="5"
+        tools:listitem="@layout/incomplete_reg_item_list" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:layout_marginBottom="@dimen/_15dp"
+        android:drawablePadding="@dimen/_10dp"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="@dimen/_20dp"
+        android:text="Please check your internet connection and try again!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        android:visibility="gone"
+        app:drawableTint="@color/kcb_darker_blue"
+        app:drawableTopCompat="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

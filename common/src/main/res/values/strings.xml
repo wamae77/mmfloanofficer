@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="funeral_insurance">Funeral Insurance</string>
+    <string name="apply_package">Apply</string>
+    <string name="add_dependant">Add Dependant</string>
+    <string name="amount">Amount</string>
+    <string name="select_payment_method">Select payment method</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="confirm_label">Confirm</string>
+    <string name="error_message">Error</string>
+    <string name="try_again">Try Again</string>
+    <string name="check_your_internet_connection">Please check your Internet connection</string>
+    <string name="loading_please_wait">Loading ...</string>
+    <string name="usd_6">USD 6</string>
+    <string name="collect_premiums">Collect Premiums</string>
+    <string name="collect_customer_premiums_for_their_insurance_policy">Collect customer premiums for their insurance policy</string>
+    <string name="add_label">Add</string>
+    <string name="id_number_verification_service_not_available">ID number verification service not available. Click continue to provide the required details to complete registration</string>
+
+
+    <string name="restart_capture">Restart Capture</string>
+    <string name="requirement">You must check the USB permission prompt</string>
+    <string name="oops_we_could_not_process_your_request_at_the_moment_please_try_again">Oops! We could not process your request at the moment. Please try again</string>
+</resources>

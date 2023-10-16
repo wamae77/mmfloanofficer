@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/nunitosans_bold_common</item>
+    </style>
+
+    <style name="TextViewSubtitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/nunitosans_semibold_common</item>
+    </style>
+
+
+    <style name="TextInputLayoutStyleWallet" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/textInputLayoutRadius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/textInputLayoutRadius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/textInputLayoutRadius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/textInputLayoutRadius</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="android:textColor">#6F7070</item>
+        <item name="android:textSize">12sp</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+
+    <style name="exposedDropdownMenuCustomWallet" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:textColor">@color/gray</item>
+        <item name="hintTextColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>`
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/textInputLayoutRadius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/textInputLayoutRadius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/textInputLayoutRadius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/textInputLayoutRadius</item>
+    </style>
+
+    <style name="Style_Dialog_Rounded_Corner" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_rounded_corner</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+    </style>
+
+</resources>

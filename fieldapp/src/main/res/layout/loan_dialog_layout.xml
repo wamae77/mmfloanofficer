@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_30dp"
+    android:paddingBottom="@dimen/_30dp">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_12dp"
+        android:background="@color/kcb_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/kcb_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topView">
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:gravity="center"
+            android:text="Confirm Loan Application"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:text="Amount:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar" />
+
+    <TextView
+        android:id="@+id/tvAmountValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAmount"
+        app:layout_constraintTop_toTopOf="@id/tvAmount"
+        tools:text="DAMS" />
+
+    <TextView
+        android:id="@+id/tvFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Repayment Period (Tenure):"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+    <TextView
+        android:id="@+id/tvFrequencyValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginTop="@dimen/_2dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFrequency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvFrequency"
+        app:layout_constraintTop_toTopOf="@+id/tvFrequency"
+        tools:text="STANBIC" />
+
+    <TextView
+        android:id="@+id/tvPeriodCycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Pay Every:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvFrequency" />
+
+    <TextView
+        android:id="@+id/tvPeriodCycleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPeriodCycle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPeriodCycle"
+        app:layout_constraintTop_toTopOf="@+id/tvPeriodCycle"
+        tools:text="12345678" />
+
+    <TextView
+        android:id="@+id/tvAsset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Payment Cycle Measure:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvPeriodCycle" />
+
+    <TextView
+        android:id="@+id/tvAssetValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAsset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAsset"
+        app:layout_constraintTop_toTopOf="@+id/tvAsset"
+        tools:text="1200" />
+
+    <TextView
+        android:id="@+id/tvSupplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Payment Cycle:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvAssetValue" />
+
+    <TextView
+        android:id="@+id/tvSupplierValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSupplier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSupplier"
+        app:layout_constraintTop_toTopOf="@+id/tvSupplier"
+        tools:text="MUHIA" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Supplier Phone:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvSupplier" />
+
+    <TextView
+        android:id="@+id/tvPhoneValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPhone"
+        app:layout_constraintTop_toTopOf="@+id/tvPhone"
+        tools:text="MUHIA" />
+
+    <TextView
+        android:id="@+id/tvAName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Asset name:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+    <TextView
+        android:id="@+id/tvANameValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAName"
+        app:layout_constraintTop_toTopOf="@+id/tvAName"
+        tools:text="MUHIA" />
+
+    <TextView
+        android:id="@+id/tvAssetCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Asset Cost:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvAName" />
+
+    <TextView
+        android:id="@+id/tvAssetCostValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAssetCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAssetCost"
+        app:layout_constraintTop_toTopOf="@+id/tvAssetCost"
+        tools:text="MUHIA" />
+
+    <TextView
+        android:id="@+id/tvCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="Charges:"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintStart_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@id/tvAssetCost" />
+
+    <TextView
+        android:id="@+id/tvChargeValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCharge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCharge"
+        app:layout_constraintTop_toTopOf="@+id/tvCharge"
+        tools:text="MUHIA" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:padding="10dp"
+        android:text="Cancel"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/kcb_green"
+        android:textSize="@dimen/_14sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCharge"
+        app:strokeColor="@color/kcb_green"
+        app:strokeWidth="@dimen/_1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:padding="10dp"
+        android:text="Confirm"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        android:theme="@style/AppTheme.Button.Primary"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@id/tvCharge" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

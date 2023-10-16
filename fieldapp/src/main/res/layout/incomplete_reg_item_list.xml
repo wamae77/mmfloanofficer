@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvIncompleteReg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10dp"
+    android:background="#F2F2F2"
+    app:cardCornerRadius="@dimen/_10dp"
+    app:cardElevation="@dimen/_0dp"
+    tools:layout_margin="@dimen/_4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clIncompleteReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2">
+
+        <TextView
+            android:id="@+id/tType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:maxWidth="200dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Damaris muhiaa" />
+
+        <TextView
+            android:id="@+id/tAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_0dp"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:gravity="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrow"
+            app:layout_constraintStart_toEndOf="@+id/tType"
+            app:layout_constraintTop_toTopOf="@id/tType"
+            tools:text="2000" />
+
+        <TextView
+            android:id="@+id/tvChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="@id/tType"
+            app:layout_constraintTop_toBottomOf="@id/tType"
+            tools:text="12/12/2021" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrow"
+            app:layout_constraintStart_toEndOf="@+id/tvChannel"
+            app:layout_constraintTop_toBottomOf="@+id/tAmount"
+            tools:text="Failed" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/_15dp"
+            android:layout_height="@dimen/_15dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:src="@drawable/ic_arrow_forward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="@color/grey_100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChannel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

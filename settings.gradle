@@ -1,0 +1,15 @@
+dependencyResolutionManagement {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+rootProject.name = "MMF Loan Officer POS"
+include ':app'
+include ':common'
+include ':fieldapp'
+
+//include ':fingerprintlib'
+//include ':support'
+//include ':scannerlib'
+//include ':diary'

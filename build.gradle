@@ -1,0 +1,124 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = '1.6.21'
+    ext {
+        kotlin_version = '1.5.10'
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://www.jitpack.io" }
+    }
+    dependencies {
+        //classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath 'com.android.tools.build:gradle:7.2.2'
+        // classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.21'
+        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+        //classpath "de.timfreiheit.resourceplaceholders:placeholders:0.3"
+        //classpath "io.realm:realm-gradle-plugin:10.9.0"
+
+    }
+}
+
+
+Properties properties = new Properties()
+if (project.rootProject.file('dist.properties').exists()) {
+    properties.load(project.rootProject.file('dist.properties').newDataInputStream())
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+        flatDir {
+            dirs 'aars'
+        }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://developer.huawei.com/repo/' }
+//        maven {
+//            url "${properties.artifactory_context_url}/${properties.artifactory_dev_repo_key}"
+//            credentials {
+//                username = "${properties.artifactory_user}"
+//                password = "${properties.artifactory_password}"
+//
+//            }
+//        }
+    }
+    apply plugin: "com.jfrog.artifactory"
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+    minSDKVersion = 21
+    //
+    compileSdkVersion = 34
+    buildToolsVersion = "30.0.3"
+    //
+    supportLibVersion = "1.3.0"
+    supportLegacyLibVersion = "1.0.0"
+    navigationUIVersion = "2.3.2"
+    constraintLayoutVersion = "2.0.4"
+    materialVersion = "1.3.0"
+    recyclerViewVersion = "1.1.0"
+    testVersion = "4.13.2"
+    espressoVersion = "3.3.0"
+    archLifecycleVersion = "2.0.0"
+    archRoomVersion = "2.4.3"
+    //
+    kotlinLifecycleExtVersion = "2.3.0"
+    kotlinCoreVersion = "1.6.0"
+    //
+    googlePlayCoreVesion = "1.9.1"
+    googleSecLibVersion = "1.1.0-alpha03"
+    //
+    googleDaggerVersion = "2.19"
+    //rounded imageview
+    roundedImageView = "2.3.0"
+    //google maps
+    mapsVersion = "17.0.1"
+    //MPAndroidChart
+    mpAndroidChartVersion = "v3.1.0"
+    //image picker
+    imagePicker = "1.0.0"
+    toastyVersion = "1.5.0"
+
+    //retrofit
+    retrofitVersion = "2.9.0"
+    gsonVersion = "2.8.6"
+    gsonConverter = "2.9.0"
+    okHTTPLoggingInteceptor = "4.3.1"
+
+    //coroutines
+    couroutinesVersion = "1.4.1"
+    spinkitVersion = "1.4.0"
+    sweetDialogVersion = "1.6.2"
+    //work manager
+    workVersion = "2.7.1"
+
+    //ekenya Libs
+    ekenyeEntryptionLibVersion = "1.0.2" // Data Encryption Library
+    ekenyaValidationsLibVersion = "1.0" //Input Validations Library
+    ekenyaNetworkLibVersion = "1.0" //Network REqs Library
+    ekenyaDataRepoLibVersion = "1.0" // Data Repository
+    ekenyaLoggingLibVersion = "1.0" //Logging Library
+    ekenyaSecurityLibVersion = "1.0" //Security Library
+    ekenyaDataConversionLibVersion = "1.0" //Data Conversions Library
+}

@@ -1,0 +1,283 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+apply plugin: 'kotlin-android'
+
+
+static def getDate(String dateFormat) {
+    def df = new SimpleDateFormat(dateFormat)
+    Calendar c = Calendar.getInstance()
+    TimeZone tz = c.getTimeZone()
+    df.setTimeZone(tz)
+    return df.format(new Date())
+}
+
+static def getShortDate() {
+    return getDate("yyMMdd-HHmm")
+}
+
+
+/**
+ *
+ */
+def versionMajor = 1
+def versionMinor = 1
+def versionCodePatch = 35//35 FOR UAT //1 FOR UAT
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    namespace 'com.deefrent.rnd.jiboostfieldapp'
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            // manifest.srcFile 'AndroidManifest.xml'
+//              java.srcDirs = ['src']
+//              resources.srcDirs = ['src']
+//              aidl.srcDirs = ['src']
+//              renderscript.srcDirs = ['src']
+//              res.srcDirs = ['res']
+//              assets.srcDirs = ['assets']
+            //jniLibs.srcDirs = ['libs']
+            jniLibs.srcDir 'libs'
+            //jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    defaultConfig {
+        //applicationId "com.ekenya.rnd.mmffieldapp"//UAT
+        applicationId "com.deefrent.rnd.jiboostfieldapp"//DEV
+        minSdk rootProject.minSDKVersion
+        targetSdk rootProject.compileSdkVersion
+        resConfigs "en", "fr"
+        versionCode 4
+        versionName "${versionMajor}.${versionMinor}.${defaultConfig.versionCode}-" + getShortDate()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //resourceConfigurations 'en', 'de', 'fr' // Add your desired resource configurations
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters "armeabi-v7a" //,  "arm64-v8a","x86", "x86_64"
+        }
+        kapt {
+            includeCompileClasspath false
+        }
+
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    signingConfigs {
+        //Assume you have storeFile generated already
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            //useProguard false
+            shrinkResources false
+//            minifyEnabled true
+            minifyEnabled false
+            jniDebuggable = true
+            resValue "string", "app_version", "v${defaultConfig.versionName}"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //==signingConfig signingConfigs.release
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "MMFApp.${versionName}.apk"
+                }
+            }
+            ndk {
+                // Specifies the ABI configurations of your native
+                // libraries Gradle should build and package with your APK.
+                abiFilters 'armeabi-v7a'
+            }
+        }
+        release {
+            debuggable false
+            shrinkResources false
+            minifyEnabled false
+            jniDebuggable = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "string", "app_version", "v${defaultConfig.versionName}"
+            //Referring signingConfigs of release added below
+            signingConfig signingConfigs.release
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "MMFApp.${versionName}.apk"
+                }
+            }
+/*            ndk {
+                debugSymbolLevel = 'NONE'
+            }*/
+            ndk {
+                // Specifies the ABI configurations of your native
+                // libraries Gradle should build and package with your APK.
+                abiFilters 'armeabi-v7a'
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    task wrapper(type: Wrapper) {
+        gradleVersion = '7.2'
+    }
+    ndkVersion = "21.0.6113669"
+    packagingOptions {
+        // pickFirst 'META-INF/LICENSE.txt' // picks the JavaMail license file
+        exclude "/META-INF/*.kotlin_module"
+        exclude "**/kotlin/**"
+        exclude "**/*.txt"
+        exclude "**/*.xml"
+        exclude "**/*.properties"
+        exclude "/META-INF/.kotlin_module"
+        exclude "/kotlin/*"
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/atomicfu.kotlin_module'
+        exclude 'META-INF/MANIFEST.MF'
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    externalNativeBuild {
+        cmake {
+            path file('CMakeLists.txt')
+        }
+    }
+
+    dynamicFeatures = [':fieldapp']
+}
+
+configurations.all {
+    exclude group: 'com.android.support', module: 'support-v4'
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    //cleanedAnnotations
+    // exclude group: 'org.jetbrains', module: 'annotations'
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation project(":common")
+    api fileTree(dir: "libs", include: ["*.jar"/*, "*.aar"*/, ".so"])
+    //Shared Library
+//    api(name: 'A26Library-debug', ext: 'aar') {
+//        exclude group: 'com.cspos', module: 'native'
+//        exclude group: 'vpos.util', module: 'native'
+//    }
+    api files('libs/A26Library-debug.aar')
+    api files('libs/nexgo-smartpos-sdk-v3.0.3.aar')
+    //implementation files('libs/A26Library-debug.aar')
+    //
+    implementation 'androidx.core:core-ktx:' + rootProject.kotlinCoreVersion
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.9'
+    implementation 'com.google.firebase:firebase-analytics:20.1.2'
+    //test
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test:rules:' + rootProject.testVersion
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+
+    //Java dagger
+    annotationProcessor "com.google.dagger:dagger-android-processor:" + rootProject.googleDaggerVersion
+    annotationProcessor "com.google.dagger:dagger-compiler:" + rootProject.googleDaggerVersion
+    //Kotlin dagger
+    kapt 'com.google.dagger:dagger-compiler:' + rootProject.googleDaggerVersion
+    kapt 'com.google.dagger:dagger-android-processor:' + rootProject.googleDaggerVersion
+
+    //image picker
+    implementation 'com.github.ronnieotieno:Ronnie-Image-Picker:' + rootProject.imagePicker
+    //work manager
+    // (Java only)
+    implementation "androidx.work:work-runtime:" + rootProject.workVersion
+    // Kotlin + coroutines
+    implementation "androidx.work:work-runtime-ktx:" + rootProject.workVersion
+    // optional - RxJava2 support
+    implementation "androidx.work:work-rxjava2:" + rootProject.workVersion
+    // optional - Test helpers
+    androidTestImplementation "androidx.work:work-testing:" + rootProject.workVersion
+    implementation 'com.google.android.gms:play-services-maps:' + rootProject.mapsVersion
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+
+    //scan ID library
+    // implementation project(":scannerlib")
+
+    //icon-switch library
+    implementation 'com.polyak:icon-switch:1.0.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+
+    // This dependency is downloaded from the Google’s Maven repository.
+    // So, make sure you also include that repository in your project's build.gradle file.
+    implementation 'com.google.android.play:core:1.10.3'
+
+    // For Kotlin users also add the Kotlin extensions library for Play Core:
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    //Encryption Lib
+//    debugImplementation 'com.ekenya.android.encryptionlib.debug:encryptionlib:'+rootProject.ekenyeEntryptionLibVersion
+//    releaseImplementation'com.ekenya.android:encryptionlib:'+rootProject.ekenyeEntryptionLibVersion
+//    //Validations Lib
+//    debugImplementation 'co.ke.ekenya.lib.validationslib.debug:validationslib:'+rootProject.ekenyaValidationsLibVersion
+//    releaseImplementation 'co.ke.ekenya.lib.validationslib:validationslib:'+rootProject.ekenyaValidationsLibVersion
+//    //Networking Lib
+//    debugImplementation 'co.ke.ekenya.networkLib.networklib.debug:networklib:'+rootProject.ekenyaNetworkLibVersion
+//    releaseImplementation 'co.ke.ekenya.networkLib.networklib:networklib:'+rootProject.ekenyaNetworkLibVersion
+//    //Data Repo Lib
+//    debugImplementation'devops.mobile.datarepolib.debug:datarepolib:'+rootProject.ekenyaDataRepoLibVersion
+//    releaseImplementation 'devops.mobile.datarepolib:datarepolib:'+rootProject.ekenyaDataRepoLibVersion
+//    //Logging Lib
+//    debugImplementation 'ekenya.rnd.logginglibraryImp.logginglib.debug:logginglib:'+rootProject.ekenyaLoggingLibVersion
+//    releaseImplementation 'ekenya.rnd.logginglibraryImp.logginglib:logginglib:'+rootProject.ekenyaLoggingLibVersion
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+}
+

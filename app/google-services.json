@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "446824847775",
+    "project_id": "jiboost-loan-officer-app",
+    "storage_bucket": "jiboost-loan-officer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446824847775:android:df49eab969db300792c5aa",
+        "android_client_info": {
+          "package_name": "com.deefrent.rnd.jiboostfieldapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7XHYNXff_cmI1oseuLaqwMBznmT7oWz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

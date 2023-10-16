@@ -1,0 +1,1899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/phoneLookupFragment">
+
+    <fragment
+        android:id="@+id/phoneLookupFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.onboarding.PhoneLookupFragment"
+        android:label="fragment_phone_lookup"
+        tools:layout="@layout/fragment_phone_lookup">
+        <action
+            android:id="@+id/action_phoneLookup_to_phoneVerification"
+            app:destination="@id/phoneVerificationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.onboarding.PhoneVerificationFragment"
+        android:label="fragment_phone_verification"
+        tools:layout="@layout/fragment_phone_verification">
+        <action
+            android:id="@+id/action_phoneVerification_to_pinFragment"
+            app:destination="@id/pinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.userlogin.LoginPinFragment"
+        android:label="fragment_pin"
+        tools:layout="@layout/fragment_login_pin">
+        <action
+            android:id="@+id/action_pinFragment_to_createNewPinFragment"
+            app:destination="@id/createNewPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_pinFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_pinFragment_to_phoneLookupFragment"
+            app:destination="@id/phoneLookupFragment"
+            app:popUpTo="@id/pinFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/defaultPinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.userlogin.DefaultPinFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_defaultPinFragment_to_createNewPinFragment"
+            app:destination="@id/createNewPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.userlogin.CreateNewPinFragment"
+        android:label="fragment_create_new_pin"
+        tools:layout="@layout/fragment_create_new_pin">
+        <action
+            android:id="@+id/action_createNewPinFragment_to_confirmNewPinFragment"
+            app:destination="@id/confirmNewPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_createNewPinFragment_to_pinFragment"
+            app:destination="@id/pinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmNewPinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.userlogin.ConfirmNewPinFragment"
+        android:label="fragment_confirm_new_pin"
+        tools:layout="@layout/fragment_confirm_new_pin">
+        <action
+            android:id="@+id/action_confirmNewPinFragment_to_pinFragment"
+            app:destination="@id/pinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_confirmNewPinFragment_to_createNewPinFragment"
+            app:destination="@id/createNewPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.deefrent.rnd.fieldapp.ui.main.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_onboardCustomerLookupFragment"
+            app:destination="@id/onboardCustomerLookupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_changePINFragment"
+            app:destination="@id/changePINFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_phoneLookupFragment"
+            app:destination="@id/phoneLookupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_incompleteRegDashboardFragment"
+            app:destination="@id/incompleteRegDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_billPaymentLookupFragment"
+            app:destination="@id/billPaymentLookUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_assessmentDashboardFragment"
+            app:destination="@id/assessmentDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_incompleteAssesmentFragment"
+            app:destination="@id/incompleteAssesmentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_offline"
+            app:destination="@id/offlineDashoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_tellerStatementsFragment"
+            app:destination="@id/tellerStatementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_loanLookupFragment"
+            app:destination="@id/loanLookupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_authPinFragment"
+            app:destination="@id/authPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_targetsFragment"
+            app:destination="@id/targetsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_listDiaryFragment"
+            app:destination="@id/myDiaryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_mileageFragment"
+            app:destination="@id/mileageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_step1IdLookUpFuneralCashPlanFragment"
+            app:destination="@id/step1IdLookUpFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePINFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.profile.ChangePinFragment"
+        android:label="fragment_onboard_customer_lookup"
+        tools:layout="@layout/fragment_change_pin">
+
+        <action
+            android:id="@+id/action_onboardChangePINFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/onboardCustomerLookupFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardCustomerLookupFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step1CustomerLookupFragment"
+        android:label="fragment_onboard_customer_lookup"
+        tools:layout="@layout/fragment_customer_lookup">
+
+        <action
+            android:id="@+id/action_onboardCustomerLookupFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/onboardCustomerLookupFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardCustomerLookupFragment_to_customerDetailsFragment"
+            app:destination="@id/onboardCustomerDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardCustomerDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step2CustomerDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_customer_details2">
+        <argument
+            android:name="fragmentType"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_onboardCustomerDetailsFragment_to_lookupFragment"
+            app:destination="@id/onboardCustomerLookupFragment"
+            app:popUpTo="@id/onboardCustomerDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardCustomerDetailsFragment_to_businesDetailsFragment"
+            app:destination="@id/businesDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_onboardCustomerDetailsFragment_to_incompleteRegDashboardFragment"
+            app:destination="@id/incompleteRegDashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.IncomeDetailsFragment"
+        android:label="fragment_income_details"
+        tools:layout="@layout/fragment_income_details"></fragment>
+    <fragment
+        android:id="@+id/residentialDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step5ResidentialDetailsFragment"
+        android:label="fragment_residential_details"
+        tools:layout="@layout/fragment_residential_details">
+        <action
+            android:id="@+id/action_residentialDetails_to_guarantorsFragment"
+            app:destination="@id/guarantorsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_residentialDetailsFragment_to_collateralsFragment"
+            app:destination="@id/collateralsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/guarantorsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step6GuarantorsFragment"
+        android:label="fragment_guarantors"
+        tools:layout="@layout/fragment_guarantors">
+        <action
+            android:id="@+id/action_guarantors_to_otherBorrowingsFragment"
+            app:destination="@id/otherBorrowingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_guarantorsFragment_to_residentialDetailsFragment"
+            app:destination="@id/residentialDetailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/collateralsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step4CollateralsFragment"
+        android:label="fragment_collaterals"
+        tools:layout="@layout/fragment_collaterals">
+        <action
+            android:id="@+id/action_collaterals_to_businessAddressFragment"
+            app:destination="@id/businessAddressFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_collaterals_to_nextOfKinFragment"
+            app:destination="@id/nextOfKinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_collaterals_to_residentialDetailsFragment"
+            app:destination="@id/residentialDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherBorrowingsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step7OtherBorrowingsFragment"
+        android:label="fragment_other_borrowings"
+        tools:layout="@layout/fragment_collaterals">
+        <action
+            android:id="@+id/action_otherBorrowings_to_nextOfKinFragment"
+            app:destination="@id/nextOfKinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_otherBorrowingsFragment_to_guarantorsFragment"
+            app:destination="@id/guarantorsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.SummaryFragment"
+        android:label=""
+        tools:layout="@layout/fragment_summary">
+        <action
+            android:id="@+id/action_summaryFragment_to_uploadDocument"
+            app:destination="@id/uploadDocDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_summaryFragment_to_customerAdditionalDetailsFragment"
+            app:destination="@id/customerAdditionalDetailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_summaryFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_summaryFragment_to_onboardCustomerDetailsFragment"
+            app:destination="@id/onboardCustomerDetailsFragment"
+            app:popUpTo="@id/onboardCustomerDetailsFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/DSRProfileFragment"
+        android:name="com.deefrent.rnd.fieldapp.ui.dsrProfile.DSRProfileFragment"
+        android:label="fragment_dsr_profile"
+        tools:layout="@layout/fragment_dsr_profile">
+        <action
+            android:id="@+id/action_DSRProfileFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/DSRProfileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerAdditionalDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step12CustomerAdditionalDetailsFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_customerAdditionalDetailsFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerAdditionalDetailsFragment_to_addExpensesFragment"
+            app:destination="@id/addExpensesFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/businesDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step3BusinesDetailsFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_businesDetailsFragment_to_customerDetailsFragment"
+            app:destination="@id/onboardCustomerDetailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_businesDetailsFragment_to_businessAddressFragment"
+            app:destination="@id/businessAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_businesDetailsFragment_to_collateralsFragment"
+            app:destination="@id/collateralsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessAddressFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step3BusinessAddressFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_businessAddressFragment_to_collateralsFragment"
+            app:destination="@id/collateralsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_businessAddressFragment_to_businesDetailsFragment"
+            app:destination="@id/businesDetailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nextOfKinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step8NextOfKinFragment"
+        android:label=""
+        tools:layout="@layout/fragment_next_of_kin">
+        <action
+            android:id="@+id/action_nextOfKinFragment_to_addHouseholdMembersFragment"
+            app:destination="@id/addHouseholdMembersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nextOfKinFragment_to_otherBorrowingsFragment"
+            app:destination="@id/otherBorrowingsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardCustomerSuccessFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.OnboardCustomerSuccessFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_onboardCustomerSuccessFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_onboardSuccessFragment_to_incompleteAssesmentFragment"
+            app:destination="@id/incompleteAssesmentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/incompleteAssesmentFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerIDLookupFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.CustomerIDLookupFragment"
+        android:label="">
+
+        <action
+            android:id="@+id/action_customerIDLookupFragment_to_customerAssessmentHomeFragment"
+            app:destination="@id/customerAssessmentHomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="fragmentType"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_customerIDLookupFragment_to_customerAssessmentListFragment"
+            app:destination="@id/assessmentCustomerListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/customerAssessmentHomeFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.CustomerAssessmentHomeFragment"
+        android:label=""
+        tools:layout="@layout/customer_assessment_home_fragment">
+        <action
+            android:id="@+id/action_customerAssessmentHomeFragment_to_customerIDLookupFragment"
+            app:destination="@id/customerIDLookupFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_customerAssessmentHomeFragment_to_householdInfoFragment"
+            app:destination="@id/householdInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerAst_to_customeentFragment"
+            app:destination="@id/customerDetailsAssessmentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerAssessmentHomeFragment_to_incomeDetailsFragment"
+            app:destination="@id/incomeDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerAssessmentHomeFragment_to_documentTypeFragment"
+            app:destination="@id/viewDocumentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerAssessmentHomeFragment_to_expensesInfoFragment"
+            app:destination="@id/expensesInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/householdInfoFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.HouseholdInfoFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/incompleteRegDashboardFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.incompleteRegistration.IncompleteRegDashboardFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_onboardCustomerDetailsFragment"
+            app:destination="@id/onboardCustomerDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_customerAdditionalDetailsFragment"
+            app:destination="@id/customerAdditionalDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_businesDetailsFragment"
+            app:destination="@id/businesDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_businessAddressFragment"
+            app:destination="@id/businessAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_collateralsFragment"
+            app:destination="@id/collateralsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteRegDashboardFragment_to_residentialDetailsFragment"
+            app:destination="@id/residentialDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/expensesInfoFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.ExpensesInfoFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/customerDetailsAssessmentFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.CustomerDetailsAssessmentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_customer_details_assessment">
+        <action
+            android:id="@+id/action_customerDFragment_to_customerDetailsAssessmentFragment"
+            app:destination="@id/updateCustomerDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateAdditionalDetailsFragment"
+            app:destination="@id/updateAdditionalDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateBusinesDetailsFragment"
+            app:destination="@id/updateBusinesDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateBusinessAddressFragment"
+            app:destination="@id/updateBusinessAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateGuarantorsFragment"
+            app:destination="@id/updateGuarantorsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateResidentialDetailsFragment"
+            app:destination="@id/updateResidentialDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateCollateralsFragment"
+            app:destination="@id/updateCollateralsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateBorrowingsFragment"
+            app:destination="@id/updateBorrowingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerDFragment_to_updateNextOfKinFragment"
+            app:destination="@id/updateNextOfKinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateCustomerDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateCustomerDetailsFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/updateAdditionalDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateAdditionalDetailsFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/updateBusinesDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateBusinesDetailsFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/updateBusinessAddressFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateBusinessAddressFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/updateNextOfKinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateNextOfKinFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/updateResidentialDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateResidentialDetailsFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/updateGuarantorsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateGuarantorsFragment"
+        android:label="UpdateGuarantorsFragment" />
+    <fragment
+        android:id="@+id/updateCollateralsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateCollateralsFragment"
+        android:label="UpdateCollateralsFragment" />
+    <fragment
+        android:id="@+id/updateBorrowingsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.updatecdetails.UpdateBorrowingsFragment"
+        android:label="UpdateBorrowingsFragment" />
+    <fragment
+        android:id="@+id/loanLookupFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.LoanLookupFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_loanLookupFragment_to_loanHomeFragment"
+            app:destination="@id/loanHomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanLookupFragment_to_customerLoanListFragment"
+            app:destination="@id/customerListLoanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanLookupFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanHomeFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.LoanHomeFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_loanHomeFragment_to_loanProductFragment"
+            app:destination="@id/loanProductFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_loanLookupFragment"
+            app:destination="@id/loanLookupFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_cashToCustomerFragment"
+            app:destination="@id/cashToCustomerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_disburseLoanProductFragment"
+            app:destination="@id/disburseLoanProductFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_loanPendingApprovalFragment"
+            app:destination="@id/loanPendingApprovalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_payableLoansFragment"
+            app:destination="@id/payableLoansFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_loanHistoryFragment"
+            app:destination="@id/loanHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_repaymentScheduleFragment"
+            app:destination="@id/repayableLoansFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanHomeFragment_to_loanStatementsFragment"
+            app:destination="@id/activeRepayableLoansFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanProductFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.apply.LoanProductFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_loanProductFragment_to_applyLoanFragment"
+            app:destination="@id/applyLoanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/applyLoanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.apply.ApplyLoanFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_applyLoanFragment_to_authPinFragment"
+            app:destination="@id/authPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_applyLoanFragment_to_loanSuccessFragment"
+            app:destination="@id/loanSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loanHomeFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="loanProductItem"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.LoanProduct" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/authPinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.AuthPinFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/loanSuccessFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.LoanSuccessFragment"
+        android:label="">
+        <!-- popupinclusive true if am in successfragment and click done, it will remove
+        success from the backstack so when i click home back button it will not take me
+        back to successscreen-->
+        <action
+            android:id="@+id/action_loanSuccessFragment_to_loanHomeFragment"
+            app:destination="@id/loanHomeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/loanHomeFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="fragmentType"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanHistoryFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.LoanHistoryFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_loanHistoryFragment_to_loanHistoryDetailsFragment"
+            app:destination="@id/loanHistoryDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/disburseLoanProductFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.disburseloan.DisburseLoanProductFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_disburseLoanProductFragment_to_disburseLoanFragment"
+            app:destination="@id/disburseLoanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/disburseLoanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.disburseloan.DisburseLoanFragment"
+        android:label=""
+        tools:layout="@layout/fragment_disburse_loan">
+        <action
+            android:id="@+id/action_disburseLoanFragment_to_authPinFragment"
+            app:destination="@id/authPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_disburseLoanFragment_to_loanSuccessFragment"
+            app:destination="@id/loanSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loanHomeFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="disburseLoan"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.DisbursableLoan" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanPendingApprovalFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.disburseloan.LoanPendingApprovalFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_payableLoansFragment_to_updateLoanFragment"
+            app:destination="@id/updateLoanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/payableLoansFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.payloan.PayableLoansFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_payableLoansFragment_to_loanPaymentFragment"
+            app:destination="@id/loanPaymentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanPaymentFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.payloan.LoanPaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_loan_payment">
+        <action
+            android:id="@+id/action_loanPaymentFragment_to_authPinFragment"
+            app:destination="@id/authPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loanPaymentFragment_to_loanSuccessFragment"
+            app:destination="@id/loanSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loanHomeFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="payableLoans"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.RepayableLoan" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessmentDashboardFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.AssessmentDashboardFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_assessmentDashboardFragment_to_customerIDLookupFragment"
+            app:destination="@id/customerIDLookupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_assessmentDashboardFragment_to_incompleteAssesmentFragment"
+            app:destination="@id/incompleteAssesmentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/incompleteAssesmentFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.IncompleteAssesmentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_incomplete_assesment">
+        <action
+            android:id="@+id/action_incompleteAssesmentFragment_to_assessCustomerDetailsFragment"
+            app:destination="@id/assessCustomerDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteAssesmentFragment_to_addIncomeFragment"
+            app:destination="@id/addIncomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteAssesmentFragment_to_addExpensesFragment"
+            app:destination="@id/addExpensesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_incompleteAssesmentFragment_to_assessmentSummaryFragment"
+            app:destination="@id/assessmentSummaryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addHouseholdMembersFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step9AddHouseholdMembersFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_addHouseholdMembersFragment_to_addIncomeFragment"
+            app:destination="@id/addIncomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_addHouseholdMembersFragment_to_nextOfKinFragment"
+            app:destination="@id/nextOfKinFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExpensesFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step11AddExpensesFragment"
+        android:label="AddExpensesFragment">
+        <action
+            android:id="@+id/action_addExpensesFragment_to_customerAdditionalDetailsFragment"
+            app:destination="@id/customerAdditionalDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_addExpensesFragment_to_addIncomeFragment"
+            app:destination="@id/addIncomeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIncomeFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step10AddIncomeFragment"
+        android:label="AddIncomeFragment">
+        <action
+            android:id="@+id/action_addIncomeFragment_to_addExpensesFragment"
+            app:destination="@id/addExpensesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_addIncome_to_addHouseholdMembersFragment"
+            app:destination="@id/addHouseholdMembersFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assessmentSummaryFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessmentSummaryFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_assessmentSummaryFragment_to_assessSuccessFragment"
+            app:destination="@id/assessSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/incompleteAssesmentFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_assessmentSummaryFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessSuccessFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessSuccessFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_assessSuccessFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_assessSuccessFragment_to_loanLookupFragment"
+            app:destination="@id/loanLookupFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/loanLookupFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentTypeFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.DocumentTypeFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_documentTypeFragment_to_viewDocumentFragment"
+            app:destination="@id/viewDocumentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewDocumentFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.ViewDocumentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_view_document">
+        <argument
+            android:name="customerId"
+            app:argType="string" />
+        <argument
+            android:name="docId"
+            app:argType="string" />
+        <argument
+            android:name="docTypeName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_viewDocumentsFragment_to_addDocumentFragment"
+            app:destination="@id/addDocumentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assessCustomerDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessCustomerDetailsFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_assessCustomerDetailsFragment_to_assessBusinesDetailsFragment"
+            app:destination="@id/assessBusinesDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessAdditionalDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessAdditionalDetailsFragment"
+        android:label="AssessAdditionalDetailsFragment">
+        <action
+            android:id="@+id/action_assessAdditionalDetailsFragment_to_summaryAnalysisFragment"
+            app:destination="@id/summaryAnalysisFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessBusinesDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessBusinesDetailsFragment"
+        android:label="AssessBusinesDetailsFragment">
+        <action
+            android:id="@+id/action_assessBsDetailFragment_to_assessBsAddressFragment"
+            app:destination="@id/assessBusinessAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessBusinessAddressFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessBusinessAddressFragment"
+        android:label="AssessBusinessAddressFragment">
+        <action
+            android:id="@+id/action_assessBsAddressFragment_to_assessCollFragment"
+            app:destination="@id/assessCollateralsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessGuarantorsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessGuarantorsFragment"
+        android:label="AssessGuarantorsFragment">
+        <action
+            android:id="@+id/action_assessGuarantorsFragment_to_assesBorrowingFragment"
+            app:destination="@id/assessBorrowingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessCollateralsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessCollateralsFragment"
+        android:label="AssessCollateralsFragment">
+        <action
+            android:id="@+id/action_assessCollateralsFragment_to_assessresidential"
+            app:destination="@id/assessResidentialDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessResidentialDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessResidentialDetailsFragment"
+        android:label="AssessResidentialDetailsFragment">
+        <action
+            android:id="@+id/action_assessResidentialFragment_to_assessGuarantorsFragment"
+            app:destination="@id/assessGuarantorsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessBorrowingsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessBorrowingsFragment"
+        android:label="AssessBorrowingsFragment">
+        <action
+            android:id="@+id/action_assessBorrowingFragment_to_assessnokFragment"
+            app:destination="@id/assessNextOfKinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/assessNextOfKinFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessNextOfKinFragment"
+        android:label="AssessNextOfKinFragment">
+        <action
+            android:id="@+id/action_assessNokFragment_to_assesshouseholeMemberragment"
+            app:destination="@id/assessHouseholdMembersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessHouseholdMembersFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessHouseholdMembersFragment"
+        android:label="AssessHouseholdMembersFragment">
+        <action
+            android:id="@+id/action_assessHouseholdMembersFragment_to_assessIncomeFragment"
+            app:destination="@id/assessIncomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessIncomeFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessIncomeFragment"
+        android:label="AssessIncomeFragment">
+        <action
+            android:id="@+id/action_assessIncomeFragment_to_assessExpensesFragment"
+            app:destination="@id/assessExpensesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessExpensesFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.AssessExpensesFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_assessExpensesFragment_to_assessAdditionalDetailsFragment"
+            app:destination="@id/assessAdditionalDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/billersFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.billers.BillersFragment"
+        android:label="BillersFragment">
+        <action
+            android:id="@+id/action_billersFragment_to_paybillFragment"
+            app:destination="@id/paybillFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryAnalysisFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.SummaryAnalysisFragment"
+        android:label="SummaryAnalysisFragment">
+        <action
+            android:id="@+id/action_summaryAnalysisFragment_to_assessSuccessFragment"
+            app:destination="@id/assessSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/riskFactorReportFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.assessment.RiskFactorReportFragment"
+        android:label="RiskFactorReportFragment" />
+    <fragment
+        android:id="@+id/uploadDocDialogFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.UploadDocDialogFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_uploadDocDialogFragment_to_onboardCustomerSuccessFragment"
+            app:destination="@id/onboardCustomerSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/offlineDashoardFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.offlinetransaction.OfflineDashoardFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/cashToCustomerFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.disburseloan.CashToCustomerFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_cashToCustomerFragment_to_authPinFragment"
+            app:destination="@id/authPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_cashToCustomerFragment_to_loanSuccessFragment"
+            app:destination="@id/loanSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loanHomeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLoanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.disburseloan.UpdateLoanFragment"
+        android:label="">
+
+        <argument
+            android:name="pendingloans"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.LoansPendingApproval" />
+        <action
+            android:id="@+id/action_updateLoanFragment_to_loanSuccessFragment"
+            app:destination="@id/loanSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loanHomeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_updateLoanFragment_to_authPinFragment"
+            app:destination="@id/authPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/targetsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.targets.TargetsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_targets">
+        <action
+            android:id="@+id/action_targetsFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!--<action
+            android:id="@+id/action_targetsFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/tellerStatementsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.TellerStatementsFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/myDiaryFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.myDiary.MyDiaryFragment"
+        android:label="" />
+
+    <fragment
+        android:id="@+id/mileageFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.mileage.MileageFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/assessmentCustomerListFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.AssessmentCustomerListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_assessment_customer_list">
+        <action
+            android:id="@+id/action_customerListFragment_to_customerAssessmentHomeFragment"
+            app:destination="@id/customerAssessmentHomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_customerListFragment_to_customerIDLookupFragment"
+            app:destination="@id/customerIDLookupFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerListLoanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.CustomerListLoanFragment"
+        android:label="fragment_customer_list_loan"
+        tools:layout="@layout/fragment_customer_list_loan">
+        <action
+            android:id="@+id/action_listLoanFragment_to_loanLookupFragment"
+            app:destination="@id/loanLookupFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_loanListFragment_to_loanHomeFragment"
+            app:destination="@id/loanHomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/repayableLoansFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.repaymentSchedule.RepayableLoansFragment"
+        android:label=""
+        tools:layout="@layout/fragment_repayable_loans">
+        <action
+            android:id="@+id/action_repayableLoansFragment_to_repaymentScheduleFragment"
+            app:destination="@id/repaymentScheduleFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/repaymentScheduleFragment2"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.repaymentSchedule.RepaymentScheduleFragment"
+        android:label=""
+        tools:layout="@layout/fragment_repayment_schedule">
+        <argument
+            android:name="repayableLoan"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.RepayableLoan" />
+    </fragment>
+    <fragment
+        android:id="@+id/activeRepayableLoansFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.statements.ActiveRepayableLoansFragment"
+        android:label="fragment_active_repayable_loans"
+        tools:layout="@layout/fragment_active_repayable_loans">
+        <action
+            android:id="@+id/action_activeRepayableLoansFragment_to_loanStatementFragment"
+            app:destination="@id/loanStatementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanStatementFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.statements.LoanStatementFragment"
+        android:label="fragment_loan_statement"
+        tools:layout="@layout/fragment_loan_statement">
+        <argument
+            android:name="repayableLoan"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.RepayableLoan" />
+    </fragment>
+    <fragment
+        android:id="@+id/billPaymentLookUpFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.billers.BillPaymentLookUpFragment"
+        android:label="BillPaymentLookUpFragment"
+        tools:layout="@layout/fragment_bill_payment_look_up">
+        <action
+            android:id="@+id/action_billPaymentLookupFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_billPaymentLookupFragment_to_billersFragment"
+            app:destination="@id/billersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_billPaymentLookupFragment_to_customerListFragment"
+            app:destination="@id/customerListBillPaymentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/paybillFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.billers.PaybillFragment"
+        android:label="PaybillFragment"
+        tools:layout="@layout/fragment_paybill">
+        <action
+            android:id="@+id/action_paybillFragment_to_billersFragment"
+            app:destination="@id/billersFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_paybillFragment_to_billPaymentSuccessFragment"
+            app:destination="@id/billPaymentSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="biller"
+            app:argType="com.deefrent.rnd.fieldapp.network.models.Biller" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerListBillPaymentFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.billers.CustomerListBillPaymentFragment"
+        android:label="fragment_customer_list_bill_payment"
+        tools:layout="@layout/fragment_customer_list_bill_payment" />
+    <fragment
+        android:id="@+id/billPaymentSuccessFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.billers.BillPaymentSuccessFragment"
+        android:label="fragment_bill_payment_success"
+        tools:layout="@layout/fragment_bill_payment_success">
+        <action
+            android:id="@+id/action_billPaymentSuccessFragment_to_billPaymentLookUpFragment"
+            app:destination="@id/billPaymentLookUpFragment"
+            app:popUpTo="@id/mobile_navigation" />
+        <!--app:popUpToInclusive="false" -->
+    </fragment>
+    <fragment
+        android:id="@+id/loanHistoryDetailsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.loans.LoanHistoryDetailsFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/addDocumentFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.customerassessment.customerprofile.AddDocumentFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/feedBackFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.feedbacks.FeedBackFragment"
+        android:label="fragment_quick_reports"
+        tools:layout="@layout/fragment_quick_reports" />
+    <fragment
+        android:id="@+id/quickReportsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.quickreports.QuickReportsFragment"
+        android:label="fragment_quick_reports"
+        tools:layout="@layout/fragment_quick_reports" />
+
+    <!-- FUNERAL CAHS PLAN -->
+
+    <fragment
+        android:id="@+id/step1IdLookUpFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step1LookUpFuneralCashPlanFragment"
+        android:label="fragment_funeral_cash_plan"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_1">
+        <action
+            android:id="@+id/action_step1IdLookUpFuneralCashPlanFragment_to_step2DetailsFuneralCashPlanFragment"
+            app:destination="@id/step2DetailsFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_step1IdLookUpFuneralCashPlanFragment_to_step1CustomerListFuneralCashPlanFragment"
+            app:destination="@id/step1CustomerListFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/step1CustomerListFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step1CustomerListFuneralCashPlanFragment"
+        android:label="fragment_funeral_cash_plan"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_1">
+        <action
+            android:id="@+id/action_step1CustomerListFuneralCashPlanFragment_to_step2DetailsFuneralCashPlanFragment"
+            app:destination="@id/step2DetailsFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/step2DetailsFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step2DetailsFuneralCashPlanFragment"
+        android:label="Step2DetailsFuneralCashPlanFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+        <action
+            android:id="@+id/action_step2IdLookUpFuneralCashPlanFragment_to_step3PackagesFuneralCashPlanFragment"
+            app:destination="@id/step3PackagesFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_step2IdLookUpFuneralCashPlanFragment_to_customerPoliciesFuneralCashPlanFragment"
+            app:destination="@id/customerPoliciesFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/step3PackagesFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step3PackagesFuneralCashPlanFragment"
+        android:label="Step2DetailsFuneralCashPlanFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+
+        <action
+            android:id="@+id/action_step3IdLookUpFuneralCashPlanFragment_to_step4PackagesFuneralCashPlanFragment"
+            app:destination="@id/step4PackagesFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/step4PackagesFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step4PackageFuneralCashPlanFragment"
+        android:label="Step3DetailsFuneralCashPlanFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+
+        <action
+            android:id="@+id/action_step4IdLookUpFuneralCashPlanFragment_to_step5PackagesFuneralCashPlanFragment"
+            app:destination="@id/step5PackagesFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step5PackagesFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step5PackageFuneralCashPlanFragment"
+        android:label="Step3DetailsFuneralCashPlanFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+
+        <action
+            android:id="@+id/action_step5IdLookUpFuneralCashPlanFragment_to_step6PackagesFuneralCashPlanFragment"
+            app:destination="@id/step6PackagesFuneralCashPlanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step6PackagesFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.Step6PackageFuneralCashPlanFragment"
+        android:label="Step3DetailsFuneralCashPlanFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+
+        <!-- <action
+             android:id="@+id/action_step5IdLookUpFuneralCashPlanFragment_to_step6PackagesFuneralCashPlanFragment"
+             app:destination="@id/step6PackagesFuneralCashPlanFragment"
+             app:enterAnim="@anim/slide_in_right"
+             app:exitAnim="@anim/slide_out_left"
+             app:launchSingleTop="true"
+             app:popEnterAnim="@anim/slide_in_left"
+             app:popExitAnim="@anim/slide_out_right" />-->
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/customerPoliciesFuneralCashPlanFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.customerpolicies.CustomerPoliciesFuneralCashPlanFragment"
+        android:label="CustomerPoliciesFuneralCashPlanFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+
+        <action
+            android:id="@+id/action_customerPoliciesFuneralCashPlanFragment_to_customerPoliciesFuneralBreakDownFragment"
+            app:destination="@id/customerPoliciesFuneralBreakDownFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerPoliciesFuneralBreakDownFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.customerpolicies.CustomerPoliciesFuneralBreakDownFragment"
+        android:label="CustomerPoliciesFuneralBreakDownFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2">
+        <action
+            android:id="@+id/action_customerPoliciesFuneralBreakDownFragment_to_collectPremiumsFragment"
+            app:destination="@id/collectPremiumsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/collectPremiumsFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.funeralcashplan.customerpolicies.CollectPremiumsFragment"
+        android:label="CollectPremiumsFragment"
+        tools:layout="@layout/fragment_funeral_cash_plan_step_2" />
+    <fragment
+        android:id="@+id/commonAuthFragment"
+        android:name="com.deefrent.rnd.common.auth.CommonAuthFragment"
+        android:label="CommonAuthFragment" />
+    <fragment
+        android:id="@+id/loginWithFingerPrintFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method1.LoginWithFingerPrintFragment"
+        android:label="CaptureFingerPrintFragment" />
+
+    <fragment
+        android:id="@+id/enrollFingerPrintFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method1.EnrollFingerPrintFragmentMethod1"
+        android:label="EnrollFingerPrintFragment" />
+    <fragment
+        android:id="@+id/enrollFingerPrintFragmentMethod2"
+        android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method2.EnrollFingerPrintFragmentMethod2"
+        android:label="EnrollFingerPrintFragmentMethod2" />
+    <fragment
+        android:id="@+id/step13EnrollFingerPrintFragmentMethod1"
+        android:name="com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.Step13EnrollFingerPrintFragment"
+        android:label="Step13EnrollFingerPrintFragmentMethod1" />
+    <fragment
+        android:id="@+id/generalSuccessfulFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.success.GeneralSuccessfulFragment"
+        android:label="SuccessfulWalletServicesFragment" />
+    <fragment
+        android:id="@+id/updateCustomerFingerPrintFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method2.UpdateCustomerFingerPrintFragment"
+        android:label="UpdateCustomerFingerPrintFragment" />
+    <fragment
+        android:id="@+id/authFingerPrintFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.auth.AuthFingerPrintFragment"
+        android:label="AuthFingerPrintFragment" />
+    <fragment
+        android:id="@+id/enrollOneFingerPrintFragment"
+        android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method1.EnrollOneFingerPrintFragment"
+        android:label="EnrollOneFingerPrintFragment" />
+</navigation>

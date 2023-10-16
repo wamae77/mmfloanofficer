@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="?attr/actionBarSize"
+    android:titleTextColor="@color/white"
+    android:visibility="visible"
+    app:navigationIcon="?attr/homeAsUpIndicator"
+    app:theme="@style/ToolbarColoredBackArrow">
+
+    <TextView
+        android:id="@+id/toolbarTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/kcb_blue"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="48sp"
+        android:layout_gravity="center"
+        android:src="@drawable/mmf_logo_transparent_bg"
+        android:visibility="gone" />
+
+</androidx.appcompat.widget.Toolbar>

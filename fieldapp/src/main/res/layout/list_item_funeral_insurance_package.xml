@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10dp"
+    android:elevation="@dimen/_10dp"
+    app:cardBackgroundColor="@color/kcb_blue"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_15dp">
+
+        <TextView
+            android:id="@+id/tvPackageName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:text="GOLD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2USD/Month"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPackageName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmount">
+
+            <TextView
+                android:id="@+id/tvDependants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10dp"
+                android:text="Up to 4 dependants @ 2USD each"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:drawableStartCompat="@drawable/ic_done"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPackageName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCashBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10dp"
+                android:text="Get cash backs of up to $1000 for each beneficiary"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:drawableStartCompat="@drawable/ic_done"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPackageName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvFlexiblePremiums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10dp"
+                android:text="Flexible Premiums"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:drawableStartCompat="@drawable/ic_done"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPackageName"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:backgroundTint="#4A5782A2"
+            android:paddingStart="@dimen/_20dp"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingEnd="@dimen/_20dp"
+            android:paddingBottom="@dimen/_10dp"
+            android:text="@string/apply_package"
+            app:cornerRadius="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPackage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.deefrent.rnd.fieldapp">
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+
+    <uses-permission android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.hardware.usb.accessory" />
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+
+    <!--    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_etourism">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+
+    <application
+        android:allowBackup="false"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method2.EnrollFingerPrintCaptureActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method2.LoginFingerPrintCaptureActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.view.printreceipt.MoneyMartPrintServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method1.SetUpInKotlinActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.view.printreceipt.MoneyMartSignatureCaptureActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method2.GetFingerPrintReaderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:label="@string/app_name">
+            <!--<intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />-->
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_api_key" />
+
+        <activity
+            android:name="com.deefrent.rnd.fieldapp.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.KCBAgentField"></activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>

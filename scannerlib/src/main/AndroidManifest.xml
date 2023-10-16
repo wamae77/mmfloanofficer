@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ekenya.rnd.scannerlib">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <meta-data
+        android:name="com.huawei.hms.ml.DEPENDENCY"
+        android:value= "ocr"/>
+
+</manifest>

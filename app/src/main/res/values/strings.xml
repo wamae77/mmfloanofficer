@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JIBOOST Loan Officer</string>
+    <string name="title_etourism">JIBOOST Field Agent</string>
+    <string name="title_support">Support Chat</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="field_teams_management">Loan Officer App</string>
+    <string name="onboard_new_agents">Onboard new members</string>
+    <string name="quality_performance">Quality performance monitoring</string>
+    <string name="apply_loans">Apply loans and overdrafts</string>
+    <string name="assets_management">Assets management</string>
+    <string name="google_maps_api_key">AIzaSyBYCwYs84Buc0ZlFVBrxhWrQaQBSiZ4EwM</string>
+    <string name="root_message">This application can not run on Rooted devices , unroot your device and try again</string>
+    <string name="no_sim">This application can not run without sim card , Please insert sim card to enjoy 24/7 app experience and try again</string>
+    <string name="emulator_message">This application does not work on virtual devices or simulators. You need an actual device to run it!</string>
+    <string name="ok">OK</string>
+</resources>
