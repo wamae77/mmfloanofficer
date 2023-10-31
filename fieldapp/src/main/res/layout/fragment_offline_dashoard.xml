@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     >
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -31,8 +30,7 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/tvFragmentTitle"
                 android:layout_width="wrap_content"
@@ -41,7 +39,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Offline Transactions"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/ivBack"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -54,10 +51,7 @@
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/helloTxt"
-            app:tabIndicatorColor="@color/primary"
-            app:tabSelectedTextColor="@color/primary"
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-            app:tabTextColor="@color/grey2" />
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
         <!--
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabs"

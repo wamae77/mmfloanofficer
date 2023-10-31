@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.agentField360.AgentFieldFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/agent_field"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -58,7 +55,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/_360_degree_merchant_agent_summary"
-        android:textColor="@color/kcb_blue"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +69,7 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/select_user_type"
-        android:textColor="@color/text_screens"
+
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +83,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="20dp"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCustomerTypeTitle">
@@ -96,8 +91,7 @@
             android:id="@+id/acUserTypes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens" />
+            android:fontFamily="@font/nunito" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -109,7 +103,7 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/search_for_account"
-        android:textColor="@color/text_screens"
+
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +117,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="20dp"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSearchCustomerTitle">
@@ -134,7 +127,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito"
             android:hint="@string/enter_account"
-            android:textColor="@color/text_screens"
+
             android:textSize="12sp"
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -149,7 +142,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/customer_id"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiSearchCustomer">
@@ -159,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens" />
+             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -173,7 +165,6 @@
         android:padding="10dp"
         android:text="@string/search"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

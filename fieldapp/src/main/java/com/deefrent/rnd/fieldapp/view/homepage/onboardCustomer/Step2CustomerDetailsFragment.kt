@@ -32,6 +32,7 @@ import com.deefrent.rnd.fieldapp.databinding.EditPhotsDialogBinding
 import com.deefrent.rnd.fieldapp.databinding.FragmentStep2CustomerDetailsBinding
 import com.deefrent.rnd.fieldapp.models.xaraniIdCheck.request.XaraniIdCheckRequest
 import com.deefrent.rnd.fieldapp.models.xaraniIdCheck.response.XaraniIdCheckData
+import com.deefrent.rnd.fieldapp.models.xaraniIdCheck.response.XaraniIdCheckResponse
 import com.deefrent.rnd.fieldapp.network.models.Gender
 import com.deefrent.rnd.fieldapp.room.entities.*
 import com.deefrent.rnd.fieldapp.utils.*
@@ -473,103 +474,133 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 CommonSharedPreferences.CU_ID_NUMBER,
                 binding.etIdNo.text.toString().trim()
             )
-            idCustomerLookUpViewModel.xaraniIdCheck(xaraniIdCheckRequest = xaraniIdCheckRequest)
-                .collect {
-                    when (it) {
-                        is ResourceNetworkFlow.Error -> {
-                            //showDummyDataForSimulation()
-                            binding.progressbar.mainPBar.makeGone()
-                            binding.btnXaraniIDLookUp.visibilityView(true)
-                            showOneButtonDialog(
-                                image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
-                                title = "Oops!",
-                                description = "Looks like we have a Problem.Try again later.",
-                                listener = {
 
-                                }
+            binding.progressbar.mainPBar.makeGone()
+            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
+            Log.e("RESPONSE", "${response.data}")
+            if (response.status == 1) {
+                binding.clCustomerData.visibilityView(true)
+                binding.btnContinue.visibilityView(true)
+                binding.btnXaraniIDLookUp.visibilityView(false)
+                //
+                //populateUserData(response.data)
+                if (response.data.askUserToDoManualRegistration) {
+                    showTwoButtonDialog(
+                        title = "Oops!",
+                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
+                        listenerCancel = {
+                            findNavController().popBackStack(
+                                R.id.dashboardFragment,
+                                false
                             )
+                        },
+                        listenerConfirm = {
+                            Log.e("", "COFIRMED")
                         }
-
-                        is ResourceNetworkFlow.Loading -> {
-                            binding.progressbar.mainPBar.makeVisible()
-                            binding.btnXaraniIDLookUp.visibilityView(false)
-                        }
-
-                        is ResourceNetworkFlow.Success -> {
-                            binding.progressbar.mainPBar.makeGone()
-                            val response = it.data!!
-                            Log.e("RESPONSE", "${response.data}")
-                            if (response.status == 1) {
-                                binding.clCustomerData.visibilityView(true)
-                                binding.btnContinue.visibilityView(true)
-                                binding.btnXaraniIDLookUp.visibilityView(false)
-                                //
-                                //populateUserData(response.data)
-                                if (response.data.askUserToDoManualRegistration) {
-                                    showTwoButtonDialog(
-                                        title = "Oops!",
-                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
-                                        listenerCancel = {
-                                            findNavController().popBackStack(
-                                                R.id.dashboardFragment,
-                                                false
-                                            )
-                                        },
-                                        listenerConfirm = {
-                                            Log.e("", "COFIRMED")
-                                        }
-                                    )
-                                    //
-                                    binding.clCustomerData.visibilityView(true)
-                                    binding.btnContinue.visibilityView(true)
-                                    binding.btnXaraniIDLookUp.visibilityView(false)
-                                    //
-                                } else {
-                                    populateUserData(response.data)
-                                }
-                            } else if (response.status == 0) {
-                                //
-                                Timber.d("\n\n")
-                                Log.e("RESPONSE", "${response.data}")
-                                Timber.d("\n\n")
-                                //
-                                //showDummyDataForSimulation()
-                                if (response.data.askUserToDoManualRegistration) {
-                                    showTwoButtonDialog(
-                                        title = "Oops!",
-                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
-                                        listenerCancel = {
-                                            findNavController().popBackStack(
-                                                R.id.dashboardFragment,
-                                                false
-                                            )
-                                        },
-                                        listenerConfirm = {
-                                            Log.e("", "COFIRMED")
-                                        }
-                                    )
-                                    //
-                                    binding.clCustomerData.visibilityView(true)
-                                    binding.btnContinue.visibilityView(true)
-                                    binding.btnXaraniIDLookUp.visibilityView(false)
-                                    //
-                                } else if (response.data.askUserToDoManualRegistration == false) {
-                                    showOneButtonDialog(
-                                        image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
-                                        title = "Oops! ",
-                                        description = response.message.toString(),
-                                        listener = {
-                                            findNavController().popBackStack(
-                                                R.id.dashboardFragment,
-                                                false
-                                            )
-                                        }
-                                    )
-                                }
-
-                            }
-                        }
-                    }
+                    )
+                    //
+                    binding.clCustomerData.visibilityView(true)
+                    binding.btnContinue.visibilityView(true)
+                    binding.btnXaraniIDLookUp.visibilityView(false)
+                    //
+                }
+//            idCustomerLookUpViewModel.xaraniIdCheck(xaraniIdCheckRequest = xaraniIdCheckRequest)
+//                .collect {
+//                    when (it) {
+//                        is ResourceNetworkFlow.Error -> {
+//                            //showDummyDataForSimulation()
+//                            binding.progressbar.mainPBar.makeGone()
+//                            binding.btnXaraniIDLookUp.visibilityView(true)
+//                            showOneButtonDialog(
+//                                image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
+//                                title = "Oops!",
+//                                description = "Looks like we have a Problem.Try again later.",
+//                                listener = {
+//
+//                                }
+//                            )
+//                        }
+//
+//                        is ResourceNetworkFlow.Loading -> {
+//                            binding.progressbar.mainPBar.makeVisible()
+//                            binding.btnXaraniIDLookUp.visibilityView(false)
+//                        }
+//
+//                        is ResourceNetworkFlow.Success -> {
+//                            binding.progressbar.mainPBar.makeGone()
+//                            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
+//                            Log.e("RESPONSE", "${response.data}")
+//                            if (response.status == 1) {
+//                                binding.clCustomerData.visibilityView(true)
+//                                binding.btnContinue.visibilityView(true)
+//                                binding.btnXaraniIDLookUp.visibilityView(false)
+//                                //
+//                                //populateUserData(response.data)
+//                                if (response.data.askUserToDoManualRegistration) {
+//                                    showTwoButtonDialog(
+//                                        title = "Oops!",
+//                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
+//                                        listenerCancel = {
+//                                            findNavController().popBackStack(
+//                                                R.id.dashboardFragment,
+//                                                false
+//                                            )
+//                                        },
+//                                        listenerConfirm = {
+//                                            Log.e("", "COFIRMED")
+//                                        }
+//                                    )
+//                                    //
+//                                    binding.clCustomerData.visibilityView(true)
+//                                    binding.btnContinue.visibilityView(true)
+//                                    binding.btnXaraniIDLookUp.visibilityView(false)
+//                                    //
+//                                } else {
+//                                    populateUserData(response.data)
+//                                }
+//                            } else if (response.status == 0) {
+//                                //
+//                                Timber.d("\n\n")
+//                                Log.e("RESPONSE", "${response.data}")
+//                                Timber.d("\n\n")
+//                                //
+//                                //showDummyDataForSimulation()
+//                                if (response.data.askUserToDoManualRegistration) {
+//                                    showTwoButtonDialog(
+//                                        title = "Oops!",
+//                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
+//                                        listenerCancel = {
+//                                            findNavController().popBackStack(
+//                                                R.id.dashboardFragment,
+//                                                false
+//                                            )
+//                                        },
+//                                        listenerConfirm = {
+//                                            Log.e("", "COFIRMED")
+//                                        }
+//                                    )
+//                                    //
+//                                    binding.clCustomerData.visibilityView(true)
+//                                    binding.btnContinue.visibilityView(true)
+//                                    binding.btnXaraniIDLookUp.visibilityView(false)
+//                                    //
+//                                } else if (response.data.askUserToDoManualRegistration == false) {
+//                                    showOneButtonDialog(
+//                                        image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
+//                                        title = "Oops! ",
+//                                        description = response.message.toString(),
+//                                        listener = {
+//                                            findNavController().popBackStack(
+//                                                R.id.dashboardFragment,
+//                                                false
+//                                            )
+//                                        }
+//                                    )
+//                                }
+//
+//                            }
+//                        }
+//                    }
                 }
         }
     }
@@ -844,7 +875,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                     isValid = false
                 }
 
-                id.length < 11 -> {
+                id.length < 8 -> {
                     tlEmail.error = ""
                     tlIdNo.error = "Invalid ID number"
                     isValid = false
@@ -933,7 +964,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                     isValid = false
                 }
 
-                id.length < 11 -> {
+                id.length < 8 -> {
                     tlEmail.error = ""
                     tlIdNo.error = "Invalid ID number"
                     isValid = false

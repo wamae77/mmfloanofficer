@@ -14,8 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/card_color">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivCustomerDocument"
@@ -23,7 +22,6 @@
             android:layout_height="100dp"
             android:layout_margin="10dp"
             android:layout_marginTop="10dp"
-            android:background="@color/gray"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +47,6 @@
             android:paddingEnd="@dimen/_5dp"
             android:paddingBottom="10dp"
             android:text="@string/front_id"
-            android:textColor="@color/kcb_blue"
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@+id/ivMore"
             app:layout_constraintStart_toStartOf="parent"

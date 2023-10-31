@@ -28,8 +28,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvAppBarTitle"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Customer Documents"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -53,7 +51,6 @@
         android:layout_height="@dimen/_100dp"
         android:layout_marginStart="@dimen/_10dp"
         android:layout_marginEnd="@dimen/_10dp"
-        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_8dp"
         app:cardElevation="@dimen/_4dp"
         app:layout_anchor="@id/appBar"
@@ -88,8 +85,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/prof"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tintMode="@color/kcb_blue" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/view1"
@@ -140,9 +136,7 @@
             android:layout_margin="@dimen/_20dp"
             android:drawablePadding="@dimen/_5dp"
             android:text="No document uploaded"
-            android:textColor="@color/black"
             android:visibility="gone"
-            app:drawableTint="@color/kcb_darker_blue"
             app:drawableTopCompat="@drawable/ic_info"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -171,8 +165,7 @@
                 android:layout_margin="@dimen/_20dp"
                 android:drawablePadding="@dimen/_5dp"
                 android:text="@string/error_occurred_while_loading_the_document_please_try_again"
-                android:textColor="@color/black"
-                app:drawableTint="@color/kcb_darker_blue" />
+                />
 
             <TextView
                 android:id="@+id/btnRefresh"
@@ -182,7 +175,6 @@
                 android:layout_marginTop="@dimen/_10dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="@dimen/_3dp"
-                android:background="@color/white"
                 android:clickable="true"
                 android:drawableLeft="@drawable/ic_baseline_restore_24"
                 android:drawablePadding="@dimen/_10dp"
@@ -191,7 +183,6 @@
                 android:gravity="center_vertical"
                 android:padding="8dp"
                 android:text="Refresh"
-                android:textColor="@color/kcb_blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -30,7 +30,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +39,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Change PIN"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -74,12 +73,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="60dp"
                 android:scaleType="centerCrop"
-                android:tint="@color/colorPrimary"
                 android:src="@drawable/ic_person"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:riv_border_color="@color/colorPrimary"
                 app:riv_border_width="0dp"
                 app:riv_corner_radius="200dp" />
             <com.google.android.material.textfield.TextInputLayout
@@ -89,7 +86,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="@string/current_pin"
-                app:endIconTint="@color/kcb_green"
                 android:layout_marginStart="@dimen/_20dp"
                 android:layout_marginEnd="@dimen/_20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +99,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp"
                     android:inputType="numberPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -114,7 +109,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="@string/new_pin"
-                app:endIconTint="@color/kcb_green"
                 android:layout_marginStart="@dimen/_20dp"
                 android:layout_marginEnd="@dimen/_20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -128,7 +122,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp"
                     android:inputType="numberPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -139,7 +132,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="@string/confirm_new_pin_change_pin"
-                app:endIconTint="@color/kcb_green"
                 android:layout_marginStart="@dimen/_20dp"
                 android:layout_marginEnd="@dimen/_20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -153,7 +145,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp"
                     android:inputType="numberPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -170,7 +161,6 @@
         android:padding="10dp"
         android:text="@string/submit"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

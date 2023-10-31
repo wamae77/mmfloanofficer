@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/login_bg"
     tools:context=".ui.existingAccount.CustomerInfoFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/customer_info"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -53,7 +50,6 @@
         android:id="@+id/llDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/kcb_green"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +72,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/acc_current_account"
-                    android:textColor="@color/kcb_blue"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toStartOf="@+id/ivStoreFront"
                     app:layout_constraintStart_toStartOf="parent"
@@ -89,15 +84,13 @@
                     android:src="@drawable/ic_person"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvAccountNumber"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/kcb_green" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <View
                     android:id="@+id/viewSeparator"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/gray"
                     app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber" />
 
                 <TextView
@@ -107,7 +100,6 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/default_personal_acc_name"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toStartOf="@+id/tvCustomerID"
                     app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +113,6 @@
                     android:fontFamily="@font/nunito_semibold"
                     android:gravity="end"
                     android:text="@string/id_253672883"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvAccountName"

@@ -31,7 +31,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +39,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Mileage"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/ivBack"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -85,7 +84,6 @@
         android:layout_marginEnd="@dimen/_15dp"
         android:text="You have not added anything to your mileage"
         android:textAlignment="center"
-        android:textColor="@color/black"
         android:textSize="@dimen/_18sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +101,6 @@
         android:textAlignment="center"
         android:textSize="@dimen/_18sp"
         android:visibility="gone"
-        app:drawableTint="@color/kcb_darker_blue"
         app:drawableTopCompat="@drawable/ic_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +113,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginBottom="@dimen/_3dp"
-        android:background="@color/white"
         android:clickable="true"
         android:drawableLeft="@drawable/ic_baseline_restore_24"
         android:drawablePadding="@dimen/_10dp"
@@ -140,9 +136,7 @@
         android:layout_marginBottom="@dimen/_20dp"
         android:textAllCaps="false"
         android:text="Add Mileage"
-        android:textColor="@color/white"
         app:icon="@drawable/ic_round_add_circle"
-        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <!--<com.google.android.material.button.MaterialButton

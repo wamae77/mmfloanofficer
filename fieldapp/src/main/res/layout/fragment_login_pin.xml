@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".view.auth.userlogin.LoginPinFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:visibility="gone"
         app:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,8 +31,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/black" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +39,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/enter_pin"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +55,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
-        android:src="@drawable/mmf_extra_small_common"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/jiboost_a_foreground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar" />
@@ -75,7 +72,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cl_Pin"
         app:lottie_autoPlay="true"
-        app:lottie_colorFilter="@color/primary"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/pin_loading"
         app:lottie_speed="1.25" />
@@ -195,7 +191,6 @@
         android:id="@+id/btn_four"
         style="@style/keypad_buttons_style"
         android:text="4"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btn_seven"
         app:layout_constraintEnd_toStartOf="@+id/btn_five"
         app:layout_constraintHorizontal_bias="0.5"
@@ -206,7 +201,6 @@
         android:id="@+id/btn_five"
         style="@style/keypad_buttons_style"
         android:text="5"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/btn_six"
         app:layout_constraintStart_toStartOf="@+id/btn_two"
         app:layout_constraintTop_toTopOf="@+id/btn_four" />
@@ -215,7 +209,6 @@
         android:id="@+id/btn_six"
         style="@style/keypad_buttons_style"
         android:text="6"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/btn_three"
         app:layout_constraintStart_toStartOf="@+id/btn_three"
         app:layout_constraintTop_toTopOf="@+id/btn_five" />
@@ -262,7 +255,7 @@
         android:layout_height="wrap_content"
         android:elevation="0dp"
         android:padding="16dp"
-        android:src="@drawable/ic_delete"
+        android:src="@drawable/ic_backspace"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_zero"
         app:layout_constraintEnd_toEndOf="parent"
@@ -280,7 +273,6 @@
         android:focusable="true"
         android:lineSpacingExtra="12sp"
         android:text="@string/forgot_password"
-        android:textColor="#6f7070"
         android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="@+id/clTestBtn"

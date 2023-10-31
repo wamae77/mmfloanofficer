@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardAccount.AgentIDPhotoFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/merchant_id_photo"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -84,7 +81,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="@string/capture_front_id"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -94,7 +90,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginTop="15dp"
-                        android:background="@color/gray"
                         android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/image_placeholder"
@@ -114,15 +109,15 @@
                         android:paddingEnd="10dp"
                         android:src="@drawable/ic_camera"
                         android:text="@string/camera"
-                        android:textColor="@color/kcb_green"
+
                         android:textSize="14sp"
                         app:cornerRadius="20dp"
                         app:icon="@drawable/ic_camera"
-                        app:iconTint="@color/kcb_green"
+
                         app:layout_constraintEnd_toStartOf="@+id/btnGalleryFrontID"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/ivFrontID"
-                        app:strokeColor="@color/kcb_green"
+
                         app:strokeWidth="2dp" />
 
                     <com.google.android.material.button.MaterialButton
@@ -137,15 +132,15 @@
                         android:paddingEnd="10dp"
                         android:src="@drawable/ic_image"
                         android:text="@string/gallery"
-                        android:textColor="@color/kcb_green"
+
                         android:textSize="14sp"
                         app:cornerRadius="20dp"
                         app:icon="@drawable/ic_image"
-                        app:iconTint="@color/kcb_green"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/btnCameraFrontID"
                         app:layout_constraintTop_toBottomOf="@+id/ivFrontID"
-                        app:strokeColor="@color/kcb_green"
+
                         app:strokeWidth="2dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -171,7 +166,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="@string/capture_back_id"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -201,15 +195,15 @@
                         android:paddingEnd="10dp"
                         android:src="@drawable/ic_camera"
                         android:text="@string/camera"
-                        android:textColor="@color/kcb_green"
+
                         android:textSize="14sp"
                         app:cornerRadius="20dp"
                         app:icon="@drawable/ic_camera"
-                        app:iconTint="@color/kcb_green"
+
                         app:layout_constraintEnd_toStartOf="@+id/btnGalleryBackID"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/ivBackID"
-                        app:strokeColor="@color/kcb_green"
+
                         app:strokeWidth="2dp" />
 
                     <com.google.android.material.button.MaterialButton
@@ -224,15 +218,15 @@
                         android:paddingEnd="10dp"
                         android:src="@drawable/ic_image"
                         android:text="@string/gallery"
-                        android:textColor="@color/kcb_green"
+
                         android:textSize="14sp"
                         app:cornerRadius="20dp"
                         app:icon="@drawable/ic_image"
-                        app:iconTint="@color/kcb_green"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/btnCameraBackID"
                         app:layout_constraintTop_toBottomOf="@+id/ivBackID"
-                        app:strokeColor="@color/kcb_green"
+
                         app:strokeWidth="2dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -251,7 +245,6 @@
         android:padding="10dp"
         android:text="@string/continue_"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

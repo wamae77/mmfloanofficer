@@ -29,8 +29,7 @@ import javax.inject.Inject
 class FingerPrintViewModel @Inject constructor(
     private val repository: FingerPrintRepository,
     private val app: Application
-) :
-    AndroidViewModel(app) {
+) : AndroidViewModel(app) {
 
     @Inject
     lateinit var commonSharedPreferences: CommonSharedPreferences

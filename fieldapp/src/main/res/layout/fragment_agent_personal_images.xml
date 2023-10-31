@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardAccount.AgentPersonalImagesFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvFragmentTitle"
@@ -41,7 +39,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/agent_personal_images"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -74,7 +71,6 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/add_customer_photo"
-                android:textColor="@color/text_screens"
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -83,7 +79,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -95,11 +90,9 @@
                     android:clickable="true"
                     android:drawableEnd="@drawable/ic_attach_doc"
                     android:drawableRight="@drawable/ic_attach_doc"
-                    android:drawableTint="@color/kcb_blue"
                     android:focusable="false"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/attach_document"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +102,6 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/add_signature_photo"
-                android:textColor="@color/text_screens"
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -118,7 +110,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -130,11 +121,9 @@
                     android:clickable="true"
                     android:drawableEnd="@drawable/ic_attach_doc"
                     android:drawableRight="@drawable/ic_attach_doc"
-                    android:drawableTint="@color/kcb_blue"
                     android:focusable="false"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/attach_document"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,7 +133,6 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/attach_certificate_of_good_conduct"
-                android:textColor="@color/text_screens"
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -153,7 +141,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -165,11 +152,9 @@
                     android:clickable="true"
                     android:drawableEnd="@drawable/ic_attach_doc"
                     android:drawableRight="@drawable/ic_attach_doc"
-                    android:drawableTint="@color/kcb_blue"
                     android:focusable="false"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/attach_document"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -179,7 +164,6 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/attach_field_application_form"
-                android:textColor="@color/text_screens"
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -188,7 +172,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -200,11 +183,9 @@
                     android:clickable="true"
                     android:drawableEnd="@drawable/ic_attach_doc"
                     android:drawableRight="@drawable/ic_attach_doc"
-                    android:drawableTint="@color/kcb_blue"
                     android:focusable="false"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/attach_document"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -221,7 +202,6 @@
         android:padding="10dp"
         android:text="@string/continue_"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardedAccounts.OnboardedAccountsFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/onboarded_accounts"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -51,7 +48,6 @@
 
     <TextView
         android:padding="10dp"
-        android:background="@color/white"
         android:text="@string/select_a_date_range"
         app:layout_constraintTop_toBottomOf="@+id/appBar"
         android:id="@+id/tvTitle"
@@ -78,7 +74,6 @@
             android:focusable="false"
             android:fontFamily="@font/nunito"
             android:hint="@string/start_date"
-            android:textColor="@color/text_screens"
             android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,7 +97,6 @@
             android:focusable="false"
             android:fontFamily="@font/nunito"
             android:hint="End Date"
-            android:textColor="@color/text_screens"
             android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +111,6 @@
         android:padding="10dp"
         android:text="@string/search"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintEnd_toEndOf="parent"

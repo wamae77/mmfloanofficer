@@ -31,7 +31,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                />
 
             <TextView
                 android:id="@+id/head"
@@ -40,7 +40,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -53,7 +52,6 @@
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/white"
         android:paddingBottom="@dimen/_20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar">
@@ -75,7 +73,6 @@
                 android:layout_marginStart="@dimen/_10dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:layout_marginEnd="@dimen/_10dp"
-                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="@dimen/_8dp"
                 app:cardElevation="@dimen/_4dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -111,8 +108,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/prof"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tintMode="@color/kcb_blue" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <View
                         android:id="@+id/view1"
@@ -132,7 +128,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_15dp"
                         android:text="Loan AccountNumber"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         android:visibility="gone"
                         app:layout_constraintEnd_toStartOf="@+id/tvAmountValue"
@@ -145,7 +140,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:gravity="end"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="@id/tvAmount"
@@ -161,7 +155,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:text="Amount Applied:"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintEnd_toStartOf="@+id/tvFrequencyValue"
                         app:layout_constraintStart_toStartOf="@id/tvAmount"
@@ -174,7 +167,6 @@
                         android:layout_marginTop="@dimen/_2dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:gravity="end"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tvFrequency"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -189,7 +181,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:text="Amount Disbursed:"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintEnd_toStartOf="@+id/tvPeriodValue"
                         app:layout_constraintStart_toStartOf="@id/tvAmount"
@@ -201,7 +192,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:gravity="end"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tvPeriod"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -216,7 +206,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:text="Product Name:"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintEnd_toStartOf="@+id/tvLoanBalValue"
                         app:layout_constraintStart_toStartOf="@id/tvAmount"
@@ -229,7 +218,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:gravity="end"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tvLoanBal"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +232,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:text="Loan Account No.:"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintEnd_toStartOf="@+id/tvLoanBalValue"
                         app:layout_constraintStart_toStartOf="@id/tvAmount"
@@ -257,7 +244,6 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginEnd="@dimen/_10dp"
                         android:gravity="end"
-                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tvLoanAccount"
                         app:layout_constraintEnd_toEndOf="parent"

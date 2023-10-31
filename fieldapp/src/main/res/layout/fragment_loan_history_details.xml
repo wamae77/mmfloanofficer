@@ -30,8 +30,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/head"
@@ -40,7 +39,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -53,7 +51,6 @@
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/white"
         android:paddingBottom="@dimen/_10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar">
@@ -62,8 +59,8 @@
             android:id="@+id/llLimit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/kcb_blue"
-            android:paddingBottom="@dimen/_10dp"
+            android:padding="@dimen/_8dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -73,11 +70,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginTop="@dimen/_10dp"
                 android:layout_marginEnd="@dimen/_10dp"
-                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="10dp"
                 app:cardCornerRadius="@dimen/_8dp"
                 app:cardElevation="@dimen/_4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">

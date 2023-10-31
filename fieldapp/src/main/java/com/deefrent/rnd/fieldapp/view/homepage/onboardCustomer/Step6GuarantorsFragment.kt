@@ -35,6 +35,7 @@ import com.deefrent.rnd.fieldapp.viewModels.DropdownItemsViewModel
 import com.github.chrisbanes.photoview.PhotoView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
+import com.simplemobiletools.commons.extensions.toInt
 import dev.ronnie.github.imagepicker.ImagePicker
 import dev.ronnie.github.imagepicker.ImageResult
 import java.io.File
@@ -78,8 +79,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private val viewmodel by lazy {
         ViewModelProvider(
-            requireActivity(),
-            viewModelFactory
+            requireActivity(), viewModelFactory
         ).get(OnboardCustomerViewModel::class.java)
     }
 
@@ -90,8 +90,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentGuarantorsBinding.inflate(layoutInflater)
         initializeUI()
@@ -107,8 +106,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
             }
             binding.apply {
                 rvTempGuarantor.layoutManager = LinearLayoutManager(
-                    requireContext(),
-                    LinearLayoutManager.VERTICAL, false
+                    requireContext(), LinearLayoutManager.VERTICAL, false
                 )
                 gAdapter = AddGuarantorAdapter(items, this@Step6GuarantorsFragment)
                 rvTempGuarantor.adapter = gAdapter
@@ -149,8 +147,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
     }
 
     private fun showPickerOptionsDialog(type: String) {
-        val options =
-            arrayOf<CharSequence>("Take Photo", "Choose From Gallery", "Cancel")
+        val options = arrayOf<CharSequence>("Take Photo", "Choose From Gallery", "Cancel")
         val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Select Option")
         builder.setItems(options) { dialog, item ->
@@ -159,10 +156,12 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                     dialog.dismiss()
                     selectFromCamera(type)
                 }
+
                 options[item] == "Choose From Gallery" -> {
                     dialog.dismiss()
                     selectFromGallery(type)
                 }
+
                 options[item] == "Cancel" -> {
                     dialog.dismiss()
                 }
@@ -204,6 +203,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                         "Guarantor Affidavit - $affidavitImageName"
                 }
             }
+
             is ImageResult.Failure -> {
                 isFrontIDImagePicked = false
                 isAffidavitImagePicked = false
@@ -294,7 +294,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                     tlBAddress.error = getString(R.string.required)
                 } else if (!validPhone.contentEquals(validMsg)) {
                     tlDSale.error = validPhone
-                } else if (gIdNumber.length < 11) {
+                } else if (gIdNumber.length < 8) {
                     tlYear.error = "Invalid ID number"
                 } else if (gResAddress.isEmpty()) {
                     tiGuarantorAddress.error = getString(R.string.required)
@@ -311,18 +311,10 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                     affidavitImageName =
                         generateUniqueGuarantorDocName(generatedUUID, guarantorAFFIDAVITDocCode)
                     val frontDocs = CustomerDocsEntity(
-                        0,
-                        nationalId,
-                        guarantorIDDocCode,
-                        generatedUUID,
-                        frontIdImageName
+                        0, nationalId, guarantorIDDocCode, generatedUUID, frontIdImageName
                     )
                     val affidavitDocsEntity = CustomerDocsEntity(
-                        0,
-                        nationalId,
-                        guarantorAFFIDAVITDocCode,
-                        generatedUUID,
-                        affidavitImageName
+                        0, nationalId, guarantorAFFIDAVITDocCode, generatedUUID, affidavitImageName
                     )
                     val gua = Guarantor(
                         0,
@@ -343,9 +335,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                             viewmodel.insertDocument(frontDocs)
                             customerDocs.add(frontDocs)
                             saveImageToInternalAppStorage(
-                                frontIdUri!!,
-                                requireContext(),
-                                frontIdImageName
+                                frontIdUri!!, requireContext(), frontIdImageName
                             )
                         }
                         //reset collateral name to avoid using the previous collateral image name
@@ -357,9 +347,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                             viewmodel.insertDocument(affidavitDocsEntity)
                             customerDocs.add(affidavitDocsEntity)
                             saveImageToInternalAppStorage(
-                                affidavitUri!!,
-                                requireContext(),
-                                affidavitImageName
+                                affidavitUri!!, requireContext(), affidavitImageName
                             )
                         }
                         //reset collateral name to avoid using the previous collateral image name
@@ -383,8 +371,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
     }
 
     private fun populateRship(rship: List<RshipTypeEntity>) {
-        val typeAdapter =
-            ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, rship)
+        val typeAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, rship)
         addGuarantorDialog.spinnerIsource.setAdapter(typeAdapter)
         addGuarantorDialog.spinnerIsource.keyListener = null
         addGuarantorDialog.spinnerIsource.setOnItemClickListener { parent, _, position, _ ->
@@ -395,28 +382,22 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
     }
 
     private fun saveCustomerFullDatLocally(
-        customerDetailsEntity: CustomerDetailsEntity,
-        gua: List<Guarantor>
+        customerDetailsEntity: CustomerDetailsEntity, gua: List<Guarantor>
     ) {
         viewmodel.insertCustomerFullDetails(
-            customerDetailsEntity,
-            gua,
-            collateral,
-            otherBorrowing,
-            household, customerDocs
+            customerDetailsEntity, gua, collateral, otherBorrowing, household, customerDocs
         )
     }
 
     private fun handleBackButton() {
-        val callback: OnBackPressedCallback =
-            object : OnBackPressedCallback(
-                true
-            ) {
-                override fun handleOnBackPressed() {
-                    findNavController().navigate(R.id.action_guarantorsFragment_to_residentialDetailsFragment)
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(
+            true
+        ) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_guarantorsFragment_to_residentialDetailsFragment)
 
-                }
             }
+        }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
     }
@@ -526,8 +507,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                 val frontId =
                     generateUniqueGuarantorDocName(lists.guarantorGeneratedUID, guarantorIDDocCode)
                 val affidavitId = generateUniqueGuarantorDocName(
-                    lists.guarantorGeneratedUID,
-                    guarantorAFFIDAVITDocCode
+                    lists.guarantorGeneratedUID, guarantorAFFIDAVITDocCode
                 )
                 Log.e("TAG", "onItemSelectedoo: $frontId")
                 Log.e("TAG", "onItemSelectedaffidavitId: $affidavitId")
@@ -550,7 +530,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                     tlBAddress.error = getString(R.string.required)
                 } else if (!validPhone.contentEquals(validMsg)) {
                     tlDSale.error = validPhone
-                } else if (gIdNumber.length < 11) {
+                } else if (gIdNumber.length < 8) {
                     tlYear.error = "Invalid ID number"
                 } else if (gResAddress.isEmpty()) {
                     tiGuarantorAddress.error = getString(R.string.required)
@@ -572,8 +552,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                     affidavitImageName
                                 } else {
                                     generateUniqueGuarantorDocName(
-                                        lists.guarantorGeneratedUID,
-                                        guarantorAFFIDAVITDocCode
+                                        lists.guarantorGeneratedUID, guarantorAFFIDAVITDocCode
                                     )
                                 }
                             frontIdImageName =
@@ -581,8 +560,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                     frontIdImageName
                                 } else {
                                     generateUniqueGuarantorDocName(
-                                        lists.guarantorGeneratedUID,
-                                        guarantorIDDocCode
+                                        lists.guarantorGeneratedUID, guarantorIDDocCode
                                     )
                                 }
                             guaAffidavitEntity.docPath = affidavitImageName
@@ -612,32 +590,24 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                             }
                             if (affidavitUri != null) {
                                 saveImageToInternalAppStorage(
-                                    affidavitUri!!,
-                                    requireContext(),
-                                    affidavitImageName
+                                    affidavitUri!!, requireContext(), affidavitImageName
                                 )
                             }
                             if (frontIdUri != null) {
                                 saveImageToInternalAppStorage(
-                                    frontIdUri!!,
-                                    requireContext(),
-                                    frontIdImageName
+                                    frontIdUri!!, requireContext(), frontIdImageName
                                 )
                             }
                             viewmodel.updateGuarantor(lists, guarantorDocLis)
                         } else {
                             /**we have the uid, so we dont want it to generate another uid*/
                             //regenerate a new unique code so that the image is saved to internal storage with a unique name
-                            frontIdImageName =
-                                generateUniqueGuarantorDocName(
-                                    lists.guarantorGeneratedUID,
-                                    guarantorIDDocCode
-                                )
-                            affidavitImageName =
-                                generateUniqueGuarantorDocName(
-                                    lists.guarantorGeneratedUID,
-                                    guarantorAFFIDAVITDocCode
-                                )
+                            frontIdImageName = generateUniqueGuarantorDocName(
+                                lists.guarantorGeneratedUID, guarantorIDDocCode
+                            )
+                            affidavitImageName = generateUniqueGuarantorDocName(
+                                lists.guarantorGeneratedUID, guarantorAFFIDAVITDocCode
+                            )
                             val frontDocs = CustomerDocsEntity(
                                 0,
                                 nationalId,
@@ -657,9 +627,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                     viewmodel.insertDocument(frontDocs)
                                     customerDocs.add(frontDocs)
                                     saveImageToInternalAppStorage(
-                                        frontIdUri!!,
-                                        requireContext(),
-                                        frontIdImageName
+                                        frontIdUri!!, requireContext(), frontIdImageName
                                     )
                                 }
                                 //reset collateral name to avoid using the previous collateral image name
@@ -671,9 +639,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                     viewmodel.insertDocument(affidavitDocsEntity)
                                     customerDocs.add(affidavitDocsEntity)
                                     saveImageToInternalAppStorage(
-                                        affidavitUri!!,
-                                        requireContext(),
-                                        affidavitImageName
+                                        affidavitUri!!, requireContext(), affidavitImageName
                                     )
                                 }
                                 //reset collateral name to avoid using the previous collateral image name
@@ -690,11 +656,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                         affidavitImageName =
                             generateUniqueGuarantorDocName(generatedUUID, guarantorAFFIDAVITDocCode)
                         val frontDocs = CustomerDocsEntity(
-                            0,
-                            nationalId,
-                            guarantorIDDocCode,
-                            generatedUUID,
-                            frontIdImageName
+                            0, nationalId, guarantorIDDocCode, generatedUUID, frontIdImageName
                         )
                         val affidavitDocsEntity = CustomerDocsEntity(
                             0,
@@ -710,9 +672,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                 customerDocs.add(frontDocs)
                                 guarantorDocLis.add(frontDocs)
                                 saveImageToInternalAppStorage(
-                                    frontIdUri!!,
-                                    requireContext(),
-                                    frontIdImageName
+                                    frontIdUri!!, requireContext(), frontIdImageName
                                 )
                             }
                             //reset collateral name to avoid using the previous collateral image name
@@ -728,9 +688,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                 guarantorDocLis.add(frontDocs)
                                 customerDocs.add(affidavitDocsEntity)
                                 saveImageToInternalAppStorage(
-                                    affidavitUri!!,
-                                    requireContext(),
-                                    affidavitImageName
+                                    affidavitUri!!, requireContext(), affidavitImageName
                                 )
                             }
                             //reset collateral name to avoid using the previous collateral image name
@@ -776,15 +734,13 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                 getString(R.string.view_guarantor_affidavit)
                         } else {
                             Log.e("TAG", "uri: $imageName")
-                            tvAttachGuarantorAffidavit.text =
-                                "Guarantor Affidavit - $imageName"
+                            tvAttachGuarantorAffidavit.text = "Guarantor Affidavit - $imageName"
                         }
                         val newImageName = if (imageName.lowercase().contains("guarantor")) {
                             imageName
                         } else {
                             generateUniqueGuarantorDocName(
-                                lists.guarantorGeneratedUID,
-                                guarantorAFFIDAVITDocCode
+                                lists.guarantorGeneratedUID, guarantorAFFIDAVITDocCode
                             )
                         }
                         affidavitImageName = newImageName
@@ -807,15 +763,13 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                                 getString(R.string.view_guarantor_front_national_id)
                         } else {
                             Log.e("TAG", "uri: $imageName")
-                            tvAttachGuarantorFrontID.text =
-                                "Guarantor Front ID - $imageName"
+                            tvAttachGuarantorFrontID.text = "Guarantor Front ID - $imageName"
                         }
                         val newImageName = if (imageName.lowercase().contains("guarantor")) {
                             imageName
                         } else {
                             generateUniqueGuarantorDocName(
-                                lists.guarantorGeneratedUID,
-                                guarantorIDDocCode
+                                lists.guarantorGeneratedUID, guarantorIDDocCode
                             )
                         }
                         frontIdImageName = newImageName
@@ -848,7 +802,9 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
             Log.d("TAG", "getSavedItemsFromRoomDebugGoll: ${Gson().toJson(it.guarantors)}")
             binding.apply {
                 note.makeGone()
-                maxGuarantor = AppPreferences.maxGuarantor.toString().toInt()
+                maxGuarantor = if (AppPreferences.maxGuarantor.toString()
+                        .isBlank()
+                ) 0 else AppPreferences.maxGuarantor.toString().toInt()
                 isDeleteItems = true
                 items.clear()
                 items.addAll(it.guarantors)
@@ -880,8 +836,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                 Log.d("TAG", "showEditPhotoDialog12: ${customerDocsEntity.docPath}")
                 tvTitle.text = "Guarantor Affidavit Photo"
                 Glide.with(requireActivity()).load(customerDocsEntity.docPath)
-                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())
-                    .into(userLogo)
+                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder()).into(userLogo)
                 tvEdit.setOnClickListener {
                     dialog.dismiss()
                     showPickerOptionsDialog("guarantorAffidavit")
@@ -889,8 +844,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                 cardBinding.userLogo.setOnClickListener {
                     val mBuilder: AlertDialog.Builder =
                         AlertDialog.Builder(context, R.style.WrapContentDialog)
-                    val mView: View =
-                        layoutInflater.inflate(R.layout.preview_image, null)
+                    val mView: View = layoutInflater.inflate(R.layout.preview_image, null)
                     val ivImagePreview = mView.findViewById<PhotoView>(R.id.iv_preview_image)
                     Glide.with(requireActivity()).load(customerDocsEntity.docPath)
                         .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())
@@ -905,8 +859,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                 Log.d("TAG", "showEditPhotoDialog2: ${customerDocsEntity.docCode}")
                 Log.d("TAG", "showEditPhotoDialog22: ${customerDocsEntity.docPath}")
                 Glide.with(requireActivity()).load(customerDocsEntity.docPath)
-                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())
-                    .into(userLogo)
+                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder()).into(userLogo)
                 tvEdit.setOnClickListener {
                     dialog.dismiss()
                     showPickerOptionsDialog("guarantorID")
@@ -914,8 +867,7 @@ class Step6GuarantorsFragment : BaseDaggerFragment(), GuaEntityCallBack {
                 cardBinding.userLogo.setOnClickListener {
                     val mBuilder: AlertDialog.Builder =
                         AlertDialog.Builder(context, R.style.WrapContentDialog)
-                    val mView: View =
-                        layoutInflater.inflate(R.layout.preview_image, null)
+                    val mView: View = layoutInflater.inflate(R.layout.preview_image, null)
                     val ivImagePreview = mView.findViewById<PhotoView>(R.id.iv_preview_image)
                     Glide.with(requireActivity()).load(customerDocsEntity.docPath)
                         .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())

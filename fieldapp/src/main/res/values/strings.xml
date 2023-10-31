@@ -260,9 +260,9 @@
     <string name="give_your_answers_here">Give your answers here</string>
     <string name="verification_successful">Verification successful</string>
     <string name="you_can_reset">We have sent you a 4-digit default to the phone number used during registration. Go ahead and reset your pin to access your account!</string>
-    <string name="fa">LO: %1$s</string>
-    <string name="acc">ACC: %1$s</string>
-    <string name="kesh">$ %1$s</string>
+    <string name="fa">LO: Ksh</string>
+    <string name="acc">ACC: Ksh</string>
+    <string name="kesh">$ Ksh</string>
 
     <string-array name="genders">
         <item>Male</item>

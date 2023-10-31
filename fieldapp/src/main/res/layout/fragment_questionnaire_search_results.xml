@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.agentField360.QuestionnaireSearchResultsFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/questionnaire_survey"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -76,7 +73,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/acc_katani_pharmarcy"
-                    android:textColor="@color/kcb_blue"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toStartOf="@+id/ivStoreFront"
                     app:layout_constraintStart_toStartOf="parent"
@@ -89,8 +85,7 @@
                     android:src="@drawable/ic_storefront"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvAccountNumber"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/kcb_green" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <View
                     android:id="@+id/viewSeparator"
@@ -107,7 +102,6 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/agent_no_567898"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toStartOf="@+id/tvAgentTelephone"
                     app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +115,6 @@
                     android:fontFamily="@font/nunito_semibold"
                     android:gravity="end"
                     android:text="@string/tel_0749924243"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvAgentNumber"
@@ -140,7 +133,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/merchant_questionnaire_survey"
-        android:textColor="@color/kcb_blue"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +172,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/customer_experience_card_questions"
-                android:textColor="@color/kcb_blue"
                 android:textSize="14sp" />
 
             <View
@@ -197,7 +188,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/open"
-                android:textColor="@color/kcb_green"
                 app:strokeColor="@color/kcb_green"
                 app:strokeWidth="2dp" />
         </LinearLayout>

@@ -29,8 +29,7 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="My Diary"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/ivBack"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -75,7 +73,6 @@
                     tools:listitem="@layout/list_diary" />
 
                 <TextView
-                    android:textColor="@color/black"
                     android:id="@+id/noMileage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,7 +96,6 @@
                     android:textAlignment="center"
                     android:textSize="@dimen/_18sp"
                     android:visibility="gone"
-                    app:drawableTint="@color/kcb_darker_blue"
                     app:drawableTopCompat="@drawable/ic_info"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +109,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10dp"
                     android:layout_marginBottom="@dimen/_3dp"
-                    android:background="@color/white"
                     android:clickable="true"
                     android:drawableLeft="@drawable/ic_baseline_restore_24"
                     android:drawablePadding="@dimen/_10dp"
@@ -122,7 +117,6 @@
                     android:gravity="center_vertical"
                     android:padding="8dp"
                     android:text="Refresh"
-                    android:textColor="@color/kcb_blue"
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -157,9 +151,7 @@
                 android:layout_marginBottom="@dimen/_20dp"
                 android:textAllCaps="false"
                 android:text="Add Diary"
-                android:textColor="@color/white"
                 app:icon="@drawable/ic_round_add_circle"
-                app:iconTint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

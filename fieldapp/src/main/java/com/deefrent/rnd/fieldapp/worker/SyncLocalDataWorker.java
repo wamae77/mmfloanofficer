@@ -230,7 +230,7 @@ public class SyncLocalDataWorker extends Worker {
         notificationBuilder = new NotificationCompat.Builder(getApplicationContext(), "Field Agent App")
                 .setContentTitle(title)
                 .setContentText(task)
-                .setSmallIcon(R.mipmap.app_icon3)
+                .setSmallIcon(R.mipmap.jiboost_c)
                 .setAutoCancel(false)
                 .setProgress(10, 3, false);
 

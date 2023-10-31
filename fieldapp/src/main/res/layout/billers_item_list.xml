@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="@dimen/_80dp"
-    app:cardBackgroundColor="@color/grey2"
     app:cardCornerRadius="@dimen/_5dp"
     app:cardUseCompatPadding="true">
 
@@ -22,7 +21,7 @@
             android:layout_width="@dimen/_2dp"
             android:layout_height="@dimen/_60dp"
             android:layout_marginTop="@dimen/_4dp"
-            android:background="@color/kcb_blue"
+
             android:paddingBottom="@dimen/_4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -88,8 +87,7 @@
             android:src="@drawable/ic_arrow_forward"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/black" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

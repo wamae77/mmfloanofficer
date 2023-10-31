@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     android:clipChildren="false"
     tools:context=".ui.customerGeomap.CustomerLocationFragment">
 
@@ -37,7 +36,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                />
 
                 <TextView
                     android:id="@+id/tvFragmentTitle"
@@ -47,7 +46,6 @@
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/customer_location"
-                    android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -101,14 +99,13 @@
                     android:src="@drawable/ic_storefront"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/kcb_green" />
+                     />
 
                 <View
                     android:id="@+id/viewSeparator"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/gray"
                     app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber" />
 
                 <TextView
@@ -118,7 +115,6 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/agent_no_567898"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toStartOf="@+id/tvAgentTelephone"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +128,6 @@
                     android:fontFamily="@font/nunito_semibold"
                     android:gravity="end"
                     android:text="@string/tel_0749924243"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvAgentNumber"
@@ -146,7 +141,6 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="Physical Address: Room 12, Sohan Hse Moi Avenue, Nairobi"
-                    android:textColor="@color/text_screens"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +184,7 @@
         android:padding="10dp"
         android:text="@string/get_directions"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
+        app:backgroundTint="@color/colorPrimary"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

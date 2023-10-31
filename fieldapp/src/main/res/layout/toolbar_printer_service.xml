@@ -23,7 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="48sp"
         android:layout_gravity="center"
-        android:src="@drawable/mmf_logo_transparent_bg"
-        android:visibility="gone" />
+        android:scaleType="centerCrop"
+        android:src="@mipmap/jiboost_logo_a"
+        android:visibility="gone"
+      />
 
 </androidx.appcompat.widget.Toolbar>

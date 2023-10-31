@@ -60,8 +60,8 @@ class OfflineRegFragment : BaseDaggerFragment(), CustomerEntityCallBack {
     private var arrayList: ArrayList<CusomerDetailsEntityWithList> = arrayListOf()
     private lateinit var directory: String
 
-    @Inject
-    lateinit var viewModel: FingerPrintViewModel
+//    @Inject
+//    lateinit var viewModel: FingerPrintViewModel
 
     //private var uploadedDocsNames: ArrayList<String> = arrayListOf()
     // private lateinit var documentName:String
@@ -194,7 +194,6 @@ class OfflineRegFragment : BaseDaggerFragment(), CustomerEntityCallBack {
             }
             val onboardCustomerDTO = OnboardCustomerDTO(
                 items.customerDetails.subBranchId,
-                fingerprint_reg_id = fingerprint_reg_id,
                 items.customerDetails.completion,
                 items.customerDetails.bsDistrictId,
                 items.customerDetails.alias,
@@ -450,48 +449,48 @@ class OfflineRegFragment : BaseDaggerFragment(), CustomerEntityCallBack {
     }
 
 
-    private fun performApiRequestEnrollWithMultipleImages(items: CusomerDetailsEntityWithList) {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.enrollCustomerWithMultipleImages(
-                idNumber = items.customerDetails.customerId.toString(),
-                finger_index = "1",
-                hand_type = "1",
-            ).collect {
-                when (it) {
-                    is ResourceNetworkFlow.Error -> {
-                        binding.progressbar.mainPBar.makeGone()
-                        showOneButtonDialog(
-                            title = "ERROR",
-                            description = "${it.error}",
-                            image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24
-                        )
-                    }
-
-                    is ResourceNetworkFlow.Loading -> {
-                        binding.progressbar.mainPBar.makeVisible()
-                    }
-
-                    is ResourceNetworkFlow.Success -> {
-                        binding.progressbar.mainPBar.makeGone()
-                        if (it.data?.status == 200) {
-                            performSyncingOfCusomerDetailsEntityWithList(
-                                items,
-                                it.data?.data?.userUid.toString()
-                            )
-                            lifecycleScope.launch {
-                                viewModel.deleteByPhoneNumber(customerPhone)
-                            }
-
-                        } else {
-                            Log.e("", "ESLE RESPONSE: ${it.data?.message.toString()}")
-                        }
-                    }
-
-                    else -> {
-                        Log.e("", "else RESPONSE:")
-                    }
-                }
-            }
-        }
-    }
+//    private fun performApiRequestEnrollWithMultipleImages(items: CusomerDetailsEntityWithList) {
+//        viewLifecycleOwner.lifecycleScope.launch {
+//            viewModel.enrollCustomerWithMultipleImages(
+//                idNumber = items.customerDetails.customerId.toString(),
+//                finger_index = "1",
+//                hand_type = "1",
+//            ).collect {
+//                when (it) {
+//                    is ResourceNetworkFlow.Error -> {
+//                        binding.progressbar.mainPBar.makeGone()
+//                        showOneButtonDialog(
+//                            title = "ERROR",
+//                            description = "${it.error}",
+//                            image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24
+//                        )
+//                    }
+//
+//                    is ResourceNetworkFlow.Loading -> {
+//                        binding.progressbar.mainPBar.makeVisible()
+//                    }
+//
+//                    is ResourceNetworkFlow.Success -> {
+//                        binding.progressbar.mainPBar.makeGone()
+//                        if (it.data?.status == 200) {
+//                            performSyncingOfCusomerDetailsEntityWithList(
+//                                items,
+//                                it.data?.data?.userUid.toString()
+//                            )
+//                            lifecycleScope.launch {
+//                                viewModel.deleteByPhoneNumber(customerPhone)
+//                            }
+//
+//                        } else {
+//                            Log.e("", "ESLE RESPONSE: ${it.data?.message.toString()}")
+//                        }
+//                    }
+//
+//                    else -> {
+//                        Log.e("", "else RESPONSE:")
+//                    }
+//                }
+//            }
+//        }
+//    }
 }

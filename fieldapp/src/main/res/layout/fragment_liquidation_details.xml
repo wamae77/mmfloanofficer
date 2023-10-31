@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardAccount.LiquidationDetailsFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/liquidation_details"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -64,7 +61,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -75,7 +71,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
                 android:hint="@string/select_liquidation_type"
-                android:textColor="@color/text_screens"
                 android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +80,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tiIDNumber">
@@ -107,7 +101,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tiSurname">
@@ -118,7 +111,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
                 android:hint="@string/select_bank_name"
-                android:textColor="@color/text_screens"
                 android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +121,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tiIDNumber">
@@ -141,7 +132,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
                 android:hint="@string/bank_code"
-                android:textColor="@color/text_screens"
                 android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,7 +142,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:hint="@string/select_branch_name"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCustomerTypeTitle">
@@ -162,7 +151,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
-                android:textColor="@color/text_screens"
                 android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -172,7 +160,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tiFirstName">
@@ -183,7 +170,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
                 android:hint="@string/liquidation_account_name"
-                android:textColor="@color/text_screens"
                 android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -193,7 +179,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:endIconTint="@color/kcb_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tiFirstName">
@@ -204,7 +189,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
                 android:hint="@string/liquidation_account_number"
-                android:textColor="@color/text_screens"
                 android:textSize="12sp"
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -221,7 +205,6 @@
         android:padding="10dp"
         android:text="@string/continue_"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

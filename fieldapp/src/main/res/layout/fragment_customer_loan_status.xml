@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/login_bg"
     tools:context=".ui.existingAccount.CustomerLoanStatusFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvFragmentTitle"
@@ -41,7 +39,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/customer_loan_status"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -85,8 +82,7 @@
                 android:src="@drawable/ic_storefront"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvAccountNumber"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/kcb_green" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/viewSeparator"
@@ -136,7 +132,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/select_type_of_loan"
-        android:textColor="@color/text_screens"
         android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +147,6 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="20dp"
         android:visibility="gone"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLoanTypeTitle">
@@ -161,8 +155,7 @@
             android:id="@+id/acLoanType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens" />
+            android:fontFamily="@font/nunito" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -268,7 +261,6 @@
         android:padding="10dp"
         android:text="@string/refresh"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

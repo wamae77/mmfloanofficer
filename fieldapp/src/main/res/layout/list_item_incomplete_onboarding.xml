@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_semibold"
             android:text="Individual"
-            android:textColor="@color/text_dashboard"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/tvDate"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +26,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_semibold"
             android:text="12-23-2021"
-            android:textColor="@color/kcb_darker_blue"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>

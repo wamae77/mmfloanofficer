@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.existingAccount.DisplayCustomerIDPhotoFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/id_passport_photos"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -83,7 +80,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCustomerName">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/card_color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp">
@@ -94,7 +90,6 @@
                 android:layout_margin="10dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/gray"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_placeholder"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +103,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/front_id"
-                android:textColor="@color/kcb_blue"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +115,6 @@
 
     <com.google.android.material.card.MaterialCardView
         app:cardCornerRadius="10dp"
-        android:background="@color/card_color"
         android:id="@+id/cvBackID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -133,7 +126,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCustomerName">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/card_color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp">
@@ -143,7 +135,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@color/gray"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_placeholder"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +148,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/back_id"
-                android:textColor="@color/kcb_blue"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

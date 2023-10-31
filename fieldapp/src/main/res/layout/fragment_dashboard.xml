@@ -24,8 +24,9 @@
             <ImageView
                 android:id="@+id/ivDashboardLogo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_mmf_logo_large_2"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/jiboost_a_foreground"
                 app:layout_constraintBottom_toTopOf="@+id/tvName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

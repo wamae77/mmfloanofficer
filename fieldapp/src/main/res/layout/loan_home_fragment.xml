@@ -2,8 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/login_bg">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -29,7 +28,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                />
 
             <TextView
                 android:id="@+id/tvFragmentTitle"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/customer_loans"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -54,7 +52,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10dp"
         android:layout_marginEnd="@dimen/_10dp"
-        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_8dp"
         app:cardElevation="@dimen/_4dp"
         app:layout_anchor="@id/appBar"
@@ -89,8 +86,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/prof"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tintMode="@color/kcb_blue" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:text="Credit Rating: "
@@ -147,7 +143,6 @@
                     android:id="@+id/Apply"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -162,7 +157,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Apply Loan"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/tvTotalTargets"
@@ -178,7 +172,6 @@
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="5"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -193,7 +186,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -210,7 +203,6 @@
                     android:id="@+id/repay"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -222,7 +214,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Repay loan"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivForward"
@@ -238,7 +229,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -255,7 +246,6 @@
                     android:id="@+id/Disbuse"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -270,7 +260,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Disburse Loan"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivForward2"
@@ -286,7 +275,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -303,7 +292,6 @@
                     android:id="@+id/pendingDis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -315,7 +303,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Pending Approvals"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivForward4"
@@ -331,7 +318,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -348,7 +335,6 @@
                     android:id="@+id/ClCashToCustomer"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -360,7 +346,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Cash to Customer"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivCashToCustomer"
@@ -376,7 +361,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -393,7 +378,6 @@
                     android:id="@+id/History_layout"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -408,7 +392,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Loan History"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivForward3"
@@ -424,7 +407,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -441,7 +424,6 @@
                     android:id="@+id/clLoanStatements"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -456,7 +438,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Loan Statements"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivForwardLoanStatements"
@@ -472,7 +453,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -489,7 +470,6 @@
                     android:id="@+id/clRepaymentSchedule"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@color/kcb_blue"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -504,7 +484,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_semibold"
                         android:text="Repayment Schedule"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ivForwardRepaymentSchedule"
@@ -520,7 +499,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                       />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>

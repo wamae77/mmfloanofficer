@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardAccount.PhysicalAddressFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -31,7 +30,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+             />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +39,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/physical_address"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -89,7 +87,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -100,7 +97,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/select_county"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +106,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -131,7 +126,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tiIDNumber">
@@ -142,7 +136,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/enter_street_name"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,7 +145,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tiSurname">
@@ -163,7 +155,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/enter_building_name"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -173,7 +164,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tiFirstName">
@@ -184,7 +174,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/room_number"
-                    android:textColor="@color/text_screens"
                     android:textSize="12sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -201,7 +190,6 @@
         android:padding="10dp"
         android:text="@string/continue_"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/residential_details"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -61,7 +59,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/_5_of_8"
-        android:textColor="@color/kcb_green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
@@ -111,7 +108,6 @@
                     android:singleLine="true"
                     android:fontFamily="@font/nunito"
                     android:hint="Physical Address"
-                    android:textColor="@color/text_screens"
                    />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -120,7 +116,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:placeholderText="Eg. Rented"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +127,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
                     android:hint="@string/accommodation_status"
-                    android:textColor="@color/text_screens"
                      />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -144,8 +138,7 @@
                 app:placeholderText="Eg. 12/2020"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tiAccommodationStatus"
-                app:endIconTint="@color/kcb_green">
+                app:layout_constraintTop_toBottomOf="@+id/tiAccommodationStatus">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etHomeAddress"
@@ -154,7 +147,6 @@
                     android:fontFamily="@font/nunito"
                     android:focusable="false"
                     android:hint="Living since"
-                    android:textColor="@color/text_screens"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <TextView
@@ -175,7 +167,6 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

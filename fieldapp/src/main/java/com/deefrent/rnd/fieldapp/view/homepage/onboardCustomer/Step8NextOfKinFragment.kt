@@ -120,7 +120,7 @@ class Step8NextOfKinFragment : BaseDaggerFragment() {
                     tlYear.error = validPhone
                 } else if (spID.isEmpty()) {
                     toastyErrors("Select Identity type")
-                } else if (kinId.length < 11) {
+                } else if (kinId.length < 8) {
                     tiGuarantorAddress.error = "Please provide a valid ID Number"
                 } else {
                     tlBAddress.error = ""

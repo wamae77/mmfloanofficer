@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/onboarded_accounts"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -50,12 +48,8 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/kcb_green"
             android:visibility="gone"
-            app:tabIndicatorColor="@color/white"
-            app:tabSelectedTextColor="@color/white"
-            app:tabTextAppearance="@style/tab_text"
-            app:tabTextColor="@color/white" />
+            app:tabTextAppearance="@style/tab_text" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -63,7 +57,6 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/login_bg"
         android:padding="10dp"
         android:text="@string/from_01_09_2021_to_07_01_2022"
         app:layout_constraintTop_toBottomOf="@+id/appBar" />

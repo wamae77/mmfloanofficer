@@ -28,8 +28,7 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Pay Bill"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/ivBack"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -75,7 +73,6 @@
                     android:layout_marginStart="@dimen/_15dp"
                     android:layout_marginTop="@dimen/_10dp"
                     android:layout_marginEnd="@dimen/_15dp"
-                    android:textColor="@color/colorPrimaryDark"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -159,7 +156,7 @@
                     android:layout_marginTop="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_15dp"
                     android:hint="@string/phone_number"
-                    app:helperTextTextColor="@color/colorPrimary"
+                    app:placeholderText="Eg. 0712345678"
                     app:helperText="Phone Number to receive confirmation message"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -170,7 +167,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="phone"
-                        android:maxLength="50"
+                        android:maxLength="10"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -182,7 +179,6 @@
                     android:layout_marginTop="@dimen/_15dp"
                     android:layout_marginEnd="@dimen/_15dp"
                     android:text="Pay From"
-                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_14sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/ti_ac_name" />
@@ -281,7 +277,6 @@
     </androidx.core.widget.NestedScrollView>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSubmit"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

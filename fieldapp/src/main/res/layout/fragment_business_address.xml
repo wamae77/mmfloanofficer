@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Business Address"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -62,7 +60,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/_3_of_8"
-        android:textColor="@color/kcb_green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
@@ -112,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
                     android:hint="Physical Address"
-                    android:textColor="@color/text_screens" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -121,7 +118,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tlPAdress"
@@ -134,7 +130,7 @@
                     android:focusable="false"
                     android:fontFamily="@font/nunito"
                     android:hint="Province"
-                    android:textColor="@color/text_screens" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -144,7 +140,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:visibility="gone"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tiAccommodationStatus"
@@ -157,7 +152,7 @@
                     android:focusable="false"
                     android:fontFamily="@font/nunito"
                     android:hint="Town/city"
-                    android:textColor="@color/text_screens" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -166,7 +161,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tlCity"
@@ -180,7 +174,7 @@
                     android:hint="Business phone number"
                     android:inputType="number"
                     android:maxLength="10"
-                    android:textColor="@color/text_screens" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -189,7 +183,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tlbPhone"
@@ -202,7 +195,7 @@
                     android:fontFamily="@font/nunito"
                     android:hint="Number of employees"
                     android:inputType="number"
-                    android:textColor="@color/text_screens" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -210,7 +203,6 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

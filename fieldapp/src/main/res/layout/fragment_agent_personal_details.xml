@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardAccount.AgentPersonalDetailsFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvFragmentTitle"
@@ -41,7 +39,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/merchant_agent_personal_details"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -73,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/select_id_type"
-                android:textColor="@color/text_screens"
+
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -82,7 +79,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
-                app:endIconTint="@color/kcb_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvCustomerTypeTitle">
@@ -92,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/text_screens" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <RadioGroup
@@ -114,7 +110,7 @@
                     android:checked="true"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/type_in_details"
-                    android:textColor="@color/text_screens"
+
                     android:textSize="14sp" />
 
                 <RadioButton
@@ -124,7 +120,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/nunito_semibold"
                     android:text="@string/scan_details"
-                    android:textColor="@color/text_screens"
+
                     android:textSize="14sp" />
 
             </RadioGroup>
@@ -137,7 +133,7 @@
                 android:checked="false"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/scan_id"
-                android:textColor="@color/text_screens"
+
                 android:textSize="14sp"
                 android:visibility="gone" />
 
@@ -146,7 +142,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/gray"
                 android:padding="5dp"
                 android:visibility="gone"
                 android:scaleType="fitXY"
@@ -186,7 +181,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:hint="@string/id_number"
-                    app:endIconTint="@color/kcb_green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -196,7 +190,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
-                        android:textColor="@color/text_screens"
+
                         android:textSize="12sp"
                         android:inputType="number"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -207,7 +201,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tiIDNumber">
@@ -218,7 +211,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="@string/surname"
-                        android:textColor="@color/text_screens"
+
                         android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -228,7 +221,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tiSurname">
@@ -239,7 +231,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="@string/first_name"
-                        android:textColor="@color/text_screens"
+
                         android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -249,7 +241,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tiFirstName">
@@ -260,7 +251,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="@string/last_name"
-                        android:textColor="@color/text_screens"
+
                         android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -270,7 +261,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:layout_constraintEnd_toStartOf="@+id/tiGender"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tiLastName">
@@ -284,7 +274,7 @@
                         android:focusable="false"
                         android:fontFamily="@font/nunito"
                         android:hint="@string/date_of_birth"
-                        android:textColor="@color/text_screens"
+
                         android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -295,7 +285,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tiDOB"
                     app:layout_constraintTop_toBottomOf="@+id/tiLastName">
@@ -306,7 +295,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="@string/select_gender"
-                        android:textColor="@color/text_screens"
                         android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -324,7 +312,6 @@
         android:padding="10dp"
         android:text="@string/continue_"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

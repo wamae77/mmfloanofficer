@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/kcb_blue"
     tools:context=".view.auth.userlogin.ConfirmNewPinFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -31,8 +30,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/confirm_new_pin"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -56,7 +53,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
-        android:src="@drawable/ic_mmf_logo_large"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/jiboost_a_foreground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar" />
@@ -139,7 +137,6 @@
         style="@style/keypad_buttons_style"
         android:layout_marginTop="20dp"
         android:text="1"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_four"
         app:layout_constraintEnd_toStartOf="@+id/btn_two"
         app:layout_constraintHorizontal_bias="0.5"
@@ -150,7 +147,6 @@
         android:id="@+id/btn_two"
         style="@style/keypad_buttons_style"
         android:text="2"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/btn_three"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_one"
@@ -160,7 +156,6 @@
         android:id="@+id/btn_three"
         style="@style/keypad_buttons_style"
         android:text="3"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_two"
@@ -170,7 +165,6 @@
         android:id="@+id/btn_four"
         style="@style/keypad_buttons_style"
         android:text="4"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_seven"
         app:layout_constraintEnd_toStartOf="@+id/btn_five"
         app:layout_constraintHorizontal_bias="0.5"
@@ -181,7 +175,6 @@
         android:id="@+id/btn_five"
         style="@style/keypad_buttons_style"
         android:text="5"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/btn_six"
         app:layout_constraintStart_toStartOf="@+id/btn_two"
         app:layout_constraintTop_toTopOf="@+id/btn_four" />
@@ -190,7 +183,6 @@
         android:id="@+id/btn_six"
         style="@style/keypad_buttons_style"
         android:text="6"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/btn_three"
         app:layout_constraintStart_toStartOf="@+id/btn_three"
         app:layout_constraintTop_toTopOf="@+id/btn_five" />
@@ -199,7 +191,6 @@
         android:id="@+id/btn_seven"
         style="@style/keypad_buttons_style"
         android:text="7"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_zero"
         app:layout_constraintEnd_toStartOf="@+id/btn_eight"
         app:layout_constraintHorizontal_bias="0.5"
@@ -210,7 +201,6 @@
         android:id="@+id/btn_eight"
         style="@style/keypad_buttons_style"
         android:text="8"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/btn_nine"
         app:layout_constraintStart_toStartOf="@+id/btn_five"
         app:layout_constraintTop_toTopOf="@+id/btn_seven" />
@@ -219,7 +209,6 @@
         android:id="@+id/btn_nine"
         style="@style/keypad_buttons_style"
         android:text="9"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btn_six"
         app:layout_constraintTop_toTopOf="@+id/btn_eight" />
@@ -228,7 +217,6 @@
         android:id="@+id/btn_zero"
         style="@style/keypad_buttons_style"
         android:text="0"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tv_forgotPin"
         app:layout_constraintEnd_toStartOf="@+id/btn_Delete"
         app:layout_constraintStart_toStartOf="@id/btn_eight"
@@ -247,8 +235,7 @@
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btn_nine"
-        app:layout_constraintTop_toTopOf="@+id/btn_zero"
-        app:tint="@color/white" />
+        app:layout_constraintTop_toTopOf="@+id/btn_zero" />
 
 
     <Button
@@ -261,7 +248,6 @@
         android:focusable="true"
         android:lineSpacingExtra="12sp"
         android:text="@string/forgot_password"
-        android:textColor="@color/white"
         android:textSize="12sp"
         android:textStyle="normal"
         android:visibility="gone"

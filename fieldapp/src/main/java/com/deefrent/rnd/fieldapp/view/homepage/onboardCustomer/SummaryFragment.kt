@@ -15,7 +15,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.deefrent.rnd.common.abstractions.BaseDaggerFragment
 import com.deefrent.rnd.common.network.CommonSharedPreferences
-import com.deefrent.rnd.common.network.ResourceNetworkFlow
 import com.deefrent.rnd.fieldapp.R
 import com.deefrent.rnd.fieldapp.data.CustomAction
 import com.deefrent.rnd.fieldapp.data.CustomData
@@ -28,7 +27,6 @@ import com.deefrent.rnd.fieldapp.utils.*
 import com.deefrent.rnd.fieldapp.utils.Constants.Companion.fromSummary
 import com.deefrent.rnd.fieldapp.utils.Constants.Companion.pattern
 import com.deefrent.rnd.fieldapp.view.auth.forgetPin.GeneralResponseStatus
-import com.deefrent.rnd.fieldapp.view.fingerPrint.FingerPrintViewModel
 import com.google.gson.Gson
 import id.zelory.compressor.Compressor
 import kotlinx.coroutines.*
@@ -55,8 +53,8 @@ class SummaryFragment : BaseDaggerFragment() {
     @Inject
     lateinit var commonSharedPreferences: CommonSharedPreferences
 
-    @Inject
-    lateinit var viewModel: FingerPrintViewModel
+//    @Inject
+//    lateinit var viewModel: FingerPrintViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -266,7 +264,7 @@ class SummaryFragment : BaseDaggerFragment() {
         viewmodel.updateCustomerHasFinished(true, nationalIdentity)
         val onboardCustomerDTO = OnboardCustomerDTO(
             area_id,
-            fingerprint_reg_id,
+//            fingerprint_reg_id,
             isCompletion,
             bsDistrictId,
             alias,
@@ -1049,44 +1047,44 @@ class SummaryFragment : BaseDaggerFragment() {
 
     }
 
-    private fun performApiRequestEnrollWithMultipleImages() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.enrollCustomerWithMultipleImages(
-                idNumber = customerId,
-                finger_index = "1",
-                hand_type = "1",
-            ).collect {
-                when (it) {
-                    is ResourceNetworkFlow.Error -> {
-                        binding.progressbar.mainPBar.makeGone()
-                        showErrorDialog()
-                    }
-
-                    is ResourceNetworkFlow.Loading -> {
-                        binding.progressbar.mainPBar.makeVisible()
-                    }
-
-                    is ResourceNetworkFlow.Success -> {
-                        binding.progressbar.mainPBar.makeGone()
-                        if (it.data?.status == 200) {
-                            submitOnboardCustomer(it.data?.data?.userUid.toString())
-                            lifecycleScope.launch {
-                                viewModel.deleteByPhoneNumber(phone)
-                            }
-
-                        } else {
-                            showErrorDialog()
-                            Log.e("", "ESLE RESPONSE: ${it.data?.message.toString()}")
-                        }
-                    }
-
-                    else -> {
-                        Log.e("", "else RESPONSE:")
-                    }
-                }
-            }
-        }
-    }
+//    private fun performApiRequestEnrollWithMultipleImages() {
+//        viewLifecycleOwner.lifecycleScope.launch {
+//            viewModel.enrollCustomerWithMultipleImages(
+//                idNumber = customerId,
+//                finger_index = "1",
+//                hand_type = "1",
+//            ).collect {
+//                when (it) {
+//                    is ResourceNetworkFlow.Error -> {
+//                        binding.progressbar.mainPBar.makeGone()
+//                        showErrorDialog()
+//                    }
+//
+//                    is ResourceNetworkFlow.Loading -> {
+//                        binding.progressbar.mainPBar.makeVisible()
+//                    }
+//
+//                    is ResourceNetworkFlow.Success -> {
+//                        binding.progressbar.mainPBar.makeGone()
+//                        if (it.data?.status == 200) {
+//                            submitOnboardCustomer(it.data?.data?.userUid.toString())
+//                            lifecycleScope.launch {
+//                                viewModel.deleteByPhoneNumber(phone)
+//                            }
+//
+//                        } else {
+//                            showErrorDialog()
+//                            Log.e("", "ESLE RESPONSE: ${it.data?.message.toString()}")
+//                        }
+//                    }
+//
+//                    else -> {
+//                        Log.e("", "else RESPONSE:")
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
 

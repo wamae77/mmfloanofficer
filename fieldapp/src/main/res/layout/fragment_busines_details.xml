@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Business Details"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -62,7 +60,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/_2_of_8"
-        android:textColor="@color/kcb_green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
@@ -119,7 +116,6 @@
                     android:padding="@dimen/_10dp"
                     android:paddingStart="@dimen/_15dp"
                     android:text="Yes"
-                    android:textColor="@color/text_screens"
                     android:textSize="@dimen/_14sp" />
 
                 <RadioButton
@@ -130,7 +126,6 @@
                     android:checked="false"
                     android:paddingStart="@dimen/_15dp"
                     android:text="No"
-                    android:textColor="@color/text_dashboard"
                     android:textSize="@dimen/_14sp" />
             </RadioGroup>
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -157,7 +152,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="Type of business"
-                        android:textColor="@color/text_screens"
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -167,7 +161,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:placeholderText="Eg. Manufacturing"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -179,7 +172,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="Economic sector"
-                        android:textColor="@color/text_screens"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
@@ -191,8 +183,7 @@
                     app:placeholderText="Eg. food industry"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tiAccommodationStatus"
-                    app:endIconTint="@color/kcb_green">
+                    app:layout_constraintTop_toBottomOf="@+id/tiAccommodationStatus">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etIndustryName"
@@ -201,7 +192,6 @@
                         android:singleLine="true"
                         android:fontFamily="@font/nunito"
                         android:hint="Name of industry"
-                        android:textColor="@color/text_screens"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
@@ -210,7 +200,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:endIconTint="@color/kcb_green"
                     app:placeholderText="Eg. Market"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -222,7 +211,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito"
                         android:hint="Establishment type"
-                        android:textColor="@color/text_screens"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
@@ -234,8 +222,7 @@
                     app:placeholderText="Eg. 1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tiEstType"
-                    app:endIconTint="@color/kcb_green">
+                    app:layout_constraintTop_toBottomOf="@+id/tiEstType">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etyears"
@@ -244,12 +231,9 @@
                         android:fontFamily="@font/nunito"
                         android:inputType="number"
                         android:hint="How many years in this business?"
-                        android:textColor="@color/text_screens"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
                 <TextView
-                    android:drawableTint="@color/colorPrimary"
-                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_15dp"
                     android:drawablePadding="@dimen/_10dp"
                     android:text="@string/attach_certificate_of_incorporation"
@@ -267,7 +251,6 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

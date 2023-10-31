@@ -31,8 +31,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +39,6 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Set Security Questions"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -59,7 +57,6 @@
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         android:textSize="@dimen/_16sp"
         android:text="@string/give_answers_to_the_following_question" />
     <TextView
@@ -72,7 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
-        android:textColor="@color/colorPrimaryDark"
         android:text="@string/set_and_answer_questions_incase_you_want_to_reset_your_pin_in_future" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_q1"
@@ -81,7 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
-        app:endIconTint="@color/black"
         android:layout_marginTop="@dimen/_5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,8 +88,7 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             android:hint="Question 1"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black" />
+             />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -123,7 +117,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
-        app:endIconTint="@color/black"
         android:layout_marginTop="@dimen/_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +160,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
-        app:endIconTint="@color/black"
         android:layout_marginTop="@dimen/_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -179,8 +171,7 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             android:hint="Question 3"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black" />
+             />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -203,13 +194,14 @@
            />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/continue_"
         app:cornerRadius="20dp"

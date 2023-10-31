@@ -28,8 +28,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/head"
@@ -38,7 +37,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -66,7 +64,6 @@
                 android:id="@+id/mainLayout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/appBar">
 
@@ -74,7 +71,6 @@
                     android:id="@+id/llLimit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/kcb_blue"
                     android:paddingBottom="@dimen/_10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +83,6 @@
                         android:layout_marginStart="@dimen/_10dp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:layout_marginEnd="@dimen/_10dp"
-                        app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="@dimen/_8dp"
                         app:cardElevation="@dimen/_4dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -124,14 +119,13 @@
                                 android:src="@drawable/prof"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:tintMode="@color/kcb_blue" />
+                             />
 
                             <View
                                 android:id="@+id/view1"
                                 android:layout_width="match_parent"
                                 android:layout_height="2dp"
                                 android:layout_marginTop="15dp"
-                                android:background="@color/grey_100"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/tvAccName" />
@@ -144,7 +138,6 @@
                                 android:layout_marginTop="@dimen/_10dp"
                                 android:layout_marginEnd="@dimen/_5dp"
                                 android:text="Loan Limit"
-                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/view1" />
@@ -155,7 +148,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="@dimen/_10dp"
                                 android:gravity="end"
-                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sp"
                                 app:layout_constraintBottom_toBottomOf="@id/tvAmount"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +161,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_5dp"
                                 android:text="Interest Rate:"
-                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sp"
                                 app:layout_constraintStart_toStartOf="@id/tvAmount"
                                 app:layout_constraintTop_toBottomOf="@id/tvAmount" />
@@ -181,7 +172,6 @@
                                 android:layout_marginTop="@dimen/_2dp"
                                 android:layout_marginEnd="@dimen/_10dp"
                                 android:gravity="end"
-                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sp"
                                 app:layout_constraintBottom_toBottomOf="@+id/tvFrequency"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +184,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_5dp"
                                 android:text="Maximum Repayment period"
-                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sp"
                                 app:layout_constraintStart_toStartOf="@id/tvAmount"
                                 app:layout_constraintTop_toBottomOf="@id/tvFrequency" />
@@ -205,7 +194,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="@dimen/_10dp"
                                 android:gravity="end"
-                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sp"
                                 app:layout_constraintBottom_toBottomOf="@+id/tvPeriod"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -231,7 +219,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/llLimit"
-                    app:suffixTextColor="@color/black">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_amount"
@@ -254,7 +242,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tl_enter_amount"
-                    app:suffixTextColor="@color/black">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etLoanOfficerAmount"
@@ -276,7 +264,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/tiPaymentCycleMeasure"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tiLoanOfficerAmount"
-                    app:suffixTextColor="@color/black">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPaymentCycle"
@@ -295,7 +283,6 @@
                     android:layout_marginStart="@dimen/_10dp"
                     android:layout_marginTop="@dimen/_15dp"
                     android:layout_marginEnd="@dimen/_15dp"
-                    app:endIconTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tiPaymentCycle">
@@ -320,7 +307,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tiPaymentCycleMeasure"
-                    app:suffixTextColor="@color/black">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPaymentPeriod"
@@ -339,7 +326,6 @@
                     android:layout_marginStart="@dimen/_10dp"
                     android:layout_marginTop="@dimen/_15dp"
                     android:layout_marginEnd="@dimen/_15dp"
-                    app:endIconTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tiPaymentPeriod">
@@ -367,7 +353,6 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:drawableEnd="@drawable/ic_calendar"
-                        app:drawableTint="@color/colorPrimary"
                         android:id="@+id/etApplicationDate"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -375,7 +360,7 @@
                         android:inputType="text"
                         android:maxLength="30"
                         android:singleLine="true"
-                        android:textColor="@color/text_screens_faint" />
+                     />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -390,7 +375,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tiApplicationDate"
-                    app:suffixTextColor="@color/black">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etLoanOfficerRemarks"
@@ -410,7 +395,6 @@
                     android:layout_marginTop="@dimen/_15dp"
                     android:layout_marginEnd="@dimen/_15dp"
                     android:visibility="gone"
-                    app:endIconTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tiPaymentPeriodMeasure">
@@ -456,7 +440,6 @@
                         android:padding="@dimen/_10dp"
                         android:paddingStart="@dimen/_15dp"
                         android:text="Yes"
-                        android:textColor="@color/text_screens"
                         android:textSize="@dimen/_14sp" />
 
                     <RadioButton
@@ -467,7 +450,6 @@
                         android:checked="false"
                         android:paddingStart="@dimen/_15dp"
                         android:text="No"
-                        android:textColor="@color/text_dashboard"
                         android:textSize="@dimen/_14sp" />
                 </RadioGroup>
 
@@ -493,7 +475,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:suffixTextColor="@color/black">
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_assetSupplier"
@@ -514,7 +496,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tl_assetSupplier"
-                        app:suffixTextColor="@color/black">
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_supplier_phone"
@@ -535,7 +517,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tl_supplier_phone"
-                        app:suffixTextColor="@color/black">
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etDesc"
@@ -556,7 +538,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tldesc"
-                        app:suffixTextColor="@color/black">
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_assetcost"

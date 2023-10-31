@@ -449,13 +449,13 @@ class OnboardCustomerViewModel @Inject constructor(private val app: Application)
                 app.resources.getString(R.string.mileage)
             )
         )
-        dashBoardItemsList.add(
-            HomeDashboardItems(
-                8,
-                R.drawable.funeral_cash_plan,
-                app.resources.getString(R.string.funeral_cash_plan)
-            )
-        )
+//        dashBoardItemsList.add(
+//            HomeDashboardItems(
+//                8,
+//                R.drawable.funeral_cash_plan,
+//                app.resources.getString(R.string.funeral_cash_plan)
+//            )
+//        )
         return dashBoardItemsList
     }
 }

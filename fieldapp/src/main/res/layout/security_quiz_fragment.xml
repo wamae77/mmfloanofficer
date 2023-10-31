@@ -31,8 +31,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +39,6 @@
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Security Questions"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -59,7 +57,6 @@
         android:layout_marginStart="@dimen/_15dp"
         android:textStyle="bold"
         android:layout_marginEnd="@dimen/_15dp"
-        android:textColor="@color/black"
         android:textSize="@dimen/_16sp"
         android:text="@string/give_answers_to_the_following_question" />
     <TextView
@@ -72,7 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
-        android:textColor="@color/colorPrimaryDark"
         android:text="@string/answer_the_following_question_with_the_answer_you_gave_during_registration" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_q1"
@@ -81,7 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_15dp"
-        app:endIconTint="@color/black"
         android:layout_marginTop="@dimen/_5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,9 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="false"
-            android:hint="Select Question"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black" />
+            android:hint="Select Question" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -119,7 +112,6 @@
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

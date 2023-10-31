@@ -28,8 +28,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvAppBarTitle"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Add Customer Document"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -53,7 +51,6 @@
         android:layout_height="@dimen/_100dp"
         android:layout_marginStart="@dimen/_10dp"
         android:layout_marginEnd="@dimen/_10dp"
-        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_8dp"
         app:cardElevation="@dimen/_4dp"
         app:layout_anchor="@id/appBar"
@@ -88,15 +85,13 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/prof"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tintMode="@color/kcb_blue" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="15dp"
-                android:background="@color/grey_100"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvAccName" />
@@ -165,7 +160,6 @@
                         android:id="@+id/container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="?android:selectableItemBackground"
                         android:clickable="true"
                         android:focusable="true">
 
@@ -195,7 +189,6 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="#AAFFFFFF"
                                 android:padding="@dimen/_10dp"
                                 android:paddingTop="@dimen/_20dp"
                                 android:paddingBottom="@dimen/_20dp">
@@ -277,8 +270,6 @@
                 android:layout_margin="@dimen/_20dp"
                 android:drawablePadding="@dimen/_5dp"
                 android:text="An error occurred"
-                android:textColor="@color/black"
-                app:drawableTint="@color/kcb_darker_blue"
                 app:drawableTopCompat="@drawable/ic_info"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -294,7 +285,6 @@
                 android:layout_marginBottom="@dimen/_10dp"
                 android:clickable="true"
                 android:drawableLeft="@drawable/ic_baseline_restore_24"
-                android:drawableTint="@color/white"
                 android:drawablePadding="@dimen/_10dp"
                 android:focusable="true"
                 android:gravity="center_vertical"
@@ -308,7 +298,6 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnUploadDocument"
-            style="@style/AppTheme.Button.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"

@@ -33,8 +33,7 @@
                     android:src="@drawable/ic_arrow_back"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/header"
@@ -44,7 +43,6 @@
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="Summary"
-                    android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -60,8 +58,7 @@
                     android:src="@drawable/ic_home_black_24dp"
                     app:layout_constraintBottom_toBottomOf="@+id/header"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/header"
-                    app:tint="@color/white" />
+                    app:layout_constraintTop_toTopOf="@+id/header" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -106,7 +103,6 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSubmit"
-            style="@style/AppTheme.Button.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"

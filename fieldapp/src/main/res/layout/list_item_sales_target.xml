@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_semibold"
             android:text="Onboard an Account"
-            android:textColor="@color/kcb_blue"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +34,6 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/nunito_semibold"
             tools:text="Weekly"
-            android:textColor="#AB040404"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progressIndicator" />
@@ -49,8 +47,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvProductName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvProductName"
-            app:tint="@color/kcb_blue" />
+            app:layout_constraintTop_toTopOf="@+id/tvProductName" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/progressIndicator"

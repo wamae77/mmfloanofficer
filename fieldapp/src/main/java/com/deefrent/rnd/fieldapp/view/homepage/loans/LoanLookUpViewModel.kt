@@ -18,6 +18,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
+import kotlin.math.log
 
 class LoanLookUpViewModel() : ViewModel() {
     private var _status = MutableLiveData<Int?>()

@@ -133,14 +133,9 @@
     </style>
 
     <style name="exposedDropdownMenuCustom" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-        <item name="boxStrokeColor">@color/colorPrimaryDark</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="hintTextColor">@color/colorPrimaryDark</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
-        <item name="android:textColorHint">@color/colorPrimaryDark</item>
         <item name="android:radius">1.4dp</item>
         <item name="boxStrokeWidthFocused">1dp</item>
-        <item name="endIconTint">@color/colorPrimaryDark</item>
     </style>
 
     <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -177,4 +172,5 @@
 <!--        <item name="android:textColorSecondary">@color/kcb_green</item>-->
 <!--        <item name="android:textColorPrimary">@color/kcb_blue</item>-->
 <!--    </style>-->
+
 </resources>

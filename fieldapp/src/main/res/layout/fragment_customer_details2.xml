@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/customer_details"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -62,7 +60,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/_1_of_8"
-        android:textColor="@color/kcb_green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
@@ -263,7 +260,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5dp"
-                    app:endIconTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tlDob"
@@ -303,7 +299,6 @@
                         android:padding="@dimen/_10dp"
                         android:paddingStart="@dimen/_15dp"
                         android:text="Yes"
-                        android:textColor="@color/text_screens"
                         android:textSize="@dimen/_14sp" />
 
                     <RadioButton
@@ -314,7 +309,6 @@
                         android:checked="false"
                         android:paddingStart="@dimen/_15dp"
                         android:text="No"
-                        android:textColor="@color/text_dashboard"
                         android:textSize="@dimen/_14sp" />
                 </RadioGroup>
 
@@ -338,7 +332,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:suffixTextColor="@color/black">
+                      >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_spName"
@@ -359,7 +353,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tl_spouseName"
-                        app:suffixTextColor="@color/black">
+                     >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_spousePhone"
@@ -423,7 +417,6 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnXaraniIDLookUp"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

@@ -28,8 +28,7 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Teller Account Statement"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/ivBack"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -74,7 +72,6 @@
                 android:layout_marginBottom="@dimen/_15dp"
                 android:layout_marginStart="@dimen/_10dp"
                 android:layout_marginEnd="@dimen/_10dp"
-                android:textColor="@color/kcb_blue"
                 android:text="Recent Transactions"
                 android:textSize="@dimen/_18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +109,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_15dp"
             android:layout_marginEnd="@dimen/_15dp"
-            app:drawableTint="@color/kcb_darker_blue"
             app:drawableTopCompat="@drawable/ic_info"
             android:text="There are no teller account statement at the moment"
             android:textSize="@dimen/_18sp"
@@ -133,13 +129,11 @@
             android:padding="8dp"
             android:layout_marginBottom="@dimen/_3dp"
             android:layout_marginTop="@dimen/_10dp"
-            android:textColor="@color/kcb_blue"
             android:clickable="true"
             android:visibility="gone"
             android:focusable="true"
             android:gravity="center_vertical"
             android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:background="@color/white"
             android:drawableLeft="@drawable/ic_baseline_restore_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

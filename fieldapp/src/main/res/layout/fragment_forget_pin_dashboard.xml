@@ -32,8 +32,7 @@
                         android:src="@drawable/ic_baseline_arrow_back_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/white" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -41,7 +40,6 @@
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="Forget Pin?"
-                        android:textColor="@color/white"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -59,7 +57,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="@dimen/_15dp"
                 android:layout_marginEnd="@dimen/_15dp"
-                android:textColor="@color/black"
                 android:textSize="@dimen/_15sp"
                 android:textStyle="bold"
                 android:text="@string/you_can_now_reset_or" />
@@ -76,7 +73,6 @@
                 android:text="@string/if_you_forgot_your_pin" />
             <androidx.cardview.widget.CardView
                 app:cardElevation="@dimen/_3dp"
-                app:cardBackgroundColor="@color/grey_100"
                 app:cardCornerRadius="@dimen/_5dp"
                 android:layout_marginStart="@dimen/_15dp"
                 android:layout_marginEnd="@dimen/_15dp"
@@ -121,7 +117,6 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 app:cardElevation="@dimen/_3dp"
-                app:cardBackgroundColor="@color/grey_100"
                 app:cardCornerRadius="@dimen/_5dp"
                 android:id="@+id/location"
                 android:layout_width="match_parent"

@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/other_borrowings"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -62,7 +60,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/_9_of_8"
-        android:textColor="@color/kcb_green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
@@ -116,7 +113,6 @@
                     android:padding="@dimen/_10dp"
                     android:paddingStart="@dimen/_15dp"
                     android:text="Yes"
-                    android:textColor="@color/text_screens"
                     android:textSize="@dimen/_14sp" />
 
                 <RadioButton
@@ -127,7 +123,6 @@
                     android:checked="false"
                     android:paddingStart="@dimen/_15dp"
                     android:text="No"
-                    android:textColor="@color/text_dashboard"
                     android:textSize="@dimen/_14sp" />
             </RadioGroup>
 
@@ -182,10 +177,8 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:drawableLeft="@drawable/ic_round_add_circle"
-                    android:drawableTint="@color/kcb_green"
                     android:id="@+id/btnAddBorrowing"
                     app:strokeWidth="@dimen/_1dp"
-                    app:strokeColor="@color/kcb_green"
                     android:paddingStart="@dimen/_10dp"
                     android:paddingEnd="@dimen/_20dp"
                     app:cornerRadius="@dimen/_20dp"
@@ -205,7 +198,6 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
-        style="@style/AppTheme.Button.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

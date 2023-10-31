@@ -33,8 +33,7 @@
                     android:src="@drawable/ic_arrow_back"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/header"
@@ -44,7 +43,6 @@
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="Upload Documents"
-                    android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -60,7 +58,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/header"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/header"
-                    app:tint="@color/white" />
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.AppBarLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

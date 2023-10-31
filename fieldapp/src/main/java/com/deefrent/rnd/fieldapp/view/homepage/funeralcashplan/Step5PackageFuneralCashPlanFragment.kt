@@ -248,7 +248,7 @@ class Step5PackageFuneralCashPlanFragment :
                 } else if (dob.isEmpty()) {
                     tiDOB.error = "Please select a Date of Birth"
                 }// else if (isAdult) {
-                else if (dependantIdNumber.length < 11) {
+                else if (dependantIdNumber.length <8) {
                     tiIDNumber.error = "Invalid ID number"
                 }
                 // }

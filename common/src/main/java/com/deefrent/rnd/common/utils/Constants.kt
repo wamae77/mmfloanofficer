@@ -22,7 +22,7 @@ object Constants {
     private external fun getPINNERCERT(): String?
     private external fun getFingerPrintURL(): String?
 
-    var FINGERPRINT_URL = ""
+    var FINGERPRINT_URL = "https://www.youtube.com/"
     var FINGERPRINT_SERVICENAME = ""
     var FINGERPRINT_KEY = ""
     var FINGERPRINT_SECRET = ""

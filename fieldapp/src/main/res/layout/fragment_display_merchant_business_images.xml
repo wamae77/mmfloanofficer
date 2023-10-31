@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.existingAccount.DisplayMerchantBusinessImagesFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/business_images"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -98,7 +95,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/card_color"
                     android:padding="5dp">
 
                     <ImageView
@@ -107,7 +103,6 @@
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/gray"
                         android:scaleType="fitXY"
                         android:src="@drawable/image_placeholder"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +117,6 @@
                         android:fontFamily="@font/nunito_semibold"
                         android:paddingBottom="10dp"
                         android:text="Business Permit"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +133,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/card_color"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cvBusinessPermit"
@@ -148,7 +141,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/card_color"
                     android:padding="5dp">
 
                     <ImageView
@@ -156,7 +148,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
-                        android:background="@color/gray"
                         android:scaleType="fitXY"
                         android:src="@drawable/image_placeholder"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +162,6 @@
                         android:fontFamily="@font/nunito_semibold"
                         android:paddingBottom="10dp"
                         android:text="Business License"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -194,7 +184,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/card_color"
                     android:padding="5dp">
 
                     <ImageView
@@ -203,7 +192,6 @@
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/gray"
                         android:scaleType="fitXY"
                         android:src="@drawable/image_placeholder"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -218,7 +206,6 @@
                         android:fontFamily="@font/nunito_semibold"
                         android:paddingBottom="10dp"
                         android:text="Terms &amp; Conditions Doc"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -234,7 +221,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/card_color"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cvTermsAndConditionDoc"
@@ -243,7 +229,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/card_color"
                     android:padding="5dp">
 
                     <ImageView
@@ -251,7 +236,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
-                        android:background="@color/gray"
                         android:scaleType="fitXY"
                         android:src="@drawable/image_placeholder"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -266,7 +250,6 @@
                         android:fontFamily="@font/nunito_semibold"
                         android:paddingBottom="10dp"
                         android:text="Company Registration Doc"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -289,7 +272,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/card_color"
                     android:padding="5dp">
 
                     <ImageView
@@ -298,7 +280,6 @@
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/gray"
                         android:scaleType="fitXY"
                         android:src="@drawable/image_placeholder"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -313,7 +294,6 @@
                         android:fontFamily="@font/nunito_semibold"
                         android:paddingBottom="10dp"
                         android:text="KRA Pin Certificate"
-                        android:textColor="@color/kcb_blue"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

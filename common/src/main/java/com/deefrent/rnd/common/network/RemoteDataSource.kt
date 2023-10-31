@@ -36,7 +36,7 @@ class RemoteDataSource @Inject constructor(
 
     fun <API> buildApiForFingerPrint(api: Class<API>, baseUrl: String): API {
         return Retrofit.Builder()
-            .baseUrl(baseUrl.toString().trim())
+            .baseUrl(baseUrl)
             .client(getOkHttpClientForFingerPrint())
             .addConverterFactory(
                 GsonConverterFactory.create(

@@ -29,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Loan Statement"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -58,7 +56,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Recent Transactions"
-        android:textColor="@color/hintColor"
         android:textSize="@dimen/_15sp"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginTop="@dimen/_10dp"
@@ -91,8 +88,7 @@
             android:layout_width="@dimen/_30dp"
             android:layout_height="@dimen/_30dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_info"
-            app:tint="@color/colorPrimary" />
+            android:src="@drawable/ic_info" />
 
         <TextView
             android:id="@+id/tv_title_no"
@@ -115,7 +111,6 @@
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="@dimen/_3dp"
             android:drawableLeft="@drawable/ic_refresh"
-            android:drawableTint="@color/white"
             android:drawablePadding="@dimen/_10dp"
             android:focusable="true"
             android:gravity="center_vertical"

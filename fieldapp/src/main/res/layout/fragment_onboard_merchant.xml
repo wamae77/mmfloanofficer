@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_bg"
     tools:context=".ui.onboardMerchant.OnboardMerchantFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/onboard_merchant"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -67,7 +64,6 @@
             android:checked="true"
             android:fontFamily="@font/nunito_semibold"
             android:text="@string/new_merchant_agents"
-            android:textColor="@color/text_screens"
             android:textSize="14sp" />
 
         <RadioButton
@@ -77,7 +73,6 @@
             android:layout_weight="1"
             android:fontFamily="@font/nunito_semibold"
             android:text="@string/existing_merchant_agents"
-            android:textColor="@color/text_screens"
             android:textSize="14sp" />
     </RadioGroup>
 
@@ -90,7 +85,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/account_type"
-        android:textColor="@color/text_screens"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +99,6 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/select_account"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAccountTypeTitle">
@@ -114,8 +107,7 @@
             android:id="@+id/acAccountType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens" />
+            android:fontFamily="@font/nunito" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -127,7 +119,6 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/merchant_agent_type"
-        android:textColor="@color/text_screens"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +133,6 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/select_type"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMerchantTypeTitle">
@@ -151,8 +141,7 @@
             android:id="@+id/acMerchantType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens" />
+            android:fontFamily="@font/nunito" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -165,7 +154,6 @@
         android:layout_marginEnd="20dp"
         android:hint="@string/enter_account"
         android:visibility="gone"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiAccountType">
@@ -175,7 +163,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens"
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -189,7 +176,6 @@
         android:layout_marginEnd="20dp"
         android:hint="@string/select_reference_type"
         android:visibility="gone"
-        app:endIconTint="@color/kcb_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiMerchantType">
@@ -198,8 +184,7 @@
             android:id="@+id/acReferenceType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/text_screens" />
+            android:fontFamily="@font/nunito" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -213,7 +198,6 @@
         android:padding="10dp"
         android:text="@string/continue_"
         android:textSize="14sp"
-        app:backgroundTint="@color/kcb_green"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

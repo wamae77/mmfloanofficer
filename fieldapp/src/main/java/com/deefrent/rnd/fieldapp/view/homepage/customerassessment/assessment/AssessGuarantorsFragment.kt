@@ -282,7 +282,7 @@ class AssessGuarantorsFragment : Fragment(), AssessGuarantorCallBack {
                     tlBAddress.error = getString(R.string.required)
                 } else if (!validPhone.contentEquals(validMsg)) {
                     tlDSale.error = validPhone
-                } else if (gIdNumber.length < 11) {
+                } else if (gIdNumber.length < 8) {
                     tlYear.error = "Invalid ID number"
                 } else if (gResAddress.isEmpty()) {
                     tiGuarantorAddress.error = getString(R.string.required)
@@ -527,7 +527,7 @@ class AssessGuarantorsFragment : Fragment(), AssessGuarantorCallBack {
                     tlBAddress.error = getString(R.string.required)
                 } else if (!validPhone.contentEquals(validMsg)) {
                     tlDSale.error = validPhone
-                } /*else if (gIdNumber.length < 11) {
+                } /*else if (gIdNumber.length < 8) {
                     tlYear.error = "Invalid ID number"
                 }*/ else if (gResAddress.isEmpty()) {
                     tiGuarantorAddress.error = getString(R.string.required)

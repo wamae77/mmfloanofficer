@@ -6,8 +6,8 @@ import com.google.gson.annotations.SerializedName
  data class OnboardCustomerDTO(
      @SerializedName("area_id")
      val area_id: String,
-     @SerializedName("fingerprint_reg_id")
-     val fingerprint_reg_id: String,
+//     @SerializedName("fingerprint_reg_id")
+//     val fingerprint_reg_id: String,
      @SerializedName("is_completion")
      val isCompletion: String,
      @SerializedName("bs_district_id")

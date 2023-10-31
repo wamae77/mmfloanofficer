@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/kcb_blue"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.homepage.onboardCustomer.SummaryFragment">
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +29,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Successful"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
@@ -58,7 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/ic_check_s"
         app:layout_constraintBottom_toTopOf="@+id/btnNotNow"
         app:layout_constraintTop_toBottomOf="@id/appBar"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +113,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/check_title"
                 android:layout_below="@+id/tv1"
                 android:layout_marginTop="@dimen/_15dp"
-                android:background="@color/grey_100"
                 android:layout_marginStart="@dimen/_15dp"
                 />
             <TextView
@@ -126,7 +121,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/the_customers_assessment_details_has_been_verified_successfully_please_proceed_to_loan_application"
                 android:textSize="@dimen/_12sp"
-                android:textColor="@color/black"
                 android:layout_marginStart="@dimen/_15dp"
                 android:layout_marginEnd="@dimen/_15dp"
                 app:layout_constraintTop_toBottomOf="@+id/viewOne"
@@ -145,13 +139,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv1"
                 android:layout_below="@+id/tv1"
                 android:layout_marginTop="@dimen/_15dp"
-                android:background="@color/grey_100"
                 android:layout_marginStart="@dimen/_15dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
                 android:layout_marginTop="@dimen/_20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -168,7 +160,6 @@
         android:text="@string/not_now"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/white"
         android:layout_marginStart="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_8dp"
         android:textSize="@dimen/_14sp"
@@ -177,7 +168,6 @@
         app:layout_constraintTop_toTopOf="@id/btnGoAssess"
         app:layout_constraintEnd_toStartOf="@id/btnGoAssess"
         app:cornerRadius="20dp"
-        app:strokeColor="@color/white"
         app:strokeWidth="@dimen/_1dp"
         />
     <com.google.android.material.button.MaterialButton
@@ -193,13 +183,11 @@
         android:layout_marginStart="@dimen/_4dp"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/white"
         android:textSize="@dimen/_14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnNotNow"
         app:cornerRadius="20dp"
-        app:strokeColor="@color/white"
         app:strokeWidth="@dimen/_1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
