@@ -86,6 +86,7 @@ dependencies {
     implementation project(":app")
     //Shared Library
     implementation project(":common")
+    implementation project(":smart-engine-scan")
     //
     //implementation fileTree(include: ['*.jar', '.so'], dir: 'libs')
     // implementation project(':fingerprintlib')

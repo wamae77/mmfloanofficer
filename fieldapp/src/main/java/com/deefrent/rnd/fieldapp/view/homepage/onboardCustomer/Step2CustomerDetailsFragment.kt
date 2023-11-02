@@ -1,5 +1,6 @@
 package com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer
 
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.net.Uri
@@ -14,6 +15,8 @@ import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -45,6 +48,7 @@ import com.deefrent.rnd.fieldapp.viewModels.DropdownItemsViewModel
 import com.github.chrisbanes.photoview.PhotoView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
+import com.smartengines.ScanSmartActivity
 import dev.ronnie.github.imagepicker.ImagePicker
 import dev.ronnie.github.imagepicker.ImageResult
 import es.dmoral.toasty.Toasty
@@ -455,8 +459,15 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 }
             }
         }
+        val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val intent = result.data
+                // Handle the Intent
+            }
+        }
 
         binding.btnXaraniIDLookUp.setOnClickListener {
+           // startForResult.launch(ScanSmartActivity.getStartIntent(requireContext()))
             if (binding.etIdNo.text.toString().isEmpty()) {
                 binding.etIdNo.error = "ID Number required"
             } else {
@@ -475,132 +486,132 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 binding.etIdNo.text.toString().trim()
             )
 
-            binding.progressbar.mainPBar.makeGone()
-            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
-            Log.e("RESPONSE", "${response.data}")
-            if (response.status == 1) {
-                binding.clCustomerData.visibilityView(true)
-                binding.btnContinue.visibilityView(true)
-                binding.btnXaraniIDLookUp.visibilityView(false)
-                //
-                //populateUserData(response.data)
-                if (response.data.askUserToDoManualRegistration) {
-                    showTwoButtonDialog(
-                        title = "Oops!",
-                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
-                        listenerCancel = {
-                            findNavController().popBackStack(
-                                R.id.dashboardFragment,
-                                false
-                            )
-                        },
-                        listenerConfirm = {
-                            Log.e("", "COFIRMED")
-                        }
-                    )
-                    //
-                    binding.clCustomerData.visibilityView(true)
-                    binding.btnContinue.visibilityView(true)
-                    binding.btnXaraniIDLookUp.visibilityView(false)
-                    //
-                }
-//            idCustomerLookUpViewModel.xaraniIdCheck(xaraniIdCheckRequest = xaraniIdCheckRequest)
-//                .collect {
-//                    when (it) {
-//                        is ResourceNetworkFlow.Error -> {
-//                            //showDummyDataForSimulation()
-//                            binding.progressbar.mainPBar.makeGone()
-//                            binding.btnXaraniIDLookUp.visibilityView(true)
-//                            showOneButtonDialog(
-//                                image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
-//                                title = "Oops!",
-//                                description = "Looks like we have a Problem.Try again later.",
-//                                listener = {
-//
-//                                }
+//            binding.progressbar.mainPBar.makeGone()
+//            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
+//            Log.e("RESPONSE", "${response.data}")
+//            if (response.status == 1) {
+//                binding.clCustomerData.visibilityView(true)
+//                binding.btnContinue.visibilityView(true)
+//                binding.btnXaraniIDLookUp.visibilityView(false)
+//                //
+//                //populateUserData(response.data)
+//                if (response.data.askUserToDoManualRegistration) {
+//                    showTwoButtonDialog(
+//                        title = "Oops!",
+//                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
+//                        listenerCancel = {
+//                            findNavController().popBackStack(
+//                                R.id.dashboardFragment,
+//                                false
 //                            )
+//                        },
+//                        listenerConfirm = {
+//                            Log.e("", "COFIRMED")
 //                        }
-//
-//                        is ResourceNetworkFlow.Loading -> {
-//                            binding.progressbar.mainPBar.makeVisible()
-//                            binding.btnXaraniIDLookUp.visibilityView(false)
-//                        }
-//
-//                        is ResourceNetworkFlow.Success -> {
-//                            binding.progressbar.mainPBar.makeGone()
-//                            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
-//                            Log.e("RESPONSE", "${response.data}")
-//                            if (response.status == 1) {
-//                                binding.clCustomerData.visibilityView(true)
-//                                binding.btnContinue.visibilityView(true)
-//                                binding.btnXaraniIDLookUp.visibilityView(false)
-//                                //
-//                                //populateUserData(response.data)
-//                                if (response.data.askUserToDoManualRegistration) {
-//                                    showTwoButtonDialog(
-//                                        title = "Oops!",
-//                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
-//                                        listenerCancel = {
-//                                            findNavController().popBackStack(
-//                                                R.id.dashboardFragment,
-//                                                false
-//                                            )
-//                                        },
-//                                        listenerConfirm = {
-//                                            Log.e("", "COFIRMED")
-//                                        }
-//                                    )
-//                                    //
-//                                    binding.clCustomerData.visibilityView(true)
-//                                    binding.btnContinue.visibilityView(true)
-//                                    binding.btnXaraniIDLookUp.visibilityView(false)
-//                                    //
-//                                } else {
-//                                    populateUserData(response.data)
-//                                }
-//                            } else if (response.status == 0) {
-//                                //
-//                                Timber.d("\n\n")
-//                                Log.e("RESPONSE", "${response.data}")
-//                                Timber.d("\n\n")
-//                                //
-//                                //showDummyDataForSimulation()
-//                                if (response.data.askUserToDoManualRegistration) {
-//                                    showTwoButtonDialog(
-//                                        title = "Oops!",
-//                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
-//                                        listenerCancel = {
-//                                            findNavController().popBackStack(
-//                                                R.id.dashboardFragment,
-//                                                false
-//                                            )
-//                                        },
-//                                        listenerConfirm = {
-//                                            Log.e("", "COFIRMED")
-//                                        }
-//                                    )
-//                                    //
-//                                    binding.clCustomerData.visibilityView(true)
-//                                    binding.btnContinue.visibilityView(true)
-//                                    binding.btnXaraniIDLookUp.visibilityView(false)
-//                                    //
-//                                } else if (response.data.askUserToDoManualRegistration == false) {
-//                                    showOneButtonDialog(
-//                                        image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
-//                                        title = "Oops! ",
-//                                        description = response.message.toString(),
-//                                        listener = {
-//                                            findNavController().popBackStack(
-//                                                R.id.dashboardFragment,
-//                                                false
-//                                            )
-//                                        }
-//                                    )
-//                                }
-//
-//                            }
-//                        }
-//                    }
+//                    )
+//                    //
+//                    binding.clCustomerData.visibilityView(true)
+//                    binding.btnContinue.visibilityView(true)
+//                    binding.btnXaraniIDLookUp.visibilityView(false)
+//                    //
+//                }
+            idCustomerLookUpViewModel.xaraniIdCheck(xaraniIdCheckRequest = xaraniIdCheckRequest)
+                .collect {
+                    when (it) {
+                        is ResourceNetworkFlow.Error -> {
+                            //showDummyDataForSimulation()
+                            binding.progressbar.mainPBar.makeGone()
+                            binding.btnXaraniIDLookUp.visibilityView(true)
+                            showOneButtonDialog(
+                                image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
+                                title = "Oops!",
+                                description = "Looks like we have a Problem.Try again later.",
+                                listener = {
+
+                                }
+                            )
+                        }
+
+                        is ResourceNetworkFlow.Loading -> {
+                            binding.progressbar.mainPBar.makeVisible()
+                            binding.btnXaraniIDLookUp.visibilityView(false)
+                        }
+
+                        is ResourceNetworkFlow.Success -> {
+                            binding.progressbar.mainPBar.makeGone()
+                            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
+                            Log.e("RESPONSE", "${response.data}")
+                            if (response.status == 1) {
+                                binding.clCustomerData.visibilityView(true)
+                                binding.btnContinue.visibilityView(true)
+                                binding.btnXaraniIDLookUp.visibilityView(false)
+                                //
+                                //populateUserData(response.data)
+                                if (response.data.askUserToDoManualRegistration) {
+                                    showTwoButtonDialog(
+                                        title = "Oops!",
+                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
+                                        listenerCancel = {
+                                            findNavController().popBackStack(
+                                                R.id.dashboardFragment,
+                                                false
+                                            )
+                                        },
+                                        listenerConfirm = {
+                                            Log.e("", "COFIRMED")
+                                        }
+                                    )
+                                    //
+                                    binding.clCustomerData.visibilityView(true)
+                                    binding.btnContinue.visibilityView(true)
+                                    binding.btnXaraniIDLookUp.visibilityView(false)
+                                    //
+                                } else {
+                                    populateUserData(response.data)
+                                }
+                            } else if (response.status == 0) {
+                                //
+                                Timber.d("\n\n")
+                                Log.e("RESPONSE", "${response.data}")
+                                Timber.d("\n\n")
+                                //
+                                //showDummyDataForSimulation()
+                                if (response.data.askUserToDoManualRegistration) {
+                                    showTwoButtonDialog(
+                                        title = "Oops!",
+                                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
+                                        listenerCancel = {
+                                            findNavController().popBackStack(
+                                                R.id.dashboardFragment,
+                                                false
+                                            )
+                                        },
+                                        listenerConfirm = {
+                                            Log.e("", "COFIRMED")
+                                        }
+                                    )
+                                    //
+                                    binding.clCustomerData.visibilityView(true)
+                                    binding.btnContinue.visibilityView(true)
+                                    binding.btnXaraniIDLookUp.visibilityView(false)
+                                    //
+                                } else if (response.data.askUserToDoManualRegistration == false) {
+                                    showOneButtonDialog(
+                                        image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
+                                        title = "Oops! ",
+                                        description = response.message.toString(),
+                                        listener = {
+                                            findNavController().popBackStack(
+                                                R.id.dashboardFragment,
+                                                false
+                                            )
+                                        }
+                                    )
+                                }
+
+                            }
+                        }
+                    }
                 }
         }
     }

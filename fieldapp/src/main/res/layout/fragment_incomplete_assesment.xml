@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

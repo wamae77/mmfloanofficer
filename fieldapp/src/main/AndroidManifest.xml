@@ -41,7 +41,8 @@
     <application
         android:allowBackup="false"
         android:requestLegacyExternalStorage="true"
-        tools:replace="android:allowBackup">
+        tools:replace="android:allowBackup, android:theme"
+        android:theme="@style/Theme.KCBAgentField">
         <activity
             android:name="com.deefrent.rnd.fieldapp.view.fingerPrint.method2.EnrollFingerPrintCaptureActivity"
             android:exported="false" />
