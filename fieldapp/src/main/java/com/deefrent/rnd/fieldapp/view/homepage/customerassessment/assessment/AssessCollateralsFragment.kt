@@ -519,7 +519,7 @@ class AssessCollateralsFragment : Fragment(), AssessColCallBack {
         viewmodel.fetchCustomerDetails(parentId).observe(viewLifecycleOwner) {
             binding.apply {
                 binding.note.text = "Note: You must have a minimum of ${it.assessCustomerEntity.minimumCollateral} collaterals"
-                maximumCollateral=it.assessCustomerEntity.maximumColateral.toInt()
+                maximumCollateral=if (it.assessCustomerEntity.maximumColateral.isNotEmpty()) it.assessCustomerEntity.maximumColateral.toInt() else 3
                 isDeleteItems = true
                 if (coll.isNotEmpty()) {
                     it.assessCollateral.forEach { collateral ->

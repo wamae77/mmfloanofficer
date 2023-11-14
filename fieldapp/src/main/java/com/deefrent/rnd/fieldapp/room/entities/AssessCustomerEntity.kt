@@ -10,7 +10,7 @@ class AssessCustomerEntity {
     var isComplete = false
     var isProcessed = false
     var minimumCollateral: String = ""
-    var maximumColateral: String = ""
+    var maximumColateral: String = "3"
     var minimumGuarantor: String = ""
     var maximumGuarantor: String = ""
     var hasFinished = false
