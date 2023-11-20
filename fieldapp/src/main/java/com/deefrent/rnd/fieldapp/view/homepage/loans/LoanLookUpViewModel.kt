@@ -13,14 +13,19 @@ import com.deefrent.rnd.fieldapp.network.FieldAgentApi
 import com.deefrent.rnd.fieldapp.network.models.*
 import com.deefrent.rnd.fieldapp.view.auth.forgetPin.GeneralResponseStatus
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
+import timber.log.Timber
 import java.io.IOException
-import kotlin.math.log
 
 class LoanLookUpViewModel() : ViewModel() {
+    private var useMpesa: Boolean = false
+
+    private var repayableLoan: RepayableLoan? = null
+
     private var _status = MutableLiveData<Int?>()
     val status: MutableLiveData<Int?>
         get() = _status
@@ -178,8 +183,8 @@ class LoanLookUpViewModel() : ViewModel() {
                 _responseGStatus.value = GeneralResponseStatus.DONE
                 e.printStackTrace()
                 if (e is IOException) {
-                    _statusMessage.value = BaseApp.applicationContext()
-                        .getString(R.string.no_network_connection)
+                    _statusMessage.value =
+                        BaseApp.applicationContext().getString(R.string.no_network_connection)
                     _statusId.value = 0
                 }
                 _statusId.value = e.hashCode()
@@ -214,8 +219,8 @@ class LoanLookUpViewModel() : ViewModel() {
                 _responseGStatus.value = GeneralResponseStatus.DONE
                 e.printStackTrace()
                 if (e is IOException) {
-                    _statusMessage.value = BaseApp.applicationContext()
-                        .getString(R.string.no_network_connection)
+                    _statusMessage.value =
+                        BaseApp.applicationContext().getString(R.string.no_network_connection)
                     _statusId.value = 0
                 }
                 _statusId.value = e.hashCode()
@@ -247,8 +252,8 @@ class LoanLookUpViewModel() : ViewModel() {
                 _responseStatus.value = GeneralResponseStatus.DONE
                 e.printStackTrace()
                 if (e is IOException) {
-                    _statusMessage.value = BaseApp.applicationContext()
-                        .getString(R.string.no_network_connection)
+                    _statusMessage.value =
+                        BaseApp.applicationContext().getString(R.string.no_network_connection)
                     _status.value = 0
                 }
                 _status.value = e.hashCode()
@@ -283,8 +288,8 @@ class LoanLookUpViewModel() : ViewModel() {
                 _responseStatus.value = GeneralResponseStatus.DONE
                 e.printStackTrace()
                 if (e is IOException) {
-                    _statusMessage.value = BaseApp.applicationContext()
-                        .getString(R.string.no_network_connection)
+                    _statusMessage.value =
+                        BaseApp.applicationContext().getString(R.string.no_network_connection)
                     _status.value = 0
                 }
                 _status.value = e.hashCode()
@@ -462,6 +467,7 @@ class LoanLookUpViewModel() : ViewModel() {
     }
 
     fun payLoanPreview(payLoanDTO: PayLoanDTO) {
+        this.useMpesa = false
         uiScope.launch {
             _payResponseStatus.value = GeneralResponseStatus.LOADING
             val payLoanDetails = FieldAgentApi.retrofitService.loanRepayPreviewAsync(payLoanDTO)
@@ -489,9 +495,15 @@ class LoanLookUpViewModel() : ViewModel() {
         uiScope.launch {
             val formIDDTO = FormIDDTO()
             formIDDTO.formId = formId.value!!
-            val loanRequest = FieldAgentApi.retrofitService.loanRepayCommitAsync(formIDDTO)
+
+            val generalPostResponse: Deferred<GeneralCommitResponse> = if (useMpesa){
+                FieldAgentApi.retrofitService.loanRepayCommitAsyncMpesa(formIDDTO)
+            }else {
+                FieldAgentApi.retrofitService.loanRepayCommitAsync(formIDDTO)
+            }
+
             try {
-                val loanResponse = loanRequest.await()
+                val loanResponse = generalPostResponse.await()
                 if (loanResponse.status == 1) {
                     val loanLookUpDTO = LoanLookUpDTO()
                     loanLookUpDTO.idNumber = _idNumber.value!!
@@ -544,5 +556,51 @@ class LoanLookUpViewModel() : ViewModel() {
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
+    }
+
+    fun payLoanMpesaPreview(payLoanDTO: PayLoanDTO): Int? {
+        this.useMpesa = true
+        val repayableLoan = repayableLoan
+        if (repayableLoan == null) {
+            return R.string.loan_details_notFound
+        } else {
+            uiScope.launch {
+                _payResponseStatus.value = GeneralResponseStatus.LOADING
+                try {
+                    val payLoanDTOMpesa = PayLoanDTOMpesa(
+                        loanId = repayableLoan.loanId.toString(),
+                        amount = payLoanDTO.amount,
+                        providerPhone ="254748188534", //repayableLoan.customerNumber!!,
+                        payAll = payLoanDTO.payAll,
+                        idNumber = payLoanDTO.idNumber,
+                        loanAccountNo = repayableLoan.loanAccountNo,
+                        repaymentDate = payLoanDTO.repaymentDate,
+                        description = payLoanDTO.description
+                    )
+                    val payloanResponse =
+                        FieldAgentApi.retrofitService.loanRepayPreviewMpesa(payLoanDTOMpesa).await()
+                    if (payloanResponse.status == 1) {
+                        _payResponseStatus.value = GeneralResponseStatus.DONE
+                        formId.value = payloanResponse.data.formId.toString()
+                        charges.value = payloanResponse.data.charges.toString()
+                        _payStatusCode.value = payloanResponse.status
+                    } else if (payloanResponse.status == 0) {
+                        _payResponseStatus.value = GeneralResponseStatus.ERROR
+                        _statusMessage.value = payloanResponse.message
+                        _payStatusCode.value = payloanResponse.status
+                    }
+                } catch (e: HttpException) {
+                    e.printStackTrace()
+                    _responseUpdateStatus.value = GeneralResponseStatus.ERROR
+                    _statusUpdateCode.value = e.code()
+                }
+            }
+            return null
+        }
+
+    }
+
+    fun addPayAbleLoans(args: RepayableLoan) {
+        this.repayableLoan = args
     }
 }

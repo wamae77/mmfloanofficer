@@ -294,6 +294,7 @@ class ApplyLoanFragment : BaseDaggerFragment() {
                     lookupViewmodel.stopObserving()
                 }
             }
+
             lookupViewmodel.statusCommit.observe(viewLifecycleOwner) {
                 if (null != it) {
                     when (it) {

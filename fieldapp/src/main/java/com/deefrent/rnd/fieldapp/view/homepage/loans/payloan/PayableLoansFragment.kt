@@ -56,7 +56,7 @@ class PayableLoansFragment : Fragment(), LoanPayableCallBack {
     override fun onItemSelected(loanProduct: RepayableLoan) {
         val direction =
             PayableLoansFragmentDirections.actionPayableLoansFragmentToLoanPaymentFragment(
-                loanProduct
+                loanProduct.copy(customerNumber = viewModel.loanLookUpData.value?.phone)
             )
         findNavController().navigate(direction)
     }

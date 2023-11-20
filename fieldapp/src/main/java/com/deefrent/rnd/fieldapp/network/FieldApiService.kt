@@ -148,6 +148,12 @@ interface FieldApiService {
     @POST("loan/repayment-preview")
     fun loanRepayPreviewAsync(@Body payLoanDTO: PayLoanDTO): Deferred<GeneralPreviewResponse>
 
+    @POST("loan/repayment-preview-pg")
+    fun loanRepayPreviewMpesa(@Body payLoanDTOMpesa: PayLoanDTOMpesa):Deferred<GeneralPreviewResponse>
+
+    @POST("loan/repayment-commit-pg")
+    fun loanRepayCommitAsyncMpesa(@Body formIDDTO: FormIDDTO): Deferred<GeneralCommitResponse>
+
     @POST("loan/repayment-commit")
     fun loanRepayCommitAsync(@Body formIDDTO: FormIDDTO): Deferred<GeneralCommitResponse>
 

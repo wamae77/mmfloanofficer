@@ -539,4 +539,5 @@
     <string name="title_signature_capture">Signature Pad</string>
     <string name="signature_instructions">Double tap to clear signature.</string>
     <string name="submit_signature">Done</string>
+    <string name="loan_details_notFound">Loan details not found</string>
 </resources>

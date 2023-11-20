@@ -51,6 +51,8 @@ data class LoanLookupData(
     val isFullyRegistered: Boolean,
     @SerializedName("lastName")
     val lastName: String,
+    @SerializedName("phone")
+    val phone:String,
     @SerializedName("periodMeasures")
     val periodMeasures: List<PeriodMeasure>,
     @SerializedName("loanPurposes")
@@ -95,6 +97,8 @@ data class RepayableLoan(
     val loanTenure: String,
     @SerializedName("interestRate")
     val interestRate: String,
+
+    var customerNumber: String?
 ) : Parcelable
 
 data class LoanPurposes(

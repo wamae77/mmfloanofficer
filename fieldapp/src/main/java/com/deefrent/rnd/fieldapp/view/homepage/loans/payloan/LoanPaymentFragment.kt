@@ -54,8 +54,7 @@ class LoanPaymentFragment : BaseDaggerFragment() {
     lateinit var commonSharedPreferences: CommonSharedPreferences
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentLoanPaymentBinding.inflate(layoutInflater)
 
@@ -79,14 +78,14 @@ class LoanPaymentFragment : BaseDaggerFragment() {
             showDatePicker()
         }
         val args = LoanPaymentFragmentArgs.fromBundle(requireArguments()).payableLoans
+        lookupViewmodel.addPayAbleLoans(args)
         payableLoans = args
         lookupViewmodel.loanLookUpData.observe(viewLifecycleOwner) {
             national_id = it?.idNumber.toString()
             val idNumber = it?.idNumber?.replace("(?<=.{2}).(?=.{3})".toRegex(), "*")
             val customerName = "${it?.firstName} ${it?.lastName}"
             binding.tvAccName.text = String.format(
-                getString(R.string.acc), "$customerName -" +
-                        "\n$idNumber"
+                getString(R.string.acc), "$customerName -" + "\n$idNumber"
             )
         }
         binding.head.text = "Repay ${args.name.capitalizeWords}"
@@ -122,8 +121,7 @@ class LoanPaymentFragment : BaseDaggerFragment() {
             }
 
             binding.ivBack.setOnClickListener { v ->
-                Navigation.findNavController(v)
-                    .navigateUp()
+                Navigation.findNavController(v).navigateUp()
             }
         }
         return binding.root
@@ -155,6 +153,7 @@ class LoanPaymentFragment : BaseDaggerFragment() {
         binding.apply {
             btnContinue.setOnClickListener {
                 if (isNetworkAvailable(requireContext())) {
+
                     val payLoanDTO = PayLoanDTO()
                     if (rbMyself.isChecked) {
                         if (validateYesFields()) {
@@ -164,7 +163,14 @@ class LoanPaymentFragment : BaseDaggerFragment() {
                             payLoanDTO.payAll = 1
                             payLoanDTO.amount = loanBal
                             payLoanDTO.repaymentDate = etPaymentDateFull.text.toString().trim()
-                            lookupViewmodel.payLoanPreview(payLoanDTO)
+                            if (binding.useMpesaCheckBox.isChecked) {
+                                lookupViewmodel.payLoanMpesaPreview(payLoanDTO)
+                                    ?.let { id ->
+                                        toastyErrors(getString(id))
+                                    }
+                            } else {
+                                lookupViewmodel.payLoanPreview(payLoanDTO)
+                            }
                         }
                     } else {
                         if (validateNoFields()) {
@@ -174,7 +180,14 @@ class LoanPaymentFragment : BaseDaggerFragment() {
                             payLoanDTO.payAll = 0
                             payLoanDTO.amount = etPamount.text.toString().trim()
                             payLoanDTO.repaymentDate = etPaymentDatePartial.text.toString().trim()
-                            lookupViewmodel.payLoanPreview(payLoanDTO)
+                            if (binding.useMpesaCheckBox.isChecked) {
+                                lookupViewmodel.payLoanMpesaPreview(payLoanDTO)
+                                    ?.let { id ->
+                                        toastyErrors(getString(id))
+                                    }
+                            } else {
+                                lookupViewmodel.payLoanPreview(payLoanDTO)
+                            }
                         }
 
                     }
@@ -288,10 +301,8 @@ class LoanPaymentFragment : BaseDaggerFragment() {
                         1 -> {
                             pinViewmodel.getWalletAccountBal()
                             btnContinue.isEnabled = true
-                            binding.apply {
-                            }
-                            binding.progressbar.mainPBar.makeGone()
-                            /* val direction =
+                            binding.apply {}
+                            binding.progressbar.mainPBar.makeGone()/* val direction =
                                  LoanPaymentFragmentDirections.actionLoanPaymentFragmentToLoanSuccessFragment(
                                      2
                                  )
@@ -419,16 +430,14 @@ class LoanPaymentFragment : BaseDaggerFragment() {
             repaymentPeriod.observe(viewLifecycleOwner) {
                 dialogDetailCommonHashSet.add(
                     DialogDetailCommon(
-                        label = "Loan Account Number",
-                        content = "${it} "
+                        label = "Loan Account Number", content = "${it} "
                     )
                 )
             }
             repaymentDate.observe(viewLifecycleOwner) {
                 dialogDetailCommonHashSet.add(
                     DialogDetailCommon(
-                        label = "Repayment Date:",
-                        content = it
+                        label = "Repayment Date:", content = it
                     )
                 )
             }
@@ -444,14 +453,12 @@ class LoanPaymentFragment : BaseDaggerFragment() {
 
         bundle.putString(SUCCESS_TITLE, "Loan Repayment Successful")
         bundle.putString(
-            SUCCESS_DESCRIPTION,
-            "Loan repayment has been processed successfully"
+            SUCCESS_DESCRIPTION, "Loan repayment has been processed successfully"
         )
 
         bundle.putParcelableArrayList(SUCCESS_DIALOGDETAILCOMMON, dialogDetailCommonHashSet)
         findNavController().navigate(
-            R.id.generalSuccessfulFragment,
-            bundle
+            R.id.generalSuccessfulFragment, bundle
         )
         dataToPrint()
         commonSharedPreferences.setIsPrintReceipt(true)
