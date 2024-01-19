@@ -5,7 +5,7 @@ extern "C" {
 JNIEXPORT jstring JNICALL
 Java_com_deefrent_rnd_jiboostfieldapp_BaseApp_getBaseURL(JNIEnv *env, jobject thiz) {
     //UAT URL
-    return env->NewStringUTF("https://jiboost.wearedeefrent.org/jiboost-api/api/");
+    return env->NewStringUTF( "https://jiboostapi.wearedeefrent.org/api/");
     //DEV Test URL
     //return env->NewStringUTF("https://test-api.ekenya.co.ke/moneymart-api/api/");
     //PRODUCTION URL
@@ -21,10 +21,15 @@ Java_com_deefrent_rnd_common_utils_Constants_getPINNERURL(JNIEnv *env, jobject t
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_deefrent_rnd_common_utils_Constants_getPINNERCERT(JNIEnv *env, jobject thiz) {
-    return env->NewStringUTF("sha256/KUBFLwmWgeTr+eiWM9lc0PxIzJL3jh39Z46NQ4LDHJo=");
+    return env->NewStringUTF("sha256/qtKUIytKjQx6WeERsF8ffuTH2+LFxqi8LntoUjfCdME=");
 }
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_deefrent_rnd_common_utils_Constants_getFingerPrintURL(JNIEnv *env, jobject thiz) {
     return env->NewStringUTF("https://fingerprint.moneymart-test.awsekenya.com");
+}
+extern "C"
+JNIEXPORT jint JNICALL
+Java_com_gne_pm_PM_powerOn(JNIEnv *env, jclass clazz) {
+    // TODO: implement powerOn()
 }

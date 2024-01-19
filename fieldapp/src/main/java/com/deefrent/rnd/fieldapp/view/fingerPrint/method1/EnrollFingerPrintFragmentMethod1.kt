@@ -25,8 +25,7 @@ class EnrollFingerPrintFragmentMethod1 :
     BaseMoneyMartBindedFragment<FragmentEnrollFingerPrintBinding>(
         FragmentEnrollFingerPrintBinding::inflate
     ) {
-    @Inject
-    lateinit var viewModel: FingerPrintViewModel
+
     private val sharedViewModel: SharedViewModelToStoreImageData by activityViewModels()
 
     @Inject

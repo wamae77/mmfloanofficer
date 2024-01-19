@@ -26,7 +26,7 @@ class FieldValidators {
         var message = VALIDINPUT
         if (phoneNumber.trim().isNotEmpty()){
             if (phoneNumber.trim().length !=12){
-                message = "Enter a valid phone number e.g(263712345678)"
+                message = "Enter a valid phone number e.g(254712345678)"
             }
             /* if (phoneNumber.trim().length !=12 && !phoneNumber.trim().startsWith("254")){
                  message = "Provide a valid  number"
@@ -36,7 +36,7 @@ class FieldValidators {
              }*/
 
         }else{
-            message = "Enter a valid phone number e.g(263712345678)"
+            message = "Enter a valid phone number e.g(254712345678)"
         }
         return message
     }

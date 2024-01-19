@@ -18,7 +18,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
-import timber.log.Timber
 import java.io.IOException
 
 class LoanLookUpViewModel() : ViewModel() {
@@ -558,7 +557,7 @@ class LoanLookUpViewModel() : ViewModel() {
         viewModelJob.cancel()
     }
 
-    fun payLoanMpesaPreview(payLoanDTO: PayLoanDTO): Int? {
+    fun payLoanMpesaPreview(payLoanDTO: PayLoanDTO, phoneNumber: String): Int? {
         this.useMpesa = true
         val repayableLoan = repayableLoan
         if (repayableLoan == null) {
@@ -570,7 +569,7 @@ class LoanLookUpViewModel() : ViewModel() {
                     val payLoanDTOMpesa = PayLoanDTOMpesa(
                         loanId = repayableLoan.loanId.toString(),
                         amount = payLoanDTO.amount,
-                        providerPhone ="254748188534", //repayableLoan.customerNumber!!,
+                        providerPhone =phoneNumber,
                         payAll = payLoanDTO.payAll,
                         idNumber = payLoanDTO.idNumber,
                         loanAccountNo = repayableLoan.loanAccountNo,

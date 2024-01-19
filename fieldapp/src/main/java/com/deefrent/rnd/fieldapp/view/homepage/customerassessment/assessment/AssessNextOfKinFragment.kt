@@ -93,7 +93,7 @@ class AssessNextOfKinFragment : Fragment() {
                     tlYear.error = validPhone
                 }else if (sId.isEmpty()){
                     toastyErrors("Select Identity type")
-                }else if (kinId.length<11){
+                }else if (kinId.length<8){
                     tiGuarantorAddress.error="Required"
                 }else{
                     tlBAddress.error=""

@@ -113,8 +113,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentStep2CustomerDetailsBinding.inflate(layoutInflater)
         viewmodel.stopObserving()
@@ -251,7 +250,9 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
             btnContinue.setOnClickListener {
 
                 if (rbMyself.isChecked) {
+                    Log.i("TAG", "setUpBindingApply: ----------------------1")
                     if (validateYesFields()) {
+                        Log.i("TAG", "setUpBindingApply: ----------------------3")
                         customerDetailsEntity.apply {
                             lastStep = "CustomerDetailsFragment"
                             isComplete = false
@@ -351,7 +352,9 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                     }
 
                 } else {
+                    Log.i("TAG", "setUpBindingApply: ------------------------2")
                     if (validateNoFields()) {
+                        Log.i("TAG", "setUpBindingApply: ------------------------------4")
                         customerDetailsEntity.apply {
                             lastStep = "CustomerDetailsFragment"
                             isComplete = false
@@ -371,8 +374,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                             when (args.fragmentType) {
                                 2 -> {
                                     completion = "0"
-                                    customerNumber = ""
-                                    /* viewmodel.accountLookUpData.observe(viewLifecycleOwner) {
+                                    customerNumber = ""/* viewmodel.accountLookUpData.observe(viewLifecycleOwner) {
                                          Log.d(
                                              "TAG",
                                              "getSavedItemsFromRoomDebugGkkkkkk3: ${it.maxCollaterals}"
@@ -393,8 +395,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                                     findNavController().navigate(R.id.summaryFragment)
                                 }
 
-                                3 -> {
-                                    /*maximumColateral = maxColateral
+                                3 -> {/*maximumColateral = maxColateral
                                     maximumGuarantor = maxGuarantor*/
                                     Log.d("TAG", "onViewCreatedisComp2: $isComp")
                                     /**from incomplete registration*/
@@ -404,8 +405,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
 
                                 }
 
-                                4 -> {
-                                    /*maximumColateral = maxColateral
+                                4 -> {/*maximumColateral = maxColateral
                                     maximumGuarantor = maxGuarantor*/
                                     completion = isComp
                                     customerNumber = customerDetailValue
@@ -440,16 +440,12 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                             //saveCustomerFullDatLocally(customerDetailsEntity)
                             if (frontIDUri != null) {
                                 saveImageToInternalAppStorage(
-                                    frontIDUri!!,
-                                    requireContext(),
-                                    frontIDImageName
+                                    frontIDUri!!, requireContext(), frontIDImageName
                                 )
                             }
                             if (passportPhotoUri != null) {
                                 saveImageToInternalAppStorage(
-                                    passportPhotoUri!!,
-                                    requireContext(),
-                                    passportImageName
+                                    passportPhotoUri!!, requireContext(), passportImageName
                                 )
                             }
                             val json = Gson()
@@ -459,15 +455,16 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 }
             }
         }
-        val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                val intent = result.data
-                // Handle the Intent
+        val startForResult =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+                if (result.resultCode == Activity.RESULT_OK) {
+                    val intent = result.data
+                    // Handle the Intent
+                }
             }
-        }
 
         binding.btnXaraniIDLookUp.setOnClickListener {
-           // startForResult.launch(ScanSmartActivity.getStartIntent(requireContext()))
+            // startForResult.launch(ScanSmartActivity.getStartIntent(requireContext()))
             if (binding.etIdNo.text.toString().isEmpty()) {
                 binding.etIdNo.error = "ID Number required"
             } else {
@@ -482,39 +479,8 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 idNumber = binding.etIdNo.text.toString().trim()
             )
             commonSharedPreferences.saveStringData(
-                CommonSharedPreferences.CU_ID_NUMBER,
-                binding.etIdNo.text.toString().trim()
+                CommonSharedPreferences.CU_ID_NUMBER, binding.etIdNo.text.toString().trim()
             )
-
-//            binding.progressbar.mainPBar.makeGone()
-//            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
-//            Log.e("RESPONSE", "${response.data}")
-//            if (response.status == 1) {
-//                binding.clCustomerData.visibilityView(true)
-//                binding.btnContinue.visibilityView(true)
-//                binding.btnXaraniIDLookUp.visibilityView(false)
-//                //
-//                //populateUserData(response.data)
-//                if (response.data.askUserToDoManualRegistration) {
-//                    showTwoButtonDialog(
-//                        title = "Oops!",
-//                        description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
-//                        listenerCancel = {
-//                            findNavController().popBackStack(
-//                                R.id.dashboardFragment,
-//                                false
-//                            )
-//                        },
-//                        listenerConfirm = {
-//                            Log.e("", "COFIRMED")
-//                        }
-//                    )
-//                    //
-//                    binding.clCustomerData.visibilityView(true)
-//                    binding.btnContinue.visibilityView(true)
-//                    binding.btnXaraniIDLookUp.visibilityView(false)
-//                    //
-//                }
             idCustomerLookUpViewModel.xaraniIdCheck(xaraniIdCheckRequest = xaraniIdCheckRequest)
                 .collect {
                     when (it) {
@@ -522,14 +488,12 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                             //showDummyDataForSimulation()
                             binding.progressbar.mainPBar.makeGone()
                             binding.btnXaraniIDLookUp.visibilityView(true)
-                            showOneButtonDialog(
-                                image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
+                            showOneButtonDialog(image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
                                 title = "Oops!",
                                 description = "Looks like we have a Problem.Try again later.",
                                 listener = {
 
-                                }
-                            )
+                                })
                         }
 
                         is ResourceNetworkFlow.Loading -> {
@@ -539,7 +503,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
 
                         is ResourceNetworkFlow.Success -> {
                             binding.progressbar.mainPBar.makeGone()
-                            val response = XaraniIdCheckResponse(status = 1, message = "skip", data = XaraniIdCheckData(askUserToDoManualRegistration = true) )//it.data!!  TODO undo this line @kelvin
+                            val response = it.data!!
                             Log.e("RESPONSE", "${response.data}")
                             if (response.status == 1) {
                                 binding.clCustomerData.visibilityView(true)
@@ -548,19 +512,16 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                                 //
                                 //populateUserData(response.data)
                                 if (response.data.askUserToDoManualRegistration) {
-                                    showTwoButtonDialog(
-                                        title = "Oops!",
+                                    showTwoButtonDialog(title = "Oops!",
                                         description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
                                         listenerCancel = {
                                             findNavController().popBackStack(
-                                                R.id.dashboardFragment,
-                                                false
+                                                R.id.dashboardFragment, false
                                             )
                                         },
                                         listenerConfirm = {
                                             Log.e("", "COFIRMED")
-                                        }
-                                    )
+                                        })
                                     //
                                     binding.clCustomerData.visibilityView(true)
                                     binding.btnContinue.visibilityView(true)
@@ -577,36 +538,30 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                                 //
                                 //showDummyDataForSimulation()
                                 if (response.data.askUserToDoManualRegistration) {
-                                    showTwoButtonDialog(
-                                        title = "Oops!",
+                                    showTwoButtonDialog(title = "Oops!",
                                         description = getString(com.deefrent.rnd.common.R.string.id_number_verification_service_not_available),
                                         listenerCancel = {
                                             findNavController().popBackStack(
-                                                R.id.dashboardFragment,
-                                                false
+                                                R.id.dashboardFragment, false
                                             )
                                         },
                                         listenerConfirm = {
                                             Log.e("", "COFIRMED")
-                                        }
-                                    )
+                                        })
                                     //
                                     binding.clCustomerData.visibilityView(true)
                                     binding.btnContinue.visibilityView(true)
                                     binding.btnXaraniIDLookUp.visibilityView(false)
                                     //
                                 } else if (response.data.askUserToDoManualRegistration == false) {
-                                    showOneButtonDialog(
-                                        image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
+                                    showOneButtonDialog(image = com.deefrent.rnd.common.R.drawable.ic_baseline_error_outline_24,
                                         title = "Oops! ",
                                         description = response.message.toString(),
                                         listener = {
                                             findNavController().popBackStack(
-                                                R.id.dashboardFragment,
-                                                false
+                                                R.id.dashboardFragment, false
                                             )
-                                        }
-                                    )
+                                        })
                                 }
 
                             }
@@ -637,7 +592,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
             etIdNo.alpha = 1f
             etIdNo.alpha = 1f
             //
-            etDob.isEnabled = false;
+           // etDob.isEnabled = false;
             etDob.alpha = 1f
             tlDob.alpha = 1f
             //
@@ -668,8 +623,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 }
                 if (isDateOk) {
                     val preferredFormat = "dd-MM-yyyy"
-                    val date =
-                        SimpleDateFormat(preferredFormat, Locale.US).format(myCalendar.time)
+                    val date = SimpleDateFormat(preferredFormat, Locale.US).format(myCalendar.time)
                     binding.etDob.setText(date)
                 } else {
                     toastyErrors(getString(R.string.age_should_be_more_than_18years))
@@ -677,7 +631,9 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
             }
         myCalendar.add(Calendar.YEAR, -18)
         val dialog = DatePickerDialog(
-            requireContext(), dateListener, myCalendar[Calendar.YEAR],
+            requireContext(),
+            dateListener,
+            myCalendar[Calendar.YEAR],
             myCalendar[Calendar.MONTH],
             myCalendar[Calendar.DAY_OF_MONTH]
         )
@@ -741,8 +697,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
     }
 
     private fun showPickerOptionsDialog(type: String) {
-        val options =
-            arrayOf<CharSequence>("Take Photo", "Choose From Gallery", "Cancel")
+        val options = arrayOf<CharSequence>("Take Photo", "Choose From Gallery", "Cancel")
         val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Select Option")
         builder.setItems(options) { dialog, item ->
@@ -790,8 +745,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                     //  if (isFromIncomplete) {
                     //passportImageName = getFileName2(uri, requireContext())
                     passportImageName = generateUniqueDocName(
-                        binding.etIdNo.text.toString(),
-                        profilePicCode
+                        binding.etIdNo.text.toString(), profilePicCode
                     )
                     passportPhotoUri = uri
                     if (customerImagePassport.isNotEmpty()) {
@@ -815,13 +769,11 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                         )
                         customerDocs.add(customerDocsEntity)
                     }
-                    binding.tvAttachPassport.text =
-                        "Passport Size Photo - $passportImageName"
+                    binding.tvAttachPassport.text = "Passport Size Photo - $passportImageName"
                 } else {
                     //   if (isFromIncomplete) {
                     frontIDImageName = generateUniqueDocName(
-                        binding.etIdNo.text.toString(),
-                        frontIDCode
+                        binding.etIdNo.text.toString(), frontIDCode
                     )
                     frontIDUri = uri
                     if (customerImage.isNotEmpty()) {
@@ -948,6 +900,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 }
             }
         }
+        Log.i("TAG", "validateYesFields: $isValid")
         return isValid
     }
 
@@ -1025,21 +978,18 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
 
     }
 
-    private fun saveCustomerFullDatLocally(customerDetailsEntity: CustomerDetailsEntity) {
-        /*customerDocs.forEach { customerDoc ->
+    private fun saveCustomerFullDatLocally(customerDetailsEntity: CustomerDetailsEntity) {/*customerDocs.forEach { customerDoc ->
             customerDoc.parentNationalIdentity = binding.etIdNo.text.toString()
         }*/
         Log.d("TAG", "saveCustomerFullDatLocally: ${customerDocs.size}")
         viewmodel.insertCustomerFullDetails(
-            customerDetailsEntity,
-            guarantor,
-            collateral,
-            otherBorrowing, household, customerDocs
+            customerDetailsEntity, guarantor, collateral, otherBorrowing, household, customerDocs
         )
     }
 
     private fun updateCustomerNationalID(
-        newNationalID: String, firstName: String,
+        newNationalID: String,
+        firstName: String,
         lastName: String,
         alias: String,
         email: String,
@@ -1049,8 +999,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
         genderName: String,
         spouseName: String?,
         spousePhone: String?
-    ) {
-        /*customerDocs.forEach { customerDoc ->
+    ) {/*customerDocs.forEach { customerDoc ->
             customerDoc.parentNationalIdentity = binding.etIdNo.text.toString()
         }*/
         Log.d("TAG", "saveCustomerFullDatLocally: ${customerDocs.size}")
@@ -1071,29 +1020,28 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
     }
 
     private fun handleBackButton() {
-        val callback: OnBackPressedCallback =
-            object : OnBackPressedCallback(
-                true
-            ) {
-                override fun handleOnBackPressed() {
-                    when (args.fragmentType) {
-                        4 -> {
-                            isFromCustomerDetails = true
-                            findNavController().navigate(R.id.action_onboardCustomerDetailsFragment_to_incompleteRegDashboardFragment)
-                        }
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(
+            true
+        ) {
+            override fun handleOnBackPressed() {
+                when (args.fragmentType) {
+                    4 -> {
+                        isFromCustomerDetails = true
+                        findNavController().navigate(R.id.action_onboardCustomerDetailsFragment_to_incompleteRegDashboardFragment)
+                    }
 
-                        1 -> {
-                            isFromCustomerDetails = false
-                            findNavController().navigate(R.id.summaryFragment)
-                        }
+                    1 -> {
+                        isFromCustomerDetails = false
+                        findNavController().navigate(R.id.summaryFragment)
+                    }
 
-                        else -> {
-                            isFromCustomerDetails = false
-                            findNavController().navigate(R.id.action_onboardCustomerDetailsFragment_to_incompleteRegDashboardFragment)
-                        }
+                    else -> {
+                        isFromCustomerDetails = false
+                        findNavController().navigate(R.id.action_onboardCustomerDetailsFragment_to_incompleteRegDashboardFragment)
                     }
                 }
             }
+        }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
     }
@@ -1153,8 +1101,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                             isComp = it.customerDetails.completion
                             Log.e("TAG", "getSavedItemsFromRoomC: $isComp")
                             Log.e(
-                                "TAG",
-                                "getSavedItemsFromRoomISC: ${it.customerDetails.completion}"
+                                "TAG", "getSavedItemsFromRoomISC: ${it.customerDetails.completion}"
                             )
                         }
                         if (it.customerDetails.isButtonChecked != null) {
@@ -1182,8 +1129,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                         collateral.clear()
                         collateral.addAll(it.collateral)
                         Log.e(
-                            "TAG",
-                            "customerDocsEntity Phase 1: ${Gson().toJson(it.customerDocs)}"
+                            "TAG", "customerDocsEntity Phase 1: ${Gson().toJson(it.customerDocs)}"
                         )
                         customerImage.clear()
                         val frontIDImage =
@@ -1223,8 +1169,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                                 customerFaceID = customerImagePassport.first()
                                 Log.e("TAG", "customerFaceID2: ${Gson().toJson(customerFaceID)}")
                                 if (customerFaceID.docPath.isNotEmpty()) {
-                                    val uriFace =
-                                        Uri.fromFile(File(customerFaceID.docPath))
+                                    val uriFace = Uri.fromFile(File(customerFaceID.docPath))
                                     val imageFace = getFileName2(uriFace, requireContext())
                                     if (pattern.containsMatchIn(customerFaceID.docPath)) {
                                         Log.d(
@@ -1297,8 +1242,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
 
             if (customerDocsEntity.docCode == profilePicCode) {
                 Glide.with(requireActivity()).load(customerDocsEntity.docPath)
-                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())
-                    .into(userLogo)
+                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder()).into(userLogo)
                 tvTitle.text = "Passport Photo Size"
                 tvEdit.setOnClickListener {
                     dialog.dismiss()
@@ -1306,8 +1250,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
                 }
             } else {
                 Glide.with(requireActivity()).load(customerDocsEntity.docPath)
-                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())
-                    .into(userLogo)
+                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder()).into(userLogo)
                 tvTitle.text = "Customer Front ID"
                 tvEdit.setOnClickListener {
                     dialog.dismiss()
@@ -1317,12 +1260,10 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
             cardBinding.userLogo.setOnClickListener {
                 val mBuilder: AlertDialog.Builder =
                     AlertDialog.Builder(context, R.style.WrapContentDialog)
-                val mView: View =
-                    layoutInflater.inflate(R.layout.preview_image, null)
+                val mView: View = layoutInflater.inflate(R.layout.preview_image, null)
                 val ivImagePreview = mView.findViewById<PhotoView>(R.id.iv_preview_image)
                 Glide.with(requireActivity()).load(customerDocsEntity.docPath)
-                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder())
-                    .into(ivImagePreview)
+                    .placeholder(ShimmerPlaceHolder.getShimmerPlaceHolder()).into(ivImagePreview)
                 mBuilder.setView(mView)
                 val mDialog: AlertDialog = mBuilder.create()
                 mDialog.show()

@@ -28,8 +28,10 @@ class BillPaymentLookUpFragment : Fragment() {
         ViewModelProvider(requireActivity()).get(BillersViewModel::class.java)
     }
 
+    val TAG  = "BillPaymentLookUp"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i(TAG, "onCreate: kevo")
         arguments?.let {
         }
     }
@@ -155,7 +157,6 @@ class BillPaymentLookUpFragment : Fragment() {
                                     viewmodel.stopObserving()
                                     binding.btnSearch.isEnabled = true
                                     binding.etName.setText("")
-                                    Log.d("TAG", "initUI: ${viewmodel.customerList.size}")
                                     findNavController().navigate(R.id.action_billPaymentLookupFragment_to_customerListFragment)
                                 } else {
                                     viewmodel.stopObserving()

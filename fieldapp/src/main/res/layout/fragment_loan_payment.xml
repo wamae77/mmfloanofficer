@@ -305,7 +305,32 @@
                         android:layout_weight="1"
                         android:src="@mipmap/mpesalogo_foreground" />
 
+
                 </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tl_phone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:hint="phone number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:prefixText="+254"
+                    app:layout_constraintTop_toBottomOf="@id/useMpesa">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Full"
@@ -315,7 +340,7 @@
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/useMpesa">
+                    app:layout_constraintTop_toBottomOf="@id/tl_phone">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tl_enter_amount"
@@ -439,7 +464,7 @@
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/useMpesa">
+                    app:layout_constraintTop_toBottomOf="@id/tl_phone">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tl_P_amount"

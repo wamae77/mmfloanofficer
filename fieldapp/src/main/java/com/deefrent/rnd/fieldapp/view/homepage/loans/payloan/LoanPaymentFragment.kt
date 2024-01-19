@@ -31,6 +31,7 @@ import com.deefrent.rnd.fieldapp.view.homepage.loans.LoanLookUpViewModel
 import com.deefrent.rnd.fieldapp.view.printreceipt.MoneyMartPrintServiceActivity
 import com.deefrent.rnd.jiboostfieldapp.ui.printer.PrinterConfigs
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_enrollment.view.text
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
@@ -164,10 +165,7 @@ class LoanPaymentFragment : BaseDaggerFragment() {
                             payLoanDTO.amount = loanBal
                             payLoanDTO.repaymentDate = etPaymentDateFull.text.toString().trim()
                             if (binding.useMpesaCheckBox.isChecked) {
-                                lookupViewmodel.payLoanMpesaPreview(payLoanDTO)
-                                    ?.let { id ->
-                                        toastyErrors(getString(id))
-                                    }
+                                repayMentByMpesa(payLoanDTO)
                             } else {
                                 lookupViewmodel.payLoanPreview(payLoanDTO)
                             }
@@ -181,10 +179,7 @@ class LoanPaymentFragment : BaseDaggerFragment() {
                             payLoanDTO.amount = etPamount.text.toString().trim()
                             payLoanDTO.repaymentDate = etPaymentDatePartial.text.toString().trim()
                             if (binding.useMpesaCheckBox.isChecked) {
-                                lookupViewmodel.payLoanMpesaPreview(payLoanDTO)
-                                    ?.let { id ->
-                                        toastyErrors(getString(id))
-                                    }
+                                repayMentByMpesa(payLoanDTO)
                             } else {
                                 lookupViewmodel.payLoanPreview(payLoanDTO)
                             }
@@ -331,7 +326,27 @@ class LoanPaymentFragment : BaseDaggerFragment() {
                 }
             }
 
+            useMpesaCheckBox.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    tlPhone.makeVisible()
+                } else {
+                    tlPhone.makeGone()
+                }
+            }
         }
+    }
+
+    private fun FragmentLoanPaymentBinding.repayMentByMpesa(payLoanDTO: PayLoanDTO) {
+        val phone = tlPhone.text.toString()
+        if (phone.length != 9){
+            toastyErrors(getString(R.string.invalid_phoneNo))
+            return
+        }
+       // val phoneNumber = FieldValidators().formatCodePhoneNumber(phone)
+        lookupViewmodel.payLoanMpesaPreview(payLoanDTO, phone)
+            ?.let { id ->
+                toastyErrors(getString(id))
+            }
     }
 
     override fun onDestroy() {

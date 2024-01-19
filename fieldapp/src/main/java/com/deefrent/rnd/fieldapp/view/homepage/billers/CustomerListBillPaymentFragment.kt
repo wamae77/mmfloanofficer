@@ -28,6 +28,7 @@ class CustomerListBillPaymentFragment : Fragment(), CustomerInfoCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("TAG", "onCreate: ---kevo")
         arguments?.let {
         }
     }

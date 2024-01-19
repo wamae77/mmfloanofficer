@@ -46,10 +46,10 @@ class PhoneVerificationFragment : BaseDaggerFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPhoneVerificationBinding.inflate(layoutInflater)
-        lifecycleScope.launch {
-            delay(2000)
-            findNavController().navigate(R.id.action_phoneVerification_to_pinFragment)
-        }
+//        lifecycleScope.launch {
+//            delay(2000)
+//            findNavController().navigate(R.id.action_phoneVerification_to_pinFragment)
+//        }
         return binding.root
     }
 

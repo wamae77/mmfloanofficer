@@ -152,16 +152,16 @@ class LoanLookupFragment : Fragment() {
                             if (selectedRadioButtonId == R.id.rbIDNumber) {
                                 val loanLookupData = viewmodel._loanLookUpData.value
 
-                                val gson = Gson()
-                                val jsonString = gson.toJson(loanLookupData)
-                                CommonSharedPreferences(requireContext()).saveStringData(
-                                    key = CommonSharedPreferences.LOANLOOKUPDATA,
-                                    value = jsonString
-                                )
-                                if (loanLookupData?.fingerPrintRegId == null) {
-                                    //findNavController().navigate(R.id.enrollOneFingerPrintFragment)
-                                    findNavController().navigate(R.id.updateCustomerFingerPrintFragment)
-                                } else {
+//                                val gson = Gson()
+//                                val jsonString = gson.toJson(loanLookupData)
+//                                CommonSharedPreferences(requireContext()).saveStringData(
+//                                    key = CommonSharedPreferences.LOANLOOKUPDATA,
+//                                    value = jsonString
+//                                )
+//                                if (loanLookupData?.fingerPrintRegId == null) {
+//                                    //findNavController().navigate(R.id.enrollOneFingerPrintFragment)
+//                                    findNavController().navigate(R.id.updateCustomerFingerPrintFragment)
+//                                } else {
                                     if (loanLookupData?.isAssessed == true) {
                                         binding.etPhoneNumber.setText("")
                                         findNavController().navigate(R.id.action_loanLookupFragment_to_loanHomeFragment)
@@ -170,7 +170,7 @@ class LoanLookupFragment : Fragment() {
                                     } else {
                                         onInfoDialogWarn(getString(R.string.customer_not_assessed))
                                     }
-                                }
+//                                }
                             } else if ((selectedRadioButtonId == R.id.rbName)) {
                                 if (viewmodel.customerList.isNotEmpty()) {
                                     viewmodel.stopObserving()

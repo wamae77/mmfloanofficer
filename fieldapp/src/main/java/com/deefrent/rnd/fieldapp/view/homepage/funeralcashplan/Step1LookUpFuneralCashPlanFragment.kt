@@ -39,8 +39,11 @@ class Step1LookUpFuneralCashPlanFragment :
     @Inject
     lateinit var commonSharedPreferences: CommonSharedPreferences
 
+    val TAG = "Step1LookUpFuneral"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Log.i(TAG, "onViewCreated: kevo")
 
         sharedViewModel.listFindCustomerByNameData.clear()
         setToolbarTitle(
