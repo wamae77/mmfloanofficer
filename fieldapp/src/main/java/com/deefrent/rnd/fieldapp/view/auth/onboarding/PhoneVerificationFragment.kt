@@ -1,12 +1,15 @@
 package com.deefrent.rnd.fieldapp.view.auth.onboarding
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -46,10 +49,10 @@ class PhoneVerificationFragment : BaseDaggerFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPhoneVerificationBinding.inflate(layoutInflater)
-//        lifecycleScope.launch {
-//            delay(2000)
-//            findNavController().navigate(R.id.action_phoneVerification_to_pinFragment)
-//        }
+        lifecycleScope.launch {
+            delay(2000)
+            findNavController().navigate(R.id.action_phoneVerification_to_pinFragment)
+        }
         return binding.root
     }
 
@@ -175,7 +178,11 @@ class PhoneVerificationFragment : BaseDaggerFragment() {
         }
 
         val intentFilter = IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION)
-        activity?.registerReceiver(smsBroadcastReceiver, intentFilter)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            activity?.registerReceiver(smsBroadcastReceiver, intentFilter, Context.RECEIVER_EXPORTED)
+        }else{
+            activity?.registerReceiver(smsBroadcastReceiver, intentFilter)
+        }
     }
 
     /**

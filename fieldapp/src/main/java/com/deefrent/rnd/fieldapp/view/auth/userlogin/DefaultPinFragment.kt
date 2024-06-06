@@ -171,7 +171,7 @@ class DefaultPinFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        pinBinding.appBar.setBackgroundColor(resources.getColor(R.color.white))
+        pinBinding.appBar.setBackgroundColor(resources.getColor(com.deefrent.rnd.common.R.color.white))
     }
 }
 

@@ -53,12 +53,12 @@ public class SyncLocalDataWorker extends Worker {
         merchantAgentDetailsList = fieldAppDatabase.merchantAgentDetailsDao().getAllMerchantAgentDetails1();
         if (merchantAgentDetailsList.size() > 0) {
             createMerchantAgentMultiPart(merchantAgentDetailsList);
-            displayNotification(getApplicationContext().getResources().getString(R.string.app_name), "Syncing Merchant/ Agent Data");
+            displayNotification(getApplicationContext().getResources().getString(com.deefrent.rnd.jiboostfieldapp.R.string.app_name), "Syncing Merchant/ Agent Data");
         }
         individualAccountDetailsList = fieldAppDatabase.individualAccountDetailsDao().getAllIndividualAccountDetails1();
         if (individualAccountDetailsList.size() > 0) {
             createCustomerMultiPart(individualAccountDetailsList);
-            displayNotification(getApplicationContext().getResources().getString(R.string.app_name), "Syncing Customer Data");
+            displayNotification(getApplicationContext().getResources().getString(com.deefrent.rnd.jiboostfieldapp.R.string.app_name), "Syncing Customer Data");
         }
         Log.e("syncData", "merchantAgentList: " + merchantAgentDetailsList.size());
         Log.e("syncData", "individualAccountList: " + individualAccountDetailsList.size());
@@ -223,7 +223,7 @@ public class SyncLocalDataWorker extends Worker {
         notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            channel = new NotificationChannel("Field Agent App", getApplicationContext().getResources().getString(R.string.app_name), NotificationManager.IMPORTANCE_DEFAULT);
+            channel = new NotificationChannel("Field Agent App", getApplicationContext().getResources().getString(com.deefrent.rnd.jiboostfieldapp.R.string.app_name), NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 

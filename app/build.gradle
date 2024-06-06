@@ -5,7 +5,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
+    //id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
 }
 apply plugin: 'kotlin-android'
@@ -179,6 +179,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig = true
     }
     externalNativeBuild {
         cmake {
@@ -213,7 +214,7 @@ dependencies {
     api files('libs/nexgo-smartpos-sdk-v3.0.3.aar')
     //implementation files('libs/A26Library-debug.aar')
     //
-    implementation "androidx.core:core-ktx:$rootProject.kotlinCoreVersion"
+    implementation ("androidx.core:core-ktx:$rootProject.kotlinCoreVersion")
     implementation "com.google.firebase:firebase-crashlytics:18.2.9"
     implementation 'com.google.firebase:firebase-analytics:20.1.2'
     //test
@@ -259,7 +260,7 @@ dependencies {
     // For Kotlin users also add the Kotlin extensions library for Play Core:
     implementation 'com.google.android.play:core-ktx:1.8.1'
 
-    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 
     //Encryption Lib
 //    debugImplementation 'com.ekenya.android.encryptionlib.debug:encryptionlib:'+rootProject.ekenyeEntryptionLibVersion

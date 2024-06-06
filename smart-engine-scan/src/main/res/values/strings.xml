@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="scanID">Scan ID</string>
-    <string name="start_scan">Scan</string>
-    <string name="select_document">select identification document\n</string>
-</resources>

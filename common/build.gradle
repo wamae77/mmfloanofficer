@@ -10,8 +10,9 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
+        namespace 'com.deefrent.rnd.common'
         minSdkVersion 21
-        targetSdkVersion 32
+        targetSdkVersion 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -19,7 +20,6 @@ android {
 
     buildTypes {
         release {
-            debuggable false
             //minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -33,18 +33,19 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig = true
     }
 }
 
 dependencies {
     //kotlin version
-    implementation 'androidx.core:core-ktx:' + rootProject.kotlinCoreVersion
+    implementation ("androidx.core:core-ktx:$rootProject.kotlinCoreVersion")
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api 'androidx.legacy:legacy-support-v4:' + rootProject.supportLegacyLibVersion
 
     //design support
-    api 'androidx.appcompat:appcompat:' + rootProject.supportLibVersion
+    implementation "androidx.appcompat:appcompat:$rootProject.supportLibVersion"
     api 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
     api 'com.google.android.material:material:' + rootProject.materialVersion
     api 'androidx.constraintlayout:constraintlayout:' + rootProject.constraintLayoutVersion

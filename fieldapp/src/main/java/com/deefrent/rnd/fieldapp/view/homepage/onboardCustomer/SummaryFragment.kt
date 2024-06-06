@@ -27,6 +27,7 @@ import com.deefrent.rnd.fieldapp.utils.*
 import com.deefrent.rnd.fieldapp.utils.Constants.Companion.fromSummary
 import com.deefrent.rnd.fieldapp.utils.Constants.Companion.pattern
 import com.deefrent.rnd.fieldapp.view.auth.forgetPin.GeneralResponseStatus
+import com.deefrent.rnd.fieldapp.view.homepage.onboardCustomer.SummaryFragmentDirections
 import com.google.gson.Gson
 import id.zelory.compressor.Compressor
 import kotlinx.coroutines.*

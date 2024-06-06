@@ -28,8 +28,8 @@ extern "C" JNIEXPORT jstring JNICALL
 Java_com_deefrent_rnd_common_utils_Constants_getFingerPrintURL(JNIEnv *env, jobject thiz) {
     return env->NewStringUTF("https://fingerprint.moneymart-test.awsekenya.com");
 }
-extern "C"
-JNIEXPORT jint JNICALL
-Java_com_gne_pm_PM_powerOn(JNIEnv *env, jclass clazz) {
-    // TODO: implement powerOn()
-}
+//extern "C"
+//JNIEXPORT jint JNICALL
+//Java_com_gne_pm_PM_powerOn(JNIEnv *env, jclass clazz) {
+//    // TODO: implement powerOn()
+//}

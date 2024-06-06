@@ -31,7 +31,7 @@ fun MaterialToolbar.setBackButton(
     title: Int,
     context: Activity,
     color: Int? = Color.WHITE,
-    setNavIcon: Int = R.drawable.ic_arrow_left_vector,
+    setNavIcon: Int = com.simplemobiletools.commons.R.drawable.ic_arrow_left_vector,
     action: (() -> Unit)? = null
 ) {
     this.setNavigationIcon(setNavIcon)

@@ -48,7 +48,6 @@ import com.deefrent.rnd.fieldapp.viewModels.DropdownItemsViewModel
 import com.github.chrisbanes.photoview.PhotoView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
-import com.smartengines.ScanSmartActivity
 import dev.ronnie.github.imagepicker.ImagePicker
 import dev.ronnie.github.imagepicker.ImageResult
 import es.dmoral.toasty.Toasty
@@ -464,7 +463,7 @@ class Step2CustomerDetailsFragment : BaseDaggerFragment() {
             }
 
         binding.btnXaraniIDLookUp.setOnClickListener {
-            // startForResult.launch(ScanSmartActivity.getStartIntent(requireContext()))
+
             if (binding.etIdNo.text.toString().isEmpty()) {
                 binding.etIdNo.error = "ID Number required"
             } else {

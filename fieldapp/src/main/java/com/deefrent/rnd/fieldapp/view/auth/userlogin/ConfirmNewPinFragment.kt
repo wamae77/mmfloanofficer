@@ -169,7 +169,7 @@ class ConfirmNewPinFragment : BaseDaggerFragment() {
     }
     override fun onResume() {
         super.onResume()
-        binding.appBar.setBackgroundColor(resources.getColor(R.color.white))
+        binding.appBar.setBackgroundColor(resources.getColor(com.deefrent.rnd.common.R.color.white))
     }
 
 }

@@ -482,7 +482,7 @@ public class AppPrintServiceActivity extends AppCompatActivity implements OnPrin
          } else {
              copies = "BOTH";
          }
-         InputStream imageStream = this.getResources().openRawResource(R.raw.mmf_logo_for_printer);
+         InputStream imageStream = this.getResources().openRawResource(com.deefrent.rnd.common.R.raw.mmf_logo_for_printer);
          Bitmap bmp1 = BitmapFactory.decodeStream(imageStream);
          //Bitmap bmp1 = BitmapFactory.decodeResource(getApplication().getResources(), R.drawable.abc3);
          boolean mNeedsCuttingPause = false;
@@ -588,7 +588,7 @@ public class AppPrintServiceActivity extends AppCompatActivity implements OnPrin
     }
 
     private void loadImage() {
-        InputStream imageStream = this.getResources().openRawResource(R.raw.mmf_logo_for_printer);
+        InputStream imageStream = this.getResources().openRawResource(com.deefrent.rnd.common.R.raw.mmf_logo_for_printer);
         ImageView logoPrintServiceActivityIV = (ImageView) findViewById(R.id.logoPrintServiceActivityImageView);
         bitmap = BitmapFactory.decodeStream(imageStream);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -978,7 +978,7 @@ public class AppPrintServiceActivity extends AppCompatActivity implements OnPrin
         } else {
             copies = "BOTH";
         }
-        InputStream imageStream = this.getResources().openRawResource(R.raw.mmf_logo_for_printer);
+        InputStream imageStream = this.getResources().openRawResource(com.deefrent.rnd.common.R.raw.mmf_logo_for_printer);
         Bitmap bmp1 = BitmapFactory.decodeStream(imageStream);
         //Bitmap bmp1 = BitmapFactory.decodeResource(getApplication().getResources(), R.drawable.abc3);
         boolean mNeedsCuttingPause = false;
