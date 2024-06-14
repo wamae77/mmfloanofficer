@@ -52,7 +52,7 @@ class SplashActivity : BaseActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //preventScreenShotCapture(this)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val data = mViewModel.getData()
 
@@ -146,7 +146,7 @@ class SplashActivity : BaseActivity() {
             binding = ActivitySplashBinding.inflate(layoutInflater)
             setContentView(binding.root)
             //preventScreenShotCapture(this)
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
             val data = mViewModel.getData()
 

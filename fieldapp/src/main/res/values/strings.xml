@@ -541,4 +541,5 @@
     <string name="submit_signature">Done</string>
     <string name="loan_details_notFound">Loan details not found</string>
     <string name="invalid_phoneNo">Invalid PhoneNumber</string>
+    <string name="teller_account_balances">Teller Account Balances</string>
 </resources>

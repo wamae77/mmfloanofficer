@@ -81,7 +81,7 @@
                     android:id="@+id/ivStoreFront"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-                    android:src="@drawable/ic_person"
+                    android:src="@drawable/outline_person_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvAccountNumber"
                     app:layout_constraintTop_toTopOf="parent" />

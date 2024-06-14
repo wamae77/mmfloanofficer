@@ -80,7 +80,7 @@ android {
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         ndk {
-            abiFilters "armeabi-v7a" //,  "arm64-v8a","x86", "x86_64"
+            abiFilters "armeabi-v7a" ,  "arm64-v8a","x86", "x86_64"
         }
         kapt {
             includeCompileClasspath false
@@ -250,7 +250,7 @@ dependencies {
 
     //icon-switch library
     implementation 'com.polyak:icon-switch:1.0.0'
-    implementation "androidx.core:core-ktx:+"
+    //implementation "androidx.core:core-ktx:+"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 
     // This dependency is downloaded from the Google’s Maven repository.

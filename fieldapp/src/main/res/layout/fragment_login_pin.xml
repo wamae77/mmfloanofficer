@@ -50,8 +50,8 @@
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cl_Pin"
-        app:lottie_colorFilter="@color/primary"
+        app:lottie_colorFilter="?attr/colorOnSurface"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/pin_loading"
@@ -287,7 +287,7 @@
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:padding="10dp"
-        android:background="@color/grey_100"
+        android:background="?attr/colorOnSurface"
         app:layout_constraintStart_toEndOf="@+id/ivLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLogo" />

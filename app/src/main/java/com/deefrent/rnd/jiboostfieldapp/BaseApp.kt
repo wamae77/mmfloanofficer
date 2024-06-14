@@ -161,7 +161,7 @@ class BaseApp : BaseApplication(), HasActivityInjector, HasSupportFragmentInject
         mresource = resources
         AppPreferences.init(this)
         appComponent.inject(this)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+       // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         Constants.DEVICE_ID = getDeviceUUID(this)
         Constants.BASE_URL = getBaseURL()!!
         deleteCacheImageFromInternalStorage(this, "compressor")

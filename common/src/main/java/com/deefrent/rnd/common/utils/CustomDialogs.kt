@@ -8,6 +8,7 @@ import com.deefrent.rnd.common.R
 import com.deefrent.rnd.common.databinding.ItemDialogImageButtonBinding
 import com.deefrent.rnd.common.databinding.ItemDialogOneButtonBinding
 import com.deefrent.rnd.common.databinding.ItemDialogTwoButtonBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 fun Fragment.showTwoButtonDialog(
     title: String,
@@ -20,8 +21,9 @@ fun Fragment.showTwoButtonDialog(
     val dialogBinding = ItemDialogTwoButtonBinding.inflate(layoutInflater)
 
     val alertDialog =
-        AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
-            .create()
+        MaterialAlertDialogBuilder(requireContext()).create()
+        //AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
+           // .create()
 
     alertDialog.apply {
         setView(dialogBinding.root)
@@ -54,8 +56,9 @@ fun Fragment.showOneButtonDialog(
     val dialogBinding = ItemDialogOneButtonBinding.inflate(layoutInflater)
 
     val alertDialog =
-        AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
-            .create()
+        MaterialAlertDialogBuilder(requireContext()).create()
+//        AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
+//            .create()
 
     alertDialog.apply {
         setView(dialogBinding.root)
@@ -84,8 +87,9 @@ fun Fragment.showImageDialog(
     val dialogBinding = ItemDialogImageButtonBinding.inflate(layoutInflater)
 
     val alertDialog =
-        AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
-            .create()
+        MaterialAlertDialogBuilder(requireContext()).create()
+//        AlertDialog.Builder(requireContext(), R.style.Style_Dialog_Rounded_Corner)
+//            .create()
 
     alertDialog.apply {
         setView(dialogBinding.root)

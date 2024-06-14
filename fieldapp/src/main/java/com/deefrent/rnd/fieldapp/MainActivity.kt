@@ -106,7 +106,7 @@ class MainActivity : BaseActivity(), ConnectivityReceiver.ConnectivityReceiverLi
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
         //preventScreenShotCapture(this)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
 
         //register receiver for checking internet connection status
         registerReceiver(
@@ -201,7 +201,7 @@ class MainActivity : BaseActivity(), ConnectivityReceiver.ConnectivityReceiverLi
             binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding!!.root)
             //preventScreenShotCapture(this)
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
             //register receiver for checking internet connection status
             registerReceiver(

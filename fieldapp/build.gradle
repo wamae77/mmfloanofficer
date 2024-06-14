@@ -44,7 +44,6 @@ android {
                     "armeabi",
                     "armeabi-v7a"*/
         }
-        multiDexEnabled true
     }
 
     buildTypes {
@@ -99,7 +98,7 @@ dependencies {
     //
     implementation 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
     implementation "androidx.appcompat:appcompat:$rootProject.supportLibVersion"
-    implementation 'com.google.android.material:material:' + rootProject.materialVersion
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
     //implementation 'androidx.constraintlayout:constraintlayout:' + rootProject.constraintLayoutVersion
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

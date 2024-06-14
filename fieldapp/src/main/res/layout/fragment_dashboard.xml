@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".view.homepage.DashboardFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/kcb_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,11 +21,9 @@
 
             <ImageView
                 android:id="@+id/ivDashboardLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:scaleType="centerCrop"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@mipmap/jiboost_a_foreground"
-                app:layout_constraintBottom_toTopOf="@+id/tvName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,13 +39,12 @@
                     android:id="@+id/ivSync"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground"
+                    app:tint="?attr/colorOnSurface"
+                    android:visibility="gone"
                     android:clickable="true"
                     android:src="@drawable/ic_sync"
-                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tintMode="@color/white" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/ivHasLocalData"
@@ -70,16 +65,19 @@
                 android:layout_marginEnd="20dp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
-                android:src="@drawable/notification"
+                app:tint="?attr/colorOnSurface"
+                android:src="@drawable/baseline_notifications_none_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ivOverflow"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.100000024" />
 
             <ImageView
                 android:id="@+id/ivOverflow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/prof"
+                app:tint="?attr/colorOnSurface"
+                android:src="@drawable/outline_person_24"
                 app:layout_constraintBottom_toBottomOf="@+id/ivProfilePic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/ivProfilePic"
@@ -87,12 +85,13 @@
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito"
-                android:paddingTop="13dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivDashboardLogo"
                 tools:text="DAMARIS MUHIA" />
@@ -138,7 +137,6 @@
                 android:id="@+id/mainCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:paddingBottom="@dimen/_5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -149,9 +147,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_17dp"
-                    android:layout_marginTop="@dimen/_2dp"
-                    android:text="Teller Account Balances"
-                    android:textSize="@dimen/_16sp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/teller_account_balances"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -160,15 +158,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
                     android:layout_marginStart="@dimen/_15dp"
-                    android:layout_marginTop="@dimen/_3dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="@dimen/_15dp"
-                    android:background="#BFD6F6"
                     android:orientation="vertical"
                     android:paddingBottom="@dimen/_15dp"
                     app:layout_constraintBottom_toBottomOf="@id/cardBalances"
                     app:layout_constraintEnd_toEndOf="@id/cardBalances"
                     app:layout_constraintStart_toStartOf="@id/cardBalances"
-                    app:layout_constraintTop_toTopOf="@+id/cardBalances" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_viewPager" />
 
 
                 <com.google.android.material.card.MaterialCardView
@@ -176,7 +173,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
                     android:layout_marginStart="@dimen/_15dp"
-                    android:layout_marginTop="@dimen/_3dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="@dimen/_15dp"
                     android:paddingBottom="@dimen/_15dp"
                     app:cardCornerRadius="@dimen/_8dp"
@@ -188,9 +185,7 @@
                         android:id="@+id/cvBalances"
                         android:layout_width="match_parent"
                         android:layout_height="148dp"
-                        android:layout_marginStart="@dimen/_15dp"
-                        android:layout_marginTop="@dimen/_3dp"
-                        android:layout_marginEnd="@dimen/_15dp"
+                        android:padding="@dimen/_5dp"
                         android:orientation="vertical"
                         android:paddingBottom="@dimen/_15dp">
 
@@ -198,10 +193,9 @@
                             android:id="@+id/tvTotalDisb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10dp"
                             android:layout_marginTop="10dp"
                             android:text="Total Disbursement"
-                            android:textSize="@dimen/_14sp"
+                            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -223,6 +217,7 @@
                             android:id="@+id/tvRepay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             android:layout_marginTop="@dimen/_5dp"
                             android:text="Total Repayment"
                             app:layout_constraintStart_toStartOf="@+id/tvTotalDisb"
@@ -244,6 +239,7 @@
                             android:id="@+id/tvBal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             android:layout_marginTop="@dimen/_5dp"
                             android:text="Actual Balance"
                             app:layout_constraintStart_toStartOf="@+id/tvTotalDisb"
@@ -275,9 +271,7 @@
                                 android:id="@+id/btnViewBal"
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/_35dp"
-                                android:layout_marginStart="@dimen/_10dp"
                                 android:layout_marginEnd="@dimen/_2dp"
-
                                 android:text="View Balance"
                                 android:textAlignment="center"
                                 android:textAllCaps="false"
@@ -292,8 +286,6 @@
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/_35dp"
                                 android:layout_marginStart="@dimen/_2dp"
-                                android:layout_marginEnd="@dimen/_15dp"
-
                                 android:text="Statement"
                                 android:textAlignment="center"
                                 android:textAllCaps="false"
@@ -439,7 +431,6 @@
             android:layout_marginEnd="@dimen/_15dp"
             android:elevation="6dp"
             android:text="@string/please_wait"
-            android:textColor="@color/white"
             android:textSize="@dimen/_16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
